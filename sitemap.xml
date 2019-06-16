@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<!--XML Sitemap created by the unregistered version of Sitemap Automator https://www.ragesw.com-->
+	<url>
+		<loc>https://islandhoppincharters.com/Home.php</loc>
+		<lastmod>2019-01-13</lastmod>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://islandhoppincharters.com/Boat.html</loc>
+		<lastmod>2019-02-26</lastmod>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://islandhoppincharters.com/Crew.html</loc>
+		<lastmod>2018-12-2</lastmod>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://islandhoppincharters.com/Experience.php</loc>
+		<lastmod>2018-12-2</lastmod>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://islandhoppincharters.com/Book.php</loc>
+		<lastmod>2018-12-2</lastmod>
+		<priority>0.8</priority>
+	</url>
+<!--XML Sitemap created by Sitemap Automator https://www.ragesw.com-->
+</urlset>
