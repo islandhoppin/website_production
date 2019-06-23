@@ -72,6 +72,34 @@
 			  display: table;
 			  clear: both;
 			}
+			.modal-window {
+			  position: fixed;
+			  background-color: rgba(255, 255, 255, 0.25);
+			  top: 0;
+			  right: 0;
+			  bottom: 0;
+			  left: 0;
+			  z-index: 999;
+			  opacity: 0;
+			  pointer-events: none;
+			  -webkit-transition: all 0.3s;
+			  -moz-transition: all 0.3s;
+			  transition: all 0.3s;
+			  }
+			.modal-close {
+			  color: #aaa;
+			  line-height: 50px;
+			  font-size: 80%;
+			  position: absolute;
+			  right: 0;
+			  text-align: center;
+			  top: 0;
+			  width: 70px;
+			  text-decoration: none;
+			  &:hover {
+			    color: black;
+			  }
+			}
 		</style>
 		<meta name="description" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
 		<meta name="robots" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
@@ -578,49 +606,37 @@
 											</div>
 										</article>
 										
-										
-										
 										<article>
 											<div>
-												<h3 style="vertical-align: center;">The Harry Potter and Trump Family and</h4>
+												<h3 style="vertical-align: center;">The Harry Potter Family</h4>
 												<h4 style="padding-top:10px;">Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 												<br> <subscript style="text-align: center; margin-top:-50px;">June - 2019</subscript>
 												
 												<hr style="margin-top:-50px;" />
-												<h4 style="margin-top:-50px;"> As Island Hoppin’s first repeat customer, we weren’t sure if the second time could be as amazing as the first visit we had with Jamie and Susannah in 2018 but we had an over the top week </h3>
+												<h4 style="margin-top:-50px;"> We felt like we were meeting two friends as well as our crew.</h3>
 												<p style="text-align: center; line-height: 1.25em"> <?php
-													$starting = "As Island Hoppin’s first repeat customer, we weren’t sure if the second time could be as amazing as the first visit we had with Jamie and Susannah in 2018 but we had an over the top week";
+													$starting = "We felt like we were meeting two friends as well as our crew.";
 													$text = "987654321 Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper";
 													$remaining = 250 - strlen($starting);
 													echo ellipsis($text,$remaining);
 												?>
 												</p>
-												<br><a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal"><subscript>Click to read the full review</subscript></a>
+												<br><a href="#modal<?php echo (1);?>" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal"><subscript>Click to read the full review</subscript></a>
 											</div>
 										</article>
+										
+											<div id="modal<?php echo (1);?>" class="modal-window">
+											  		<div>
+												    <a href="#" title="Close" class="modal-close">Close</a>
+												    <h1>Voilà!</h1>
+												    <div>A CSS-only modal based on the :target pseudo-class. Hope you find it helpful.</div>
+												    <div><small>Sponsor</small></div>
+												    <a href="https://aminoeditor.com" target="_blank">👉 Amino: Live CSS Editor for Chrome</div>
+											</div>
+											
 									
 								</section>
-								<div>
-											<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-											  <div class="modal-dialog">
-											    <div class="modal-content">
-											      <div class="modal-header">
-											        <h4 class="modal-title" id="myModalLabel">Basic Modal </h4>
-											        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-											          <span aria-hidden="true">×</span>
-											        </button>
-											      </div>
-											      <div class="modal-body">
-											        <h3>Modal Body</h3>
-											      </div>
-											      <div class="modal-footer">
-											        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-											        <button type="button" class="btn btn-primary">Save changes</button>
-											      </div>
-											    </div>
-											  </div>
-											</div>
-										</div>
+
 							</div>
 							<hr />
 							
