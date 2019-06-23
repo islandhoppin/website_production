@@ -577,16 +577,17 @@
 									
 										<article>
 											<div>
-												<div class="rowreview">
-													<div class="column left">
+												<div class="row">
+													<div class="column">
 														<img src="images/logo_60x.png" alt="Avatar">
 													</div>
-													<div class="column right">
+													<div class="column">
 														<h4>Harry Prince</h4>
 														<subscript>June, 2019</subscript>
-														<br><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><hr style="margin-top:-50px;" />
+														<br><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 													</div>
 												</div>
+												<hr style="margin-top:-50px;" />
 												<h3 style="margin-top:-50px;"> This is the best Trip I have ever been on</h3>
 												<?php
 													$text = "987654321 Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper";
