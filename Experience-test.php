@@ -579,15 +579,14 @@
 											<div>
 												<div class="row">
 													<div class="4u 4u(mobile) special">
-														<img src="images/Ihop100.png" alt="Avatar" style="float: right">
+														<img src="images/Ihop100.png" alt="Avatar" style="float: left">
 													</div>
-													<div class="8u 8u(mobile) special" style="float: left;">
-														<h4>Harry Prince</h4>
+													<div class="8u 8u(mobile) special">
+														<h4 style="text-align: center">Harry Prince</h4>
 														<subscript>June, 2019</subscript>
 														<br><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 													</div>
 												</div>
-												<br>
 												<hr style="margin-top:-50px;" />
 												<h3 style="margin-top:-50px;"> This is the best Trip I have ever been on</h3>
 												<?php
