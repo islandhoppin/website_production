@@ -568,8 +568,10 @@
 													<div class="8u 7u(mobile) special" style="padding-top:40px;">
 														<h4 style="text-align: center">The Harry Potter Family and Friends</h4>
 														<subscript style="text-align: center">June, 2019</subscript>
-														<br><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 													</div>
+												</div>
+												<div class="row">
+													<h4>Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 												</div>
 												<hr style="margin-top:-50px; clear:both;" />
 												<h3 style="margin-top:-50px;"> This is the best Trip I have ever been on</h3>
@@ -591,6 +593,27 @@
 												<h3 style="margin-top:-50px;"> This is the best Trip I have ever been on</h3>
 												<?php
 													$text = "12345678 Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper";
+													echo ellipsis($text,150);
+												?>
+												
+											</div>
+										</article>
+										<article>
+											<div>
+												<div class="row">
+													<div class="4u 5u(mobile)" style="padding-top:40px;">
+														<img src="images/Ihop100.png" valign="middle">
+													</div>
+													<div class="8u 7u(mobile) special" style="padding-top:40px;">
+														<h4 style="text-align: center">The Harry Potter Family and Friends</h4>
+														<subscript style="text-align: center">June, 2019</subscript>
+														<br><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+													</div>
+												</div>
+												<hr style="margin-top:-50px; clear:both;" />
+												<h3 style="margin-top:-50px;"> This is the best Trip I have ever been on</h3>
+												<?php
+													$text = "987654321 Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper";
 													echo ellipsis($text,150);
 												?>
 												
