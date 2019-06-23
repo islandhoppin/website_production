@@ -595,69 +595,8 @@
 												<br><a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal"><subscript>Click to read the full review</subscript></a>
 											</div>
 										</article>
-										<article>
-											<div>
-												<div class="row">
-													<div class="4u 5u(mobile)">
-														<img src="images/Ihop100.png" valign="middle">
-													</div>
-													<div class="8u 7u(mobile) special" style="padding-top:40px;">
-														<h4 style="vertical-align: center;">The Harry Potter Family and Friends</h4>
-													</div> 
-												</div>
-												<div>
-													<h4>Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-													<br><subscript style="text-align: center">June - 2019</subscript>
-												</div>
-												<hr style="margin-top:-50px; clear:both;" />
-												<h3 style="margin-top:-50px;"> This is the best Trip I have ever been on</h3>
-												<?php
-													$text = "987654321 Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper";
-													echo ellipsis($text,150);
-												?>
-												<br><a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal"><subscript>Click to read the full review</subscript></a>
-											</div>
-										</article>
-										<article>
-											<div>
-												<div style="text-align:left">
-													<img src="images/logo_60x.png" alt="Avatar">
-													<h4>Harry Prince</h4>
-													<subscript>June, 2019</subscript>
-													<br><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><hr style="margin-top:-50px;" />
-												</div>
-												<h3 style="margin-top:-50px;"> This is the best Trip I have ever been on</h3>
-												<?php
-													$text = "12345678 Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper";
-													echo ellipsis($text,150);
-												?>
-												
-											</div>
-										</article>
-										<article>
-											<div>
-												<div class="row">
-													<div class="4u 5u(mobile)" style="padding-top:40px;">
-														<img src="images/Ihop100.png" valign="middle">
-													</div>
-													<div class="8u 7u(mobile) special" style="padding-top:40px;">
-														<h4 style="text-align: center">The Harry Potter Family and Friends</h4>
-														<subscript style="text-align: center">June, 2019</subscript>
-														<br><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-													</div>
-												</div>
-												<hr style="margin-top:-50px; clear:both;" />
-												<h3 style="margin-top:-50px;"> This is the best Trip I have ever been on</h3>
-												<?php
-													$text = "987654321 Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper";
-													echo ellipsis($text,150);
-												?>
-												
-											</div>
-										</article>
 									
 								</section>
-								<h3 style="text-align:center;">Click to enlarge photos.</h3>
 							</div>
 							<hr />
 							
