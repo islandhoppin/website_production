@@ -555,8 +555,7 @@
 										<article>
 											<div>
 												<div style="text-align:left">
-													<img src="images/Ihop100.png" alt="Avatar" width="80%">
-
+													<img src="images/Ihop100.png" alt="Avatar">
 													<h4>Harry Prince</h4>
 													<subscript>London, U.K.</subscript>
 													<br><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><hr style="margin-top:-50px;" />
