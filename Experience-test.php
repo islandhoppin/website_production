@@ -570,7 +570,7 @@
 														<subscript style="text-align: center">June, 2019</subscript>
 													</div>
 												</div>
-												<div class="row">
+												<div>
 													<h4>Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 												</div>
 												<hr style="margin-top:-50px; clear:both;" />
@@ -579,7 +579,7 @@
 													$text = "987654321 Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper";
 													echo ellipsis($text,150);
 												?>
-												
+												<a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal"><subscript>Click to see review</subscript></a>
 											</div>
 										</article>
 										<article>
