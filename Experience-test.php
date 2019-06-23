@@ -567,12 +567,13 @@
 												
 												<hr style="margin-top:-50px;" />
 												<h4 style="margin-top:-50px;"> We felt like we were meeting two friends as well as our crew.</h3>
-												<?php
+												<p style="text-align: center"> <?php
 													$starting = "We felt like we were meeting two friends as well as our crew.";
 													$text = "987654321 Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper";
-													$remaining = 200 - strlen($starting);
+													$remaining = 250 - strlen($starting);
 													echo ellipsis($text,$remaining);
 												?>
+												</p>
 												<br><a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal"><subscript>Click to read the full review</subscript></a>
 											</div>
 										</article>
@@ -584,12 +585,13 @@
 												
 												<hr style="margin-top:-50px;" />
 												<h4 style="margin-top:-50px;"> As Island Hoppin’s first repeat customer, we weren’t sure if the second time could be as amazing as the first visit we had with Jamie and Susannah in 2018 but we had an over the top week </h3>
-												<?php
+												<p style="text-align: center"> <?php
 													$starting = "As Island Hoppin’s first repeat customer, we weren’t sure if the second time could be as amazing as the first visit we had with Jamie and Susannah in 2018 but we had an over the top week";
 													$text = "987654321 Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper";
-													$remaining = 200 - strlen($starting);
+													$remaining = 250 - strlen($starting);
 													echo ellipsis($text,$remaining);
 												?>
+												</p>
 												<br><a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal"><subscript>Click to read the full review</subscript></a>
 											</div>
 										</article>
