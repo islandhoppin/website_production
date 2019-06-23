@@ -549,7 +549,7 @@
 										<article>
 											<div>
 												<h4>Harry Prince</h4>
-												<subscript>London, U.K.</subscript>< hr/>
+												<subscript>London, U.K.</subscript><hr />
 												<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 												<h3> This is the best Trip I have ever been on</h3>
 												<p>Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper</p>
@@ -558,7 +558,7 @@
 										<article>
 											<div>
 												<h4>Harry Prince</h4>
-												<subscript>London, U.K.</subscript>< hr/>
+												<subscript>London, U.K.</subscript><hr />
 												<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 												<h3> This is the best Trip I have ever been on</h3>
 												<p>Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper</p>
