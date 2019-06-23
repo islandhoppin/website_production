@@ -578,8 +578,8 @@
 										<article>
 											<div>
 												<div class="row">
-													<div class="4u 5u(mobile) special">
-														<img src="images/Ihop100.png" alt="Avatar" style="float: left; vertical-align: middle;">
+													<div class="4u 5u(mobile)">
+														<img src="images/Ihop100.png" style="vertical-align: middle;">
 													</div>
 													<div class="8u 7u(mobile) special">
 														<h4 style="text-align: center">The Harry Potter Family and Friends</h4>
