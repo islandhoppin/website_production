@@ -571,7 +571,6 @@
 													</div>
 												</div>
 												<div>
-													<hr style="margin-top:-50px;" />
 													<h4 style="margin-top:-50px;">Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 												</div>
 												<hr style="margin-top:-50px; clear:both;" />
