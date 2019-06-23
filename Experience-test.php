@@ -10,6 +10,12 @@
     $sqlfood->execute() ;
     $sqlcustpics->execute() ;
     $sqlcustvids->execute() ;
+    function ellipsis($text, $max=100, $append='&hellip;') {
+       if (strlen($text) <= $max) return $text;
+       $out = substr($text,0,$max);
+       if (strpos($text,' ') === FALSE) return $out.$append;
+       return preg_replace('/\w+$/','',$out).$append;
+	}
 ?>
 <!DOCTYPE HTML>
 <!--
@@ -549,10 +555,13 @@
 										<article>
 											<div>
 												<h4>Harry Prince</h4>
-												<subscript>London, U.K.</subscript><hr />
+												<subscript>London, U.K.</subscript><hr style="margin-top:-50px;" />
 												<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 												<h3> This is the best Trip I have ever been on</h3>
-												<p>Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper</p>
+												<?php
+													$text = "Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper";
+													echo ellipsis($text,100);
+												?>
 											</div>
 										</article>
 										<article>
