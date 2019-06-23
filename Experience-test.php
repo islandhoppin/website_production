@@ -555,14 +555,14 @@
 										<article>
 											<div>
 												<div style="text-align:left">
-													<img src="images/Ihop100.png" alt="Avatar">
+													<img src="images/logo_60x.png" alt="Avatar">
 													<h4>Harry Prince</h4>
-													<subscript>London, U.K.</subscript>
+													<subscript>June, 2019</subscript>
 													<br><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><hr style="margin-top:-50px;" />
 												</div>
 												<h3 style="margin-top:-50px;"> This is the best Trip I have ever been on</h3>
 												<?php
-													$text = "Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper";
+													$text = "987654321 Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper";
 													echo ellipsis($text,150);
 												?>
 												
@@ -570,11 +570,18 @@
 										</article>
 										<article>
 											<div>
-												<h4>Harry Prince</h4>
-												<subscript>London, U.K.</subscript><hr />
-												<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-												<h3> This is the best Trip I have ever been on</h3>
-												<p>Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper</p>
+												<div style="text-align:left">
+													<img src="images/logo_60x.png" alt="Avatar">
+													<h4>Harry Prince</h4>
+													<subscript>June, 2019</subscript>
+													<br><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><hr style="margin-top:-50px;" />
+												</div>
+												<h3 style="margin-top:-50px;"> This is the best Trip I have ever been on</h3>
+												<?php
+													$text = "12345678 Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper";
+													echo ellipsis($text,150);
+												?>
+												
 											</div>
 										</article>
 									
