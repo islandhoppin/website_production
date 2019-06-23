@@ -562,16 +562,16 @@
 										<article>
 											<div>
 												<div class="row">
-													<div class="4u 5u(mobile)" style="padding-top:40px;">
+													<div class="4u 5u(mobile)">
 														<img src="images/Ihop100.png" valign="middle">
 													</div>
 													<div class="8u 7u(mobile) special" style="padding-top:40px;">
-														<h4 style="text-align: right; vertical-align: center;">The Harry Potter Family and Friends</h4>
+														<h4 style="vertical-align: center;">The Harry Potter Family and Friends</h4>
 													</div> 
 												</div>
 												<div>
 													<h4>Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-													<subscript style="text-align: center">June - 2019</subscript>
+													<br><subscript style="text-align: center">June - 2019</subscript>
 												</div>
 												<hr style="margin-top:-50px; clear:both;" />
 												<h3 style="margin-top:-50px;"> This is the best Trip I have ever been on</h3>
