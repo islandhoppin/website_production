@@ -96,6 +96,10 @@
 										<b>URL:</b> This process is shown in the video button below. No additional alteration of the url is need for content delivery.
 										<br /><b>All testimonials will be shown in the photo carousel, the order will favor the most recent first.</b>
 									</p><br>
+									<form action="Download_Customer_pic.php" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
+                                                  <button type="submit" value="Submit" class="button" Style="margin-top:5px; margin-bottom:5px;">Download CSV</button>
+                                        </form>
 									<a href="Download_Customer_pic.php" target="_blank"><strong>Download CSV</strong></a>
 									
 								</section>
