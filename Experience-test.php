@@ -578,15 +578,16 @@
 										<article>
 											<div>
 												<div class="row">
-													<div class="column">
-														<img src="images/logo_60x.png" alt="Avatar">
+													<div class="column center">
+														<img src="images/Ihop100.png" alt="Avatar">
 													</div>
-													<div class="column">
+													<div class="column right">
 														<h4>Harry Prince</h4>
 														<subscript>June, 2019</subscript>
 														<br><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 													</div>
 												</div>
+												<br>
 												<hr style="margin-top:-50px;" />
 												<h3 style="margin-top:-50px;"> This is the best Trip I have ever been on</h3>
 												<?php
