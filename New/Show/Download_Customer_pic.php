@@ -19,7 +19,7 @@ $sqlcustpics->execute() ;
 
 if($sqlcustpics->num_rows > 0){
     $delimiter = ",";
-    $filename = "Customer_Photos_" . date('Y-m-d') . ".csv";
+    $filename = "Customer-Photos_" . date('Y-m-d') . ".csv";
     
     //create a file pointer
     $f = fopen('php://memory', 'w');
@@ -30,8 +30,7 @@ if($sqlcustpics->num_rows > 0){
     
     //output each row of the data, format line as csv and write to file pointer
     while($row = $sqlcustpics->fetch_assoc()){
-        $status = ($row['status'] == '1')?'Active':'Inactive';
-        $lineData = array($row['pic_id'], $row['pic_title'], $row['show'], $row['image'], $row['blank_1'], $row['blank_2'], $status);
+        $lineData = array($row['pic_id'], $row['pic_title'], $row['show'], $row['image'], $row['blank_1'], $row['blank_2']);
         fputcsv($f, $lineData, $delimiter);
     }
     
@@ -45,6 +44,8 @@ if($sqlcustpics->num_rows > 0){
     //output all remaining data on a file pointer
     fpassthru($f);
 }
+
+header( 'Location: /Admin.html') ;
 exit;
 
 ?>
