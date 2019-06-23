@@ -67,26 +67,13 @@
 			} )( jQuery );
 		</script>
 		<style>
-
-			/* Create two unequal columns that floats next to each other */
-			.columnreview {
-			  float: left;
-			  padding: 10px;
-			}
-			
-			.left {
-			  width: 30%;
-			}
-			
-			.right {
-			  width: 70%;
-			}
-			
-			/* Clear floats after the columns */
-			.rowreview:after {
-			  content: "";
-			  display: table;
-			  clear: both;
+			#containeravatar_id {
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    -moz-transform: translateX(-50%) translateY(-50%);
+			    -webkit-transform: translateX(-50%) translateY(-50%);
+			    transform: translateX(-50%) translateY(-50%);
 			}
 		</style>
 		<meta name="description" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
@@ -578,8 +565,8 @@
 										<article>
 											<div>
 												<div class="row">
-													<div class="4u 5u(mobile)">
-														<img src="images/Ihop100.png" style="vertical-align: middle;">
+													<div class="4u 5u(mobile)" id="containeravatar_id">
+														<img src="images/Ihop100.png">
 													</div>
 													<div class="8u 7u(mobile) special">
 														<h4 style="text-align: center">The Harry Potter Family and Friends</h4>
