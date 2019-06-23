@@ -562,10 +562,10 @@
 										<article>
 											<div>
 												<div class="row">
-													<div class="4u 5u(mobile)">
+													<div class="4u 5u(mobile)" style="margin-top:-50px;">
 														<img src="images/Ihop100.png" valign="middle">
 													</div>
-													<div class="8u 7u(mobile) special">
+													<div class="8u 7u(mobile) special" style="margin-top:-50px;">
 														<h4 style="text-align: center">The Harry Potter Family and Friends</h4>
 														<subscript style="text-align: center">June, 2019</subscript>
 														<br><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
