@@ -579,9 +579,9 @@
 											<div>
 												<div class="row">
 													<div class="4u 4u(mobile) special">
-														<img src="images/Ihop100.png" alt="Avatar">
+														<img src="images/Ihop100.png" alt="Avatar" style="float: right">
 													</div>
-													<div class="6u 12u(mobile) special" style="float: left;">
+													<div class="8u 8u(mobile) special" style="float: left;">
 														<h4>Harry Prince</h4>
 														<subscript>June, 2019</subscript>
 														<br><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
