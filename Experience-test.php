@@ -545,13 +545,26 @@
 								</header>
 								<section  class="carousel">
 									<div class="reel">
-									<?php while( $row1 = $sqltut->fetch()) : ?>
+									
 										<article>
-											<a href="<?php echo $row1['image']; ?>" class="swipebox" title="<?php echo $row1['header']; ?> - Date: <?php echo $row1['blank_1']; ?>">
-												<img class="image featured" style="width:290px; height:auto; margin-top:30px" src="<?php echo $row1['image']; ?>" alt="<?php echo $row1['update']; ?>">
-											</a>
+											<div>
+												<h4>Harry Prince</h4>
+												<subscript>London, U.K.</subscript>< hr/>
+												<i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+												<h2> This is the best Trip I have ever been on</h2>
+												<p>Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper</p>
+											</div>
+											<div>
+												<h4>Harry Prince</h4>
+												<subscript>London, U.K.</subscript>< hr/>
+												<i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+												<h2> This is the best Trip I have ever been on</h2>
+												<p>Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper</p>
+											</div>
+											
+											
 										</article>
-									<?php endwhile ?>
+									
 								</section>
 								<h3 style="text-align:center;">Click to enlarge photos.</h3>
 							</div>
