@@ -554,7 +554,7 @@
 									
 										<article>
 											<div>
-												<div style="text-align:left">
+												<div>
 													<img src="images/logo_60x.png" alt="Avatar">
 													<h4>Harry Prince</h4>
 													<subscript>June, 2019</subscript>
