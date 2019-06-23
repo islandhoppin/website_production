@@ -578,7 +578,7 @@
 										</article>
 										<article>
 											<div>
-												<h3 style="vertical-align: center;">The Harry Potter and Trump Family and Friends</h4>
+												<h3 style="vertical-align: center;">The Harry Potter and Trump Family and</h4>
 												<h4 style="padding-top:10px;">Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 												<br> <subscript style="text-align: center; margin-top:-50px;">June - 2019</subscript>
 												
