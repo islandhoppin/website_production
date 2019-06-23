@@ -195,7 +195,7 @@
 									<h3>Captain Only</h3>
 								</header>
 								<p>
-									The Captain Only Rate is $15,000 plus all additional expenses. 
+									The Captain Only Rate is $18,000 plus all additional expenses. 
 									<br /><b>Includes: </b>Captain, Linens/towels, Dishes, Flatware, Cooking Utensils/Cookware, & Toys
 									<br /><b>Not Included: </b>Fuel, Water, Customs/Immigrations, Food/Liquor/Ice, Mooring/Dock Fees, *Diving, Gratuity
 									<br /> ***Diving & Provisioning services can be arranged***
@@ -216,7 +216,7 @@
 									<h3>Child Discount</h3>
 								</header>
 								<p>
-									Island Hoppin' is family friendly, and that's why we are currently offering a $250 discount per child under 15 years old. 
+									Island Hoppin' is family friendly, and that's why we are currently offering a $250 discount per child under 15 years old. (Max Discount - 4 Children)
 									<br />***Based on the Charter Sailing date, not booking the date.***
 								</p>
 							</section>
