@@ -561,10 +561,8 @@
 									
 										<article>
 											<div>
-												<h3 style="vertical-align: center;">The Harry Potter Family and Friends</h4>
-												<div style="padding-top:10px;">
-													<h4>Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-												</div>
+												<h3 style="vertical-align: center;">The Harry Potter Family</h4>
+												<h4 style="padding-top:10px;">Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 												<br> <subscript style="text-align: center; margin-top:-50px;">June - 2019</subscript>
 												
 												<hr style="margin-top:-50px;" />
