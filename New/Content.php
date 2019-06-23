@@ -96,6 +96,10 @@
                                                     <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
                                                   <button type="submit" value="Submit" class="button" Style="margin-top:5px; margin-bottom:5px;">Edit Customer Videos</button>
                                         </form>
+                                        <form action="/New/Show/Download_all_tables.php" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
+                                                  <button type="submit" value="Submit" class="button" Style="margin-top:5px; margin-bottom:5px;">Download all data</button>
+                                        </form>
 										<br />						
 									</header>	
 								</section>
