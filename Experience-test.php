@@ -577,27 +577,9 @@
 												<br><a href="#modal<?php echo (1);?>" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal"><subscript>Click to read the full review</subscript></a>
 											</div>
 										</article>
-										<div>
-											<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-											  <div class="modal-dialog">
-											    <div class="modal-content">
-											      <div class="modal-header">
-											        <h4 class="modal-title" id="myModalLabel">Basic Modal </h4>
-											        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-											          <span aria-hidden="true">×</span>
-											        </button>
-											      </div>
-											      <div class="modal-body">
-											        <h3>Modal Body</h3>
-											      </div>
-											      <div class="modal-footer">
-											        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-											        <button type="button" class="btn btn-primary">Save changes</button>
-											      </div>
-											    </div>
-											  </div>
-											</div>
-										</div>
+										
+										
+										
 										<article>
 											<div>
 												<h3 style="vertical-align: center;">The Harry Potter and Trump Family and</h4>
@@ -618,6 +600,27 @@
 										</article>
 									
 								</section>
+								<div>
+											<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+											  <div class="modal-dialog">
+											    <div class="modal-content">
+											      <div class="modal-header">
+											        <h4 class="modal-title" id="myModalLabel">Basic Modal </h4>
+											        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											          <span aria-hidden="true">×</span>
+											        </button>
+											      </div>
+											      <div class="modal-body">
+											        <h3>Modal Body</h3>
+											      </div>
+											      <div class="modal-footer">
+											        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											        <button type="button" class="btn btn-primary">Save changes</button>
+											      </div>
+											    </div>
+											  </div>
+											</div>
+										</div>
 							</div>
 							<hr />
 							
