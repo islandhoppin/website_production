@@ -66,6 +66,29 @@
 			
 			} )( jQuery );
 		</script>
+		<style>
+
+			/* Create two unequal columns that floats next to each other */
+			.columnreview {
+			  float: left;
+			  padding: 10px;
+			}
+			
+			.left {
+			  width: 30%;
+			}
+			
+			.right {
+			  width: 70%;
+			}
+			
+			/* Clear floats after the columns */
+			.rowreview:after {
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
+		</style>
 		<meta name="description" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
 		<meta name="robots" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
 		<meta name="googlebot" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
@@ -554,11 +577,15 @@
 									
 										<article>
 											<div>
-												<div>
-													<img src="images/logo_60x.png" alt="Avatar">
-													<h4>Harry Prince</h4>
-													<subscript>June, 2019</subscript>
-													<br><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><hr style="margin-top:-50px;" />
+												<div class="rowreview">
+													<div class="column left">
+														<img src="images/logo_60x.png" alt="Avatar">
+													</div>
+													<div class="column right">
+														<h4>Harry Prince</h4>
+														<subscript>June, 2019</subscript>
+														<br><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><hr style="margin-top:-50px;" />
+													</div>
 												</div>
 												<h3 style="margin-top:-50px;"> This is the best Trip I have ever been on</h3>
 												<?php
