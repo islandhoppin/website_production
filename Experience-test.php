@@ -566,11 +566,11 @@
 														<img src="images/Ihop100.png" valign="middle">
 													</div>
 													<div class="8u 7u(mobile) special" style="padding-top:40px;">
-														<h4 style="text-align: center">The Harry Potter Family and Friends</h4>
-														<subscript style="text-align: center">June - 2019</subscript>
+														<h4 style="text-align: right">The Harry Potter Family and Friends</h4>
 													</div>
 												</div>
 												<div>
+													<subscript style="text-align: center">June - 2019</subscript>
 													<h4 style="margin-top:-50px;">Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 												</div>
 												<hr style="margin-top:-50px; clear:both;" />
