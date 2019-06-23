@@ -567,10 +567,11 @@
 													</div>
 													<div class="8u 7u(mobile) special" style="padding-top:40px;">
 														<h4 style="text-align: center">The Harry Potter Family and Friends</h4>
-														<subscript style="text-align: center">June, 2019</subscript>
+														<subscript style="text-align: center">June - 2019</subscript>
 													</div>
 												</div>
 												<div>
+													<hr style="margin-top:-50px; clear:both;" />
 													<h4>Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 												</div>
 												<hr style="margin-top:-50px; clear:both;" />
