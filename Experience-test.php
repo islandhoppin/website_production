@@ -578,11 +578,11 @@
 										<article>
 											<div>
 												<div class="row">
-													<div class="4u 2u(mobile) special">
-														<img src="images/Ihop100.png" alt="Avatar" style="float: left">
+													<div class="4u 5u(mobile) special">
+														<img src="images/Ihop100.png" alt="Avatar" style="float: left; vertical-align: middle;">
 													</div>
-													<div class="8u 8u(mobile) special">
-														<h4 style="text-align: center">Harry Prince</h4>
+													<div class="8u 7u(mobile) special">
+														<h4 style="text-align: center">The Harry Potter Family and Friends</h4>
 														<subscript style="text-align: center">June, 2019</subscript>
 														<br><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 													</div>
