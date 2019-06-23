@@ -1,13 +1,7 @@
 <?php
     $verifyCode = getenv('SET_VERIFY');
     $onPage = $_POST["INTERNAL"];
-    if ($onPage == ""){
-        header( 'Location: /Admin.html') ;
-    }
-    if ($onPage != $verifyCode){
-        echo "Incorrect Passphrase";
-        header( 'Location: /Admin.html') ;
-    }
+
     if ($onPage == $verifyCode){
         require '../connection.inc.php'; 
         // This is a prepared statement, not necessary with this simple query with no variables, but anyway...
