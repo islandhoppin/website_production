@@ -67,8 +67,11 @@
 			} )( jQuery );
 		</script>
 		<style>
-
-
+			.row:after {
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
 		</style>
 		<meta name="description" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
 		<meta name="robots" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
@@ -568,7 +571,7 @@
 														<br><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 													</div>
 												</div>
-												<hr style="margin-top:-150px; clear:both;" />
+												<hr style="margin-top:-50px; clear:both;" />
 												<h3 style="margin-top:-50px;"> This is the best Trip I have ever been on</h3>
 												<?php
 													$text = "987654321 Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper";
