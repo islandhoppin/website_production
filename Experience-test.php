@@ -550,19 +550,19 @@
 											<div>
 												<h4>Harry Prince</h4>
 												<subscript>London, U.K.</subscript>< hr/>
-												<i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-												<h2> This is the best Trip I have ever been on</h2>
+												<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+												<h3> This is the best Trip I have ever been on</h3>
 												<p>Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper</p>
 											</div>
+										</article>
+										<article>
 											<div>
 												<h4>Harry Prince</h4>
 												<subscript>London, U.K.</subscript>< hr/>
-												<i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-												<h2> This is the best Trip I have ever been on</h2>
+												<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+												<h3> This is the best Trip I have ever been on</h3>
 												<p>Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper</p>
 											</div>
-											
-											
 										</article>
 									
 								</section>
