@@ -566,7 +566,22 @@
 												<br> <subscript style="text-align: center; margin-top:-50px;">June - 2019</subscript>
 												
 												<hr style="margin-top:-50px;" />
-												<h4 style="margin-top:-50px;"> This is the best Trip I have ever been on</h3>
+												<h4 style="margin-top:-50px;"> We felt like we were meeting two friends as well as our crew.</h3>
+												<?php
+													$text = "987654321 Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper";
+													echo ellipsis($text,150);
+												?>
+												<br><a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal"><subscript>Click to read the full review</subscript></a>
+											</div>
+										</article>
+										<article>
+											<div>
+												<h3 style="vertical-align: center;">The Harry Potter and Trump Family and Friends</h4>
+												<h4 style="padding-top:10px;">Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+												<br> <subscript style="text-align: center; margin-top:-50px;">June - 2019</subscript>
+												
+												<hr style="margin-top:-50px;" />
+												<h4 style="margin-top:-50px;"> As Island Hoppin’s first repeat customer, we weren’t sure if the second time could be as amazing as the first visit we had with Jamie and Susannah in 2018 but we had an over the top week </h3>
 												<?php
 													$text = "987654321 Metus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorperMetus euismod donec condimentum vel integer nec vivamus cursus aenean cras aliquam feugiat ullamcorper";
 													echo ellipsis($text,150);
