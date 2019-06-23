@@ -565,7 +565,7 @@
 												<div style="padding-top:10px;">
 													<h4>Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 												</div>
-												<br> <subscript style="text-align: center">June - 2019</subscript>
+												<br> <subscript style="text-align: center; margin-top:-50px;">June - 2019</subscript>
 												
 												<hr style="margin-top:-50px;" />
 												<h4 style="margin-top:-50px;"> This is the best Trip I have ever been on</h3>
