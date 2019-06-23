@@ -95,7 +95,8 @@
 										<b>Image:</b>Before Uploading ensure the image is 1000px by 676px <a href="http://picresize.com/" target="_blank">Image Resizer</a>.<br />
 										<b>URL:</b> This process is shown in the video button below. No additional alteration of the url is need for content delivery.
 										<br /><b>All testimonials will be shown in the photo carousel, the order will favor the most recent first.</b>
-									</p> 
+									</p><br>
+									<a href="Download_Customer_pic.php" target="_blank"><strong>Download CSV</strong></a>
 									
 								</section>
 							</div>
