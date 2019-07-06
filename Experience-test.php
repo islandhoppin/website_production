@@ -573,11 +573,11 @@
 													echo ellipsis($text,$remaining);
 												?>
 												<div id="ex1" class="modal">
-												  <p>Thanks for clicking. That felt good.</p>
+												  <p>Thank you again for another amazing vacation aboard Island Hoppin’! As Island Hoppin’s first repeat customer, we weren’t sure if the second time could be as amazing as the first visit we had with Jamie and Susannah in 2018 but we had an over the top week! For all those wondering if they should do a repeat trip, get on it and book now!! This trip was even better than last year’s. All of our adventures were new and unchartered territory. There were so many new, fun experiences in different places, and the “Hotdog” was the perfect addition for lots of laughs. The boat was in tip, top shape and looked just as great as it did last year. Susannah wowed us with terrific new recipes for all meals; Jamie amazed us with amazing new dive sites. Jamie & Susannah, and Island Hoppin’ are a wonderful combination; their care, attentiveness, professionalism, demeanor, and great personalities, together with a beautiful boat, left us with terrific memories and we are ready for the three-peat.</p>
 												  <a href="#" rel="modal:close">Close</a>
 												</div>
 												</p>
-												<br><a href="#ex1" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
+												<a href="#ex1" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
 											</div>
 										</article>
 										
