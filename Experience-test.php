@@ -26,7 +26,12 @@
 <html lang="en">
 	<head>
 		<!-- Global Site Tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107335403-1"></script>
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107335403-1"></script>
+		<!-- Remember to include jQuery :) -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+		<!-- jQuery Modal -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 		<script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments)};
@@ -45,13 +50,6 @@
 		<script src="src/js/jquery.swipebox.js"></script>
 		<link rel="stylesheet" href="src/css/swipebox.css">
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<script type="text/javascript">
-			;( function( $ ) {
-			
-				$( '.swipebox' ).swipebox();
-			
-			} )( jQuery );
-		</script>
 		<script type="text/javascript">
 			;( function( $ ) {
 			
@@ -574,8 +572,12 @@
 													$remaining = 250 - strlen($starting);
 													echo ellipsis($text,$remaining);
 												?>
+												<div id="ex1" class="modal">
+												  <p>Thanks for clicking. That felt good.</p>
+												  <a href="#" rel="modal:close">Close</a>
+												</div>
 												</p>
-												<br><a href="#modal<?php echo (1);?>" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal"><subscript>Click to read the full review</subscript></a>
+												<br><a href="#ex1" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
 											</div>
 										</article>
 										
