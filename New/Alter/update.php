@@ -12,6 +12,7 @@ if ($verifyCode == $onPage){
         if ($Update == "Yes"){
             if ($table =="newsupdates"){
                 $bucket = "OnDeckNews";
+            // this table is being depreciated
             } elseif ($table =="customertut"){
                 $bucket = "Testimonials";
             } elseif ($table =="specials"){
@@ -96,6 +97,16 @@ if ($verifyCode == $onPage){
     		$today = pg_escape_string($_POST["date"]);
     		$update = pg_escape_string($_POST["update"]);
     		$query = "UPDATE customertut SET header = '$header', update = '$update', image = '$image', blank_1 = '$today' WHERE news_id = $key";
+    	}
+    	if ($table == "testimonials"){
+    	    $testimonial_id = $_POST["id"];
+    		$title = pg_escape_string($_POST["family_name"]);
+    		$headline = pg_escape_string($_POST["head_line"]);
+    		$testimonial = $_POST["testimonial_text"];
+    		$date = pg_escape_string($_POST["date"]);
+    		$extra_space = $_POST["line_break"];
+    		$show = pg_escape_string($_POST["show"]);
+    		$query = "UPDATE testimonial SET title = '$title', headline = '$headline', testimonial = '$testimonial', date = '$date', extra_space = '$extra_space', show = '$show') WHERE testimonial_id = $testimonial_id";
     	}
     	if ($table == "faqList"){
     		$faq_id = $_POST["faq_id"];

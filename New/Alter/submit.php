@@ -42,11 +42,21 @@ if ($verifyCode == $onPage){
     		$today = date("F j, Y");  
     		$query = "INSERT INTO newsupdates (header, update, image, blank_1) VALUES ('$header', '$update', '$image', '$today')";
     	}
+    	// this table is being depreciated
     	if ($table == "customertut"){
     		$header = pg_escape_string($_POST["Header"]);
     		$update = pg_escape_string($_POST["update"]);
     		$today = date("F j, Y");
     		$query = "INSERT INTO customertut (header, update, image, blank_1) VALUES ('$header', '$update', '$image', '$today')";
+    	}
+    	if ($table == "testimonials"){
+    		$title = pg_escape_string($_POST["family_name"]);
+    		$headline = pg_escape_string($_POST["head_line"]);
+    		$testimonial = $_POST["testimonial_text"];
+    		$today = date("F j, Y");
+    		$extra_space = $_POST["line_break"];
+    		$show = pg_escape_string($_POST["show"]);
+    		$query = "INSERT INTO testimonials (title, headline, testimonial, date, extra_space, show) VALUES ('$title', '$headline', '$testimonial', '$today', '$extra_space', '$show')";
     	}
     	if ($table == "faqList"){
     		$question = pg_escape_string($_POST["question"]);

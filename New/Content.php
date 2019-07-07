@@ -71,6 +71,11 @@
                                                   <button type="submit" value="Submit" class="button" Style="margin-top:5px; margin-bottom:5px;">Edit Testimonials</button>
                                         </form>
                                         <br />
+                                        <form action="/New/Show/Testimonials1.php" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
+                                                  <button type="submit" value="Submit" class="button" Style="margin-top:5px; margin-bottom:5px;">Edit Testimonials1</button>
+                                        </form>
+                                        <br />
                                         <form action="/New/Show/FAQ.php" method="post" style="text-align: center;">
                                                     <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
                                                   <button type="submit" value="Submit" class="button" Style="margin-top:5px; margin-bottom:5px;">Edit FAQs</button>
