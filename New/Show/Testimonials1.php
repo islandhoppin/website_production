@@ -77,7 +77,7 @@
         		                        <header><h3>Family_Name</h3></header>
                                         <input type="text" name="family_name" placeholder="An Island Hoppin' Customer">
                                         <header style="margin-top:25px;"><h3>Headline</h3></header>
-                                        <textarea type="text" name="head_line"  rows="6" cols="30"></textarea>
+                                        <textarea type="text" name="head_line"  rows="3" cols="30"></textarea>
                                         <header style="margin-top:25px;"><h3>Testimonial</h3></header>
                                         <textarea type="text" name="testimonial_text" id="editor"></textarea>
                                         
@@ -157,9 +157,7 @@
                                                     <input type="hidden" name="Title" value="<?php echo $row1['title']; ?>">
                                                     <input type="hidden" name="Headline" value="<?php echo $row1['headline']; ?>">
                                                     <input type="hidden" name="Testimonial" value="<?php echo $row1['testimonial']; ?>">
-                                                    <input type="hidden" name="date" value="<?php echo $row1['date']; ?>">
-                                                    <input type="hidden" name="Extra_space" value="<?php echo $row1['extra_space']; ?>">
-                                                    <input type="hidden" name="show" value="<?php echo $row1['show']; ?>">
+                                                    <input type="hidden" name="date" value="<?php echo $row1['tripdate']; ?>">
                                                     <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
                                                   <button type="submit" value="Submit" Style="margin-top:5px;">Edit</button>
                                                 </form>

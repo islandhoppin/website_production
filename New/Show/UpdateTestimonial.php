@@ -16,8 +16,6 @@
         $Headline = $_POST["Headline"];
         $Testimonial = $_POST["Testimonial"];
         $tripdate = $_POST["date"];
-        $Extra_space = $_POST["Extra_space"];
-        $show = $_POST["show"];
         
     }
     
@@ -69,22 +67,26 @@
 									<section>
 									<header><h2>Edit Data Fields</h2></header>
                                     <form action = "../Alter/update.php" method = "post" enctype="multipart/form-data">
-        		                        <header><h3>Header</h3></header>
-                                        <input type="text" name="Header" value = "<?php echo $Header;?>">
-                                        <header style="margin-top:25px;"><h3>Update Text</h3></header>
-                                        <textarea type="text" name="update"  rows="6" cols="30"><?php echo $Update;?></textarea>
-                                        <header style="margin-top:25px;"><h3>Url</h3></header> 
-                                        <input type="text" name="IMAGE" value = "<?php echo $Image;?>">
-                                        <header style="margin-top:25px;"><h3>File Upload</h3></header>
-                                        <input type="file" name="photo" id="fileSelect">
-                                        <p><strong>Note:</strong> Only .jpg, .jpeg, .gif, .png formats allowed to a max size of 5 MB.</p>
-                                        <header style="margin-top:25px;"><h3>Was a New File Upload?</h3></header>
-                                        <select name="UPDATE">
-                                          <option value="No">No</option>
-                                          <option value="Yes">Yes</option>
-                                        </select>
+        		                        <header><h3>Family_Name</h3></header>
+                                        <input type="text" name="family_name" value = "<?php echo $title;?>">
+        		                        <header><h3>HeadLine</h3></header>
+                                        <textarea type="text" name="update"  rows="3" cols="30"><?php echo $Headline;?></textarea>
+                                        <input type="text" name="Header" value = "<?php echo $Headline;?>">
+                                        <header style="margin-top:25px;"><h3>Update Testimonial</h3></header>
+                                        <textarea type="text" name="update"  rows="6" cols="30"><?php echo $Testimonial;?></textarea>
+
                                         <header style="margin-top:25px;"><h3>Date</h3></header>
                                         <input type="text" name="date" value = "<?php echo $tripdate;?>">
+                                        <header style="margin-top:25px;"><h3>Extra Space Flag</h3></header>
+                                        <select name="line_break">
+                                          <option value='1'>Yes</option>
+                                          <option value='0'>No</option>
+                                        </select>
+                                        <header style="margin-top:25px;"><h3>Show</h3></header>
+                                        <select name="show">
+                                          <option value="Yes">Yes</option>
+                                          <option value="No">No</option>
+                                        </select>
                                         <br />
                                         <input type="hidden" name="id" value = "<?php echo $id;?>">
                                         <input type="hidden" name="table" value = "<?php echo $table;?>">
