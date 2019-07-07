@@ -44,14 +44,6 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!-- https://quilljs.com/docs/download/-->
 		<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-		
-		<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-		<script>
-			 var quill = new Quill('#editor', {
-			    theme: 'snow'
-			 });
-		</script>
-
 
 	</head>
 	
@@ -79,7 +71,14 @@
                                         <header style="margin-top:25px;"><h3>Headline</h3></header>
                                         <textarea type="text" name="head_line"  rows="3" cols="30"></textarea>
                                         <header style="margin-top:25px;"><h3>Testimonial</h3></header>
-                                        <textarea type="text" name="testimonial_text" id="editor"></textarea>
+                                        <!-- Create the toolbar container -->
+										<div id="toolbar">
+										  <button class="ql-bold">Bold</button>
+										  <button class="ql-italic">Italic</button>
+										  <button class="ql-underline">Underline</button>
+										</div>
+										<div id="quillArea"></div>
+										<textarea name="testimonial_text" style="display:none" id="hiddenArea"></textarea>
                                         
                                         <header style="margin-top:25px;"><h3>Extra Space Flag</h3></header>
                                         <select name="line_break">
@@ -239,6 +238,14 @@
 			<script src="/assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="/assets/js/main.js"></script>
+			<!-- Include the Quill library -->
+			<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+			<!-- Initialize Quill editor -->
+			<script>
+				 var quill = new Quill('#editor', {
+				    theme: 'snow'
+				 });
+			</script>
 
 	</body>
 </html>

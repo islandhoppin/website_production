@@ -70,10 +70,9 @@
         		                        <header><h3>Family_Name</h3></header>
                                         <input type="text" name="family_name" value = "<?php echo $title;?>">
         		                        <header><h3>HeadLine</h3></header>
-                                        <textarea type="text" name="update"  rows="3" cols="30"><?php echo $Headline;?></textarea>
-                                        <input type="text" name="Header" value = "<?php echo $Headline;?>">
+                                        <textarea type="text" name="head_line"  rows="3" cols="30"><?php echo $Headline;?></textarea>
                                         <header style="margin-top:25px;"><h3>Update Testimonial</h3></header>
-                                        <textarea type="text" name="update"  rows="6" cols="30"><?php echo $Testimonial;?></textarea>
+                                        <textarea type="text" name="testimonial_text"  rows="6" cols="30"><?php echo $Testimonial;?></textarea>
 
                                         <header style="margin-top:25px;"><h3>Date</h3></header>
                                         <input type="text" name="date" value = "<?php echo $tripdate;?>">
