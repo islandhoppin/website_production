@@ -15,7 +15,7 @@
         $title = $_POST["Title"];
         $Headline = $_POST["Headline"];
         $Testimonial = $_POST["Testimonial"];
-        $Date = $_POST["date"];
+        $tripdate = $_POST["date"];
         $Extra_space = $_POST["Extra_space"];
         $show = $_POST["show"];
         
@@ -84,7 +84,7 @@
                                           <option value="Yes">Yes</option>
                                         </select>
                                         <header style="margin-top:25px;"><h3>Date</h3></header>
-                                        <input type="text" name="date" value = "<?php echo $Date;?>">
+                                        <input type="text" name="date" value = "<?php echo $tripdate;?>">
                                         <br />
                                         <input type="hidden" name="id" value = "<?php echo $id;?>">
                                         <input type="hidden" name="table" value = "<?php echo $table;?>">
