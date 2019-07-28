@@ -573,13 +573,14 @@
 													$remaining = 250 - strlen($starting);
 													echo ellipsis($text,$remaining);
 												?>
-												<div id="#ex<?php echo $row5['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
-												  <p><?php echo $row5['testimonial']; ?></p>
-												  <a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
-												  <subscript style="text-align: center;">© Island Hoppin' 2019. All rights reserved</subscript>
-												</div>
+
 												</p>
-												<a href="#ex1" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
+												<a href="#ex<?php echo $row5['testimonial_id'];?>" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
+											</div>
+											<div id="#ex<?php echo $row5['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
+												<p><?php echo $row5['testimonial']; ?></p>
+												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
+												<subscript style="text-align: center;">© Island Hoppin' 2019. All rights reserved</subscript>
 											</div>
 										</article>
 									<?php endwhile ?>
