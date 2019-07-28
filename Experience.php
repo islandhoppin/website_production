@@ -571,13 +571,16 @@
 													<?php
 														$starting = $row5['headline'];
 														$text = $row5['testimonial'];
-														$remaining = 250 - strlen($starting);
+														if ($row5['extra_space'] == '1'){
+															$remaining = 260 - strlen($starting);
+														}
+														else{
+															$remaining = 250 - strlen($starting);
+															
+														}
 														echo ellipsis($text,$remaining);
 													?> 
 												</p>
-												<?php if ($row5['extra_space'] == '1') : ?>
-												<br />
-												<?php endif; ?>
 												<a href="#ex<?php echo $row5['testimonial_id'];?>" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
 											</div>
 											<div id="#ex<?php echo $row5['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
