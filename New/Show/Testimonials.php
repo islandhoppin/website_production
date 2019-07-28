@@ -174,6 +174,11 @@
 				    	</div>
 				    	<div>
 				    		<?php while( $row2 = $testimonials->fetch()) : ?>
+									<p><?php echo $row2['testimonial']; ?></p>
+							<?php endwhile ?>	
+				    	</div>
+				    	<div>
+				    		<?php while( $row2 = $testimonials->fetch()) : ?>
 	                            <div id="ex<?php echo $row2['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
 									<p><?php echo $row2['testimonial']; ?></p>
 									<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
