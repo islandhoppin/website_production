@@ -72,7 +72,7 @@
 									<header><h2>Add Customer Testimonial</h2></header>
                                     <form action = "../Alter/submit.php" method = "post" enctype="multipart/form-data">
         		                        <header><h3>Family_Name</h3></header>
-                                        <input type="text" name="family_name" placeholder="An Island Hoppin' Customer">
+                                        <input type="text" name="family_name" value="An Island Hoppin' Customer">
                                         <header style="margin-top:25px;"><h3>Headline</h3></header>
                                         <textarea type="text" name="head_line"  rows="3" cols="30"></textarea>
                                         <header style="margin-top:25px;"><h3>Testimonial</h3></header>
