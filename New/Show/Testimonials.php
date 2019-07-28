@@ -145,7 +145,7 @@
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['title']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['headline']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><a href="#ex<?php echo $row1['testimonial_id'];?>" rel="modal:open">Click to Preview</a></td>
-                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row1['date']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row1['tripdate']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['extra_space']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['show']; ?></td>
                                             <td border=1 style='border: 1px solid #000000; text-align:center;'>
