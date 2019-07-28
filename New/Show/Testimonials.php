@@ -27,6 +27,11 @@
 	<head>
 		<!-- Global Site Tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107335403-1"></script>
+		<!-- Remember to include jQuery :) -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+		<!-- jQuery Modal -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 		<script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments)};
@@ -165,9 +170,9 @@
                                         <?php endwhile ?>
                                         
                                         <?php while( $row2 = $testimonials->fetch()) : ?>
-	                                        <div id="ex<?php echo $row2['testimonial_id'];?>" class="modal">
+	                                        <div id="ex<?php echo $row2['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
 												<p><?php echo $row2['testimonial']; ?></p>
-												<a href="#" rel="modal:close">Close</a>
+												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
 											</div>
 										<?php endwhile ?>	
                                     </tbody>
