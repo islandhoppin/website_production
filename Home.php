@@ -134,7 +134,7 @@
 							<header>
 								<h3><a href="Crew.html#meet">Meet the Crew</a></h3>
 							</header>
-							<p>Meet Captain Jamie & Chef Susannah, The Best of the Virgin Islands</p>
+							<p>Meet Captain Taylor & Chef Margaret, The Best of the Virgin Islands</p>
 						</article>
 						
 						<article>
@@ -285,7 +285,7 @@
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Island Hoppin' 2018. All rights reserved.</li>
+											<li>&copy; Island Hoppin' 2019. All rights reserved.</li>
 										</ul>
 									</div>
 							</div>
