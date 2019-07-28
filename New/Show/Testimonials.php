@@ -143,6 +143,10 @@
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['title']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['headline']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><a href="#ex<?php echo $row1['testimonial_id'];?>" rel="modal:open">Click to Preview</a></td>
+                                            <div id="ex<?php echo $row1['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
+												<p><?php echo $row1['testimonial']; ?></p>
+												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
+											</div>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['tripdate']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['extra_space']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['show']; ?></td>
