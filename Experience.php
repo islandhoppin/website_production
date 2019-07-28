@@ -573,10 +573,10 @@
 														$text = $row5['testimonial'];
 														$remaining = 250 - strlen($starting);
 														echo ellipsis($text,$remaining);
-													?> <?php echo $row5['extra_space'];?>
+													?> 
 												</p>
 												<?php if ($row5['extra_space'] == '1') : ?>
-												<p>testing</p>
+												<br />
 												<?php endif; ?>
 												<a href="#ex<?php echo $row5['testimonial_id'];?>" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
 											</div>
