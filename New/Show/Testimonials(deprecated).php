@@ -55,13 +55,13 @@
 						    <header style="text-align:center;">
 								<h2>Admin Content Manager - Island Hoppin'</h2>
 								<p>
-									<a href="http://islandhoppincharters.com/New/Content.php?INTERNAL=<?php echo $onPage?>">Go to the Admin Screen</a>
+									<a href="../Content.php?INTERNAL=<?php echo $onPage?>">Go to the Admin Screen</a>
 								</p>
 							</header>
 							<div class="8u 12u(mobile)" id="content" style="margin-top:-50px;">
 								<article id="main">
 									<section>
-									<header><h2>Add Customer Testimonial</h2></header>
+									<header><h2>(Deprecated) Add Customer Testimonial</h2></header>
                                     <form action = "../Alter/submit.php" method = "post" enctype="multipart/form-data">
         		                        <header><h3>Header</h3></header>
                                         <input type="text" name="Header">
@@ -103,7 +103,7 @@
 						<div class="row 200%">
 				        <div class="11u 12u(mobile) important(mobile)" id="content">
 				                <article id="main">
-				                    <h2 style="text-align: center;">Customer Testimonials</h2>
+				                    <h2 style="text-align: center;">(Deprecated)Customer Testimonials</h2>
 				                    <table cellpadding='3' border=1 style='border-collapse:collapse;width:100%;border: 1px solid #000000;'>
                                     <thead>
                                         <tr cellpadding='3' border=1 style='border-collapse:collapse;width:100%;border: 1px solid #000000;'>
