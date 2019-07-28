@@ -145,7 +145,7 @@
                                             <td border=1 style='border: 1px solid #000000;'><a href="#ex<?php echo $row1['testimonial_id'];?>" rel="modal:open">Click to Preview</a></td>
                                             <div id="ex<?php echo $row1['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
 												<p><?php echo $row1['testimonial']; ?></p>
-												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
+												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="../../images/logo.png" alt="" /></a>
 											</div>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['tripdate']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['extra_space']; ?></td>
@@ -178,10 +178,10 @@
 				    	</div>
 
 				    	<div>
-				    		<?php foreach($testimonials as $row2) { ?>
-	                            <div id="ex<?php echo $row2['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
-									<p><?php echo $row2['testimonial']; ?></p>
-									<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
+				    		<?php foreach($row1 as $rows) { ?>
+	                            <div id="ex<?php echo $rows['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
+									<p><?php echo $rows['testimonial']; ?></p>
+									<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="../../images/logo.png" alt="" /></a>
 								</div> 
 							<?php } ?>
 				    	</div>
