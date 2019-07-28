@@ -176,15 +176,6 @@
 				                </article>
 				        </div>
 				    	</div>
-
-				    	<div>
-				    		<?php foreach($row1 as $rows) { ?>
-	                            <div id="ex<?php echo $rows['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
-									<p><?php echo $rows['testimonial']; ?></p>
-									<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="../../images/logo.png" alt="" /></a>
-								</div> 
-							<?php } ?>
-				    	</div>
 					</div>
 				</div>
 
