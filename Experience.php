@@ -567,15 +567,15 @@
 												
 												<hr style="margin-top:-50px;" />
 												<h4 style="margin-top:-50px;"> <?php echo $row5['headline']; ?></h3>
-												<p style="text-align: center; line-height: 1.25em"> <?php
-													$starting = $row5['headline'];
-													$text = $row5['testimonial'];
-													$remaining = 250 - strlen($starting);
-													echo ellipsis($text,$remaining);
-												?>
-
+												<p style="text-align: center; line-height: 1.25em"> 
+													<?php
+														$starting = $row5['headline'];
+														$text = $row5['testimonial'];
+														$remaining = 250 - strlen($starting);
+														echo ellipsis($text,$remaining);
+													?>
 												</p>
-												<?php if ($extra_space == 1) : ?>
+												<?php if ($extra_space == "1") : ?>
 												<p>testing</p>
 												<?php endif; ?>
 												<a href="#ex<?php echo $row5['testimonial_id'];?>" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
