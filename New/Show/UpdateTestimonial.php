@@ -87,7 +87,7 @@
                                         </select>
                                         <br />
                                         <input type="hidden" name="id" value = "<?php echo $id;?>">
-                                        <input type="hidden" name="table" value = "Testimonials">
+                                        <input type="hidden" name="table" value = "testimonials">
                                         <input type="hidden" name="INTERNAL" value = "<?php echo $verifyCode;?>">
                                         <input type="submit" value="Submit">
                                     </form>
