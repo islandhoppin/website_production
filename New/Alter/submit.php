@@ -53,7 +53,7 @@ if ($verifyCode == $onPage){
     		$title = pg_escape_string($_POST["family_name"]);
     		$headline = pg_escape_string($_POST["head_line"]);
     		$testimonial = $_POST["testimonial_text"];
-    		$today = date("F j, Y");
+    		$today = pg_escape_string($_POST["date"]);
     		$extra_space = $_POST["line_break"];
     		$show = pg_escape_string($_POST["show"]);
     		$query = "INSERT INTO testimonials (title, headline, testimonial, tripdate, extra_space, show) VALUES ('$title', '$headline', '$testimonial', '$today', '$extra_space', '$show')";
