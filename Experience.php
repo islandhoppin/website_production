@@ -575,9 +575,9 @@
 												?>
 
 												</p>
-												<?php if ($extra_space == 1){
-													<br />
-												} ?>
+												<?php if ($extra_space == 1) : ?>
+												<br />
+												<?php endif; ?>
 												<a href="#ex<?php echo $row5['testimonial_id'];?>" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
 											</div>
 											<div id="#ex<?php echo $row5['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
