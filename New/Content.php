@@ -50,7 +50,7 @@
 						    <header style="text-align:center;">
 								<h2>Admin Content Manager - Island Hoppin'</h2>
 								<p>
-									<a href="http://islandhoppincharters.com">Go to the Home Screen</a>
+									<a href="../Home.php">Go to the Home Screen</a>
 								</p>
 							</header>
 							
