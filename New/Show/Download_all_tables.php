@@ -71,7 +71,7 @@
 						    <header style="text-align:center;">
 								<h2>Admin Content Manager - Island Hoppin'</h2>
 								<p>
-									<a href="http://islandhoppincharters.com/New/Content.php?INTERNAL=<?php echo $onPage?>">Go to the Admin Screen</a>
+									<a href="../Content.php?INTERNAL=<?php echo $onPage?>">Go to the Admin Screen</a>
 								</p>
 							</header>
 						</div>				
@@ -365,7 +365,7 @@
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Island Hoppin' 2017. All rights reserved.</li>
+											<li>&copy; Island Hoppin' 2019. All rights reserved.</li>
 										</ul>
 									</div>
 							</div>

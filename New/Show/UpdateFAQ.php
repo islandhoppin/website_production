@@ -57,7 +57,7 @@
 						    <header style="text-align:center;">
 								<h2>Admin Content Manager - Island Hoppin'</h2>
 								<p>
-									<a href="http://islandhoppincharters.com/New/Content.php?INTERNAL=<?php echo $onPage?>">Go to the Admin Screen</a>
+									<a href="../Content.php?INTERNAL=<?php echo $onPage?>">Go to the Admin Screen</a>
 								</p>
 							</header>
 							<div class="8u 12u(mobile)" id="content" style="margin-top:-50px;">
