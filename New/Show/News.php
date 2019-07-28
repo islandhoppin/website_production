@@ -125,7 +125,7 @@
                                             <td border=1 style='border: 1px solid #000000;'><a href="<?php echo $row2['image']; ?>" target="_blank">Click to Preview</a></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row2['blank_1']; ?></td>
                                             <td border=1 style='border: 1px solid #000000; text-align:center;'>
-                                            	<form action="/New/Show/UpdateNewTut.php" method="post">
+                                            	<form action="/New/Show/UpdateNews.php" method="post">
                                                     <input type="hidden" name="news_id" value="<?php echo $row2['news_id']; ?>">
                                                     <input type="hidden" name="table" value="newsupdates">
                                                     <input type="hidden" name="Header" value="<?php echo $row2['header']; ?>">

@@ -71,14 +71,7 @@
                                         <header style="margin-top:25px;"><h3>Headline</h3></header>
                                         <textarea type="text" name="head_line"  rows="3" cols="30"></textarea>
                                         <header style="margin-top:25px;"><h3>Testimonial</h3></header>
-                                        <!-- Create the toolbar container -->
-										<div id="toolbar">
-										  <button class="ql-bold">Bold</button>
-										  <button class="ql-italic">Italic</button>
-										  <button class="ql-underline">Underline</button>
-										</div>
-										<div id="quillArea"></div>
-										<textarea name="testimonial_text" style="display:none" id="hiddenArea"></textarea>
+										<textarea type="text" name="testimonial_text"  rows="6" cols="30"></textarea>
                                         
                                         <header style="margin-top:25px;"><h3>Extra Space Flag</h3></header>
                                         <select name="line_break">
