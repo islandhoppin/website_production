@@ -74,7 +74,7 @@
                                         <textarea type="text" name="testimonial_text"  rows="6" cols="30"><?php echo $Testimonial;?></textarea>
 
                                         <header style="margin-top:25px;"><h3>Date</h3></header>
-                                        <input type="text" name="date" value = "<?php echo $tripdate;?>">
+                                        <input type="text" name="tripdate" value = "<?php echo $tripdate;?>">
                                         <header style="margin-top:25px;"><h3>Extra Space Flag</h3></header>
                                         <select name="line_break">
                                           <option value='1'>Yes</option>
