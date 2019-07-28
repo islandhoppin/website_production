@@ -11,7 +11,6 @@
     
     if ($onPage == $verifyCode){
         $id = $_POST["testimonial_id"];
-        $table = $_POST["table"];
         $title = $_POST["Title"];
         $Headline = $_POST["Headline"];
         $Testimonial = $_POST["Testimonial"];
@@ -66,7 +65,7 @@
 								<article id="main">
 									<section>
 									<header><h2>Edit Data Fields</h2></header>
-                                    <form action = "../Alter/update.php" method = "post" enctype="multipart/form-data">
+                                    <form action = "../Alter/update.php" method = "post">
         		                        <header><h3>Family_Name</h3></header>
                                         <input type="text" name="family_name" value = "<?php echo $title;?>">
         		                        <header><h3>HeadLine</h3></header>
@@ -88,7 +87,7 @@
                                         </select>
                                         <br />
                                         <input type="hidden" name="id" value = "<?php echo $id;?>">
-                                        <input type="hidden" name="table" value = "<?php echo $table;?>">
+                                        <input type="hidden" name="table" value = "Testimonials">
                                         <input type="hidden" name="INTERNAL" value = "<?php echo $verifyCode;?>">
                                         <input type="submit" value="Submit">
                                     </form>
