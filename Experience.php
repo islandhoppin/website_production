@@ -566,7 +566,6 @@
 												<h3 style="vertical-align: center;"><?php echo $row5['title']; ?></h4>
 												<h4 style="padding-top:10px;">Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
 												<br> <subscript style="text-align: center; margin-top:-50px;"><?php echo $row5['tripdate']; ?></subscript>
-												
 												<hr style="margin-top:-50px;" />
 												<div class="hideoffscreen">
 													<h4 style="margin-top:-50px;"> <?php echo $row5['headline']; ?></h3>
@@ -587,10 +586,9 @@
 												</div>
 												<a href="#ex<?php echo $row5['testimonial_id'];?>" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
 											</div>
-											<div id="#ex<?php echo $row5['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
+											<div id="ex<?php echo $row5['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
 												<p><?php echo $row5['testimonial']; ?></p>
 												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
-												<subscript style="text-align: center;">© Island Hoppin' 2019. All rights reserved</subscript>
 											</div>
 										</article>
 									<?php endwhile ?>
