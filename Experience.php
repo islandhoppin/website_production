@@ -70,7 +70,9 @@
 			  display: table;
 			  clear: both;
 			}
-
+		@media all and (max-width: 737px) {
+		    .hideoffscreen { display: none; }
+		}
 		</style>
 		<meta name="description" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
 		<meta name="robots" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
@@ -566,21 +568,23 @@
 												<br> <subscript style="text-align: center; margin-top:-50px;"><?php echo $row5['tripdate']; ?></subscript>
 												
 												<hr style="margin-top:-50px;" />
-												<h4 style="margin-top:-50px;"> <?php echo $row5['headline']; ?></h3>
-												<p style="text-align: center; line-height: 1.25em"> 
-													<?php
-														$starting = $row5['headline'];
-														$text = $row5['testimonial'];
-														if ($row5['extra_space'] == '1'){
-															$remaining = 260 - strlen($starting);
-														}
-														else{
-															$remaining = 250 - strlen($starting);
-															
-														}
-														echo ellipsis($text,$remaining);
-													?> 
-												</p>
+												<div class="hideoffscreen">
+													<h4 style="margin-top:-50px;"> <?php echo $row5['headline']; ?></h3>
+													<p style="text-align: center; line-height: 1.25em"> 
+														<?php
+															$starting = $row5['headline'];
+															$text = $row5['testimonial'];
+															if ($row5['extra_space'] == '1'){
+																$remaining = 260 - strlen($starting);
+															}
+															else{
+																$remaining = 250 - strlen($starting);
+																
+															}
+															echo ellipsis($text,$remaining);
+														?> 
+													</p>
+												</div>
 												<a href="#ex<?php echo $row5['testimonial_id'];?>" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
 											</div>
 											<div id="#ex<?php echo $row5['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
