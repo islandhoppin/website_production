@@ -76,6 +76,12 @@
 		@media all and (max-width: 737px) {
 		    .hideoffscreen { display: none; }
 		}
+		
+		@media (min-width: 700px) {
+   			.modal-size {
+      			width: 90%; 
+   			}
+		}
 		</style>
 		<meta name="description" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
 		<meta name="robots" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
@@ -589,7 +595,7 @@
 												</div>
 												<a href="#ex<?php echo $row5['testimonial_id'];?>" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
 											</div>
-											<div id="ex<?php echo $row5['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
+											<div id="ex<?php echo $row5['testimonial_id'];?>" class="modal modal-size" style="background-color:#E5F5FA;">
 												<p><?php echo $row5['testimonial']; ?></p>
 												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
 											</div>
