@@ -78,7 +78,7 @@
                                         <header style="margin-top:25px;"><h3>Testimonial</h3></header>
 										<textarea type="text" name="testimonial_text"  rows="6" cols="30"></textarea>
 										<header style="margin-top:25px;"><h3>Crew</h3></header>
-                                        <textarea type="text" name="crew_name"  rows="2" cols="30"></textarea>
+                                        <input type="text" name="crew_name" value="Taylor & Margaret">
                                         <header style="margin-top:25px;"><h3>Date</h3></header>
                                         <input type="text" name="date" placeholder = "Month - Year">
                                         <header style="margin-top:25px;"><h3>Extra Space Flag</h3></header>
@@ -150,7 +150,7 @@
 												<p><?php echo $row1['testimonial']; ?></p>
 												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="../../images/logo.png" alt="" /></a>
 											</div>
-											td border=1 style='border: 1px solid #000000;'><?php echo $row1['crew']; ?></td>
+											<td border=1 style='border: 1px solid #000000;'><?php echo $row1['crew']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['tripdate']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['extra_space']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['show']; ?></td>
