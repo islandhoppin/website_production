@@ -11,7 +11,7 @@
     if ($onPage == $verifyCode){
         require '../connection.inc.php'; 
         // This is a prepared statement, not necessary with this simple query with no variables, but anyway...
-    	$testimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, tripdate, extra_space, show FROM testimonials ORDER BY testimonial_id ASC") ; 
+    	$testimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, crew, tripdate, extra_space, show FROM testimonials ORDER BY testimonial_id ASC") ; 
     	// Execute the query, if there were variables, they could be bound within the brackets
     	$testimonials->execute() ;
     }
@@ -77,6 +77,8 @@
                                         <textarea type="text" name="head_line"  rows="3" cols="30"></textarea>
                                         <header style="margin-top:25px;"><h3>Testimonial</h3></header>
 										<textarea type="text" name="testimonial_text"  rows="6" cols="30"></textarea>
+										<header style="margin-top:25px;"><h3>Crew</h3></header>
+                                        <textarea type="text" name="crew_name"  rows="2" cols="30"></textarea>
                                         <header style="margin-top:25px;"><h3>Date</h3></header>
                                         <input type="text" name="date" placeholder = "Month - Year">
                                         <header style="margin-top:25px;"><h3>Extra Space Flag</h3></header>
@@ -128,6 +130,7 @@
                                             <th border=1 style='border: 1px solid #000000;'>Title</th>
                                             <th border=1 style='border: 1px solid #000000;'>Headline</th>
                                             <th border=1 style='border: 1px solid #000000;'>Testimonial</th>
+                                            <th border=1 style='border: 1px solid #000000;'>Crew</th>
                                             <th border=1 style='border: 1px solid #000000;'>Date</th>
                                             <th border=1 style='border: 1px solid #000000;'>Space Flag</th>
                                             <th border=1 style='border: 1px solid #000000;'>Show</th>
@@ -147,6 +150,7 @@
 												<p><?php echo $row1['testimonial']; ?></p>
 												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="../../images/logo.png" alt="" /></a>
 											</div>
+											td border=1 style='border: 1px solid #000000;'><?php echo $row1['crew']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['tripdate']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['extra_space']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['show']; ?></td>
@@ -157,6 +161,7 @@
                                                     <input type="hidden" name="Title" value="<?php echo $row1['title']; ?>">
                                                     <input type="hidden" name="Headline" value="<?php echo $row1['headline']; ?>">
                                                     <input type="hidden" name="Testimonial" value="<?php echo $row1['testimonial']; ?>">
+                                                    <input type="hidden" name="Crew" value="<?php echo $row1['crew']; ?>">
                                                     <input type="hidden" name="date" value="<?php echo $row1['tripdate']; ?>">
                                                     <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
                                                   <button type="submit" value="Submit" Style="margin-top:5px;">Edit</button>

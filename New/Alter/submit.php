@@ -52,11 +52,12 @@ if ($verifyCode == $onPage){
     	if ($table == "testimonials"){
     		$title = pg_escape_string($_POST["family_name"]);
     		$headline = pg_escape_string($_POST["head_line"]);
-    		$testimonial = $_POST["testimonial_text"];
+    		$testimonial = pg_escape_string($_POST["testimonial_text"]);
+    		$crew = pg_escape_string($_POST["crew_name"]);
     		$today = pg_escape_string($_POST["date"]);
     		$extra_space = $_POST["line_break"];
     		$show = pg_escape_string($_POST["show"]);
-    		$query = "INSERT INTO testimonials (title, headline, testimonial, tripdate, extra_space, show) VALUES ('$title', '$headline', '$testimonial', '$today', '$extra_space', '$show')";
+    		$query = "INSERT INTO testimonials (title, headline, testimonial, crew, tripdate, extra_space, show) VALUES ('$title', '$headline', '$testimonial', '$crew', $today', '$extra_space', '$show')";
     	}
     	if ($table == "faqList"){
     		$question = pg_escape_string($_POST["question"]);

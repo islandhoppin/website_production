@@ -72,7 +72,8 @@
                                         <textarea type="text" name="head_line"  rows="3" cols="30"><?php echo $Headline;?></textarea>
                                         <header style="margin-top:25px;"><h3>Update Testimonial</h3></header>
                                         <textarea type="text" name="testimonial_text"  rows="6" cols="30"><?php echo $Testimonial;?></textarea>
-
+										<header style="margin-top:25px;"><h3>Crew</h3></header>
+                                        <textarea type="text" name="crew_name"  rows="2" cols="30"><?php echo $Crew;?></textarea>
                                         <header style="margin-top:25px;"><h3>Date</h3></header>
                                         <input type="text" name="tripdate" value = "<?php echo $tripdate;?>">
                                         <header style="margin-top:25px;"><h3>Extra Space Flag</h3></header>
