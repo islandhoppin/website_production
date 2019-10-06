@@ -596,15 +596,20 @@
 												<a href="#ex<?php echo $row5['testimonial_id'];?>" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
 											</div>
 											<div id="ex<?php echo $row5['testimonial_id'];?>" class="modal modal-size" style="background-color:#E5F5FA;">
-												<h3 style="text-algin: left">Guest: </h3><p><?php echo $row5['title']; ?></p>
+												<h3 style="text-algin: left">Guest: </h3><p style="text-algin: left"><?php echo $row5['title']; ?></p>
 												<br />
 												<h3 style="text-algin: left">Trip Date: </h3><p><?php echo $row5['tripdate']; ?></p>
 												<br />
 												<h3 style="text-algin: left">Crew: </h3><p><?php echo $row5['crew']; ?></p>
-												<hr />
+												<hr style="margin-top:-50px;" />
 												<p><?php echo $row5['testimonial']; ?></p>
-												<hr />
+												<hr style="margin-top:-50px;" />
 												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
+													<div class="copyright">
+														<ul class="menu">
+															<li>&copy; Island Hoppin' 2019. All rights reserved.</li>
+														</ul>
+													</div>
 											</div>
 										</article>
 									<?php endwhile ?>
