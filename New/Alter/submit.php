@@ -57,7 +57,7 @@ if ($verifyCode == $onPage){
     		$today = pg_escape_string($_POST["date"]);
     		$extra_space = $_POST["line_break"];
     		$show = pg_escape_string($_POST["show"]);
-    		$query = "INSERT INTO testimonials (title, headline, testimonial, crew, tripdate, extra_space, show) VALUES ('$title', '$headline', '$testimonial', '$crew', $today', '$extra_space', '$show')";
+    		$query = "INSERT INTO testimonials (title, headline, testimonial, crew, tripdate, extra_space, show) VALUES ('$title', '$headline', '$testimonial', '$crew', '$today', '$extra_space', '$show')";
     	}
     	if ($table == "faqList"){
     		$question = pg_escape_string($_POST["question"]);
