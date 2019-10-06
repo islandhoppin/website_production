@@ -14,6 +14,7 @@
         $title = $_POST["Title"];
         $Headline = $_POST["Headline"];
         $Testimonial = $_POST["Testimonial"];
+        $Crew = $_POST["Crew"];
         $tripdate = $_POST["date"];
         
     }
