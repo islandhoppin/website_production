@@ -1,7 +1,7 @@
 <?php     
 	require 'New/connection.inc.php'; 
       // This is a prepared statement, not necessary with this simple query with no variables, but anyway...
-	$testimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, tripdate, extra_space, show FROM testimonials ORDER BY testimonial_id DESC") ;
+	$testimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, crew, tripdate, extra_space, show FROM testimonials ORDER BY testimonial_id DESC") ;
 	$sqlfood = $dbconn->prepare("Select food_id, food_title, show, image, blank_1 From food WHERE show = 'Yes' ORDER BY food_id DESC") ; 
 	$sqlcustpics = $dbconn->prepare("Select pic_id, pic_title, show, image, blank_1 From customerpic WHERE show = 'Yes' ORDER BY pic_id DESC") ; 
 	$sqlcustvids = $dbconn->prepare("Select vid_id, vid_title, show, video_link, image, blank_1 From customervid WHERE show = 'Yes' ORDER BY vid_id DESC") ; 
@@ -596,7 +596,14 @@
 												<a href="#ex<?php echo $row5['testimonial_id'];?>" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
 											</div>
 											<div id="ex<?php echo $row5['testimonial_id'];?>" class="modal modal-size" style="background-color:#E5F5FA;">
+												<h3 style="text-algin: left">Guest: </h3><p><?php echo $row5['title']; ?></p>
+												<br />
+												<h3 style="text-algin: left">Trip Date: </h3><p><?php echo $row5['tripdate']; ?></p>
+												<br />
+												<h3 style="text-algin: left">Crew: </h3><p><?php echo $row5['crew']; ?></p>
+												<hr />
 												<p><?php echo $row5['testimonial']; ?></p>
+												<hr />
 												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
 											</div>
 										</article>
