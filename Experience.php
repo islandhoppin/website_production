@@ -605,11 +605,7 @@
 												<p><?php echo $row5['testimonial']; ?></p>
 												<hr style="margin-top:-50px;" />
 												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
-													<div class="copyright">
-														<ul class="menu">
-															<li>&copy; Island Hoppin' 2019. All rights reserved.</li>
-														</ul>
-													</div>
+												<li style="text-align: center;" >&copy; Island Hoppin' 2019. All rights reserved.</li>
 											</div>
 										</article>
 									<?php endwhile ?>
