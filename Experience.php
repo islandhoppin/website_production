@@ -602,7 +602,7 @@
 												<hr style="margin-top:-50px;" />
 												<p style="margin-top:-50px;"><?php echo $row5['testimonial']; ?></p>
 												<hr style="margin-top:-50px;" />
-												<h3 style="text-algin: left">Crew: <?php echo $row5['crew']; ?></h3>
+												<h3 style="text-algin: center; margin-top:-50px;">Crew: <?php echo $row5['crew']; ?></h3>
 												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
 												<p style="text-align: center;" > &copy; Island Hoppin' 2019. All rights reserved.</p>
 											</div>
