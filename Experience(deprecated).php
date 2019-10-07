@@ -10,12 +10,6 @@
     $sqlfood->execute() ;
     $sqlcustpics->execute() ;
     $sqlcustvids->execute() ;
-    function ellipsis($text, $max=100, $append='&hellip;') {
-       if (strlen($text) <= $max) return $text;
-       $out = substr($text,0,$max);
-       if (strpos($text,' ') === FALSE) return $out.$append;
-       return preg_replace('/\w+$/','',$out).$append;
-	}
 ?>
 <!DOCTYPE HTML>
 <!--
@@ -26,12 +20,7 @@
 <html lang="en">
 	<head>
 		<!-- Global Site Tag (gtag.js) - Google Analytics -->
-			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107335403-1"></script>
-		<!-- Remember to include jQuery :) -->
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-		<!-- jQuery Modal -->
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107335403-1"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments)};
@@ -53,6 +42,13 @@
 		<script type="text/javascript">
 			;( function( $ ) {
 			
+				$( '.swipebox' ).swipebox();
+			
+			} )( jQuery );
+		</script>
+		<script type="text/javascript">
+			;( function( $ ) {
+			
 				$( '.swipebox1' ).swipebox();
 			
 			} )( jQuery );
@@ -64,14 +60,6 @@
 			
 			} )( jQuery );
 		</script>
-		<style>
-			.row:after {
-			  content: "";
-			  display: table;
-			  clear: both;
-			}
-
-		</style>
 		<meta name="description" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
 		<meta name="robots" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
 		<meta name="googlebot" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
@@ -557,74 +545,15 @@
 								</header>
 								<section  class="carousel">
 									<div class="reel">
-									
+									<?php while( $row1 = $sqltut->fetch()) : ?>
 										<article>
-											<div>
-												<h3 style="vertical-align: center;">An Island Hoppin' Customer</h4>
-												<h4 style="padding-top:10px;">Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-												<br> <subscript style="text-align: center; margin-top:-50px;">May - 2019</subscript>
-												
-												<hr style="margin-top:-50px;" />
-												<h4 style="margin-top:-50px;"> As Island Hoppin’s first repeat customer, we weren’t sure if the second time could be as amazing as the first visit we had with Jamie and Susannah in 2018 but we had an over the top week.</h3>
-												<p style="text-align: center; line-height: 1.25em"> <?php
-													$starting = "As Island Hoppin’s first repeat customer, we weren’t sure if the second time could be as amazing as the first visit we had with Jamie and Susannah in 2018 but we had an over the top week.";
-													$text = "Thank you again for another amazing vacation aboard Island Hoppin’! As Island Hoppin’s first repeat customer, we weren’t sure if the second time could be as amazing as the first visit we had with Jamie and Susannah in 2018 but we had an over the top week! For all those wondering if they should do a repeat trip, get on it and book now!! This trip was even better than last year’s. All of our adventures were new and unchartered territory. There were so many new, fun experiences in different places, and the “Hotdog” was the perfect addition for lots of laughs. The boat was in tip, top shape and looked just as great as it did last year. Susannah wowed us with terrific new recipes for all meals; Jamie amazed us with amazing new dive sites. Jamie & Susannah, and Island Hoppin’ are a wonderful combination; their care, attentiveness, professionalism, demeanor, and great personalities, together with a beautiful boat, left us with terrific memories and we are ready for the three-peat.";
-													$remaining = 250 - strlen($starting);
-													echo ellipsis($text,$remaining);
-												?>
-												<div id="ex1" class="modal" style="background-color:#00A8B7;">
-												  <p>Thank you again for another amazing vacation aboard Island Hoppin’! As Island Hoppin’s first repeat customer, we weren’t sure if the second time could be as amazing as the first visit we had with Jamie and Susannah in 2018 but we had an over the top week! For all those wondering if they should do a repeat trip, get on it and book now!! This trip was even better than last year’s. All of our adventures were new and unchartered territory. There were so many new, fun experiences in different places, and the “Hotdog” was the perfect addition for lots of laughs. The boat was in tip, top shape and looked just as great as it did last year. Susannah wowed us with terrific new recipes for all meals; Jamie amazed us with amazing new dive sites. Jamie & Susannah, and Island Hoppin’ are a wonderful combination; their care, attentiveness, professionalism, demeanor, and great personalities, together with a beautiful boat, left us with terrific memories and we are ready for the three-peat.</p>
-												  <p>Thank you again for another amazing vacation aboard Island Hoppin’! As Island Hoppin’s first repeat customer, we weren’t sure if the second time could be as amazing as the first visit we had with Jamie and Susannah in 2018 but we had an over the top week! For all those wondering if they should do a repeat trip, get on it and book now!! This trip was even better than last year’s. All of our adventures were new and unchartered territory. There were so many new, fun experiences in different places, and the “Hotdog” was the perfect addition for lots of laughs. The boat was in tip, top shape and looked just as great as it did last year. Susannah wowed us with terrific new recipes for all meals; Jamie amazed us with amazing new dive sites. Jamie & Susannah, and Island Hoppin’ are a wonderful combination; their care, attentiveness, professionalism, demeanor, and great personalities, together with a beautiful boat, left us with terrific memories and we are ready for the three-peat.</p>
-												  <p>Thank you again for another amazing vacation aboard Island Hoppin’! As Island Hoppin’s first repeat customer, we weren’t sure if the second time could be as amazing as the first visit we had with Jamie and Susannah in 2018 but we had an over the top week! For all those wondering if they should do a repeat trip, get on it and book now!! This trip was even better than last year’s. All of our adventures were new and unchartered territory. There were so many new, fun experiences in different places, and the “Hotdog” was the perfect addition for lots of laughs. The boat was in tip, top shape and looked just as great as it did last year. Susannah wowed us with terrific new recipes for all meals; Jamie amazed us with amazing new dive sites. Jamie & Susannah, and Island Hoppin’ are a wonderful combination; their care, attentiveness, professionalism, demeanor, and great personalities, together with a beautiful boat, left us with terrific memories and we are ready for the three-peat.</p>
-												  <a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
-												  <subscript style="text-align: center;">© Island Hoppin' 2019. All rights reserved</subscript>
-												</div>
-												</p>
-												<a href="#ex1" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
-											</div>
+											<a href="<?php echo $row1['image']; ?>" class="swipebox" title="<?php echo $row1['header']; ?> - Date: <?php echo $row1['blank_1']; ?>">
+												<img class="image featured" style="width:290px; height:auto; margin-top:30px" src="<?php echo $row1['image']; ?>" alt="<?php echo $row1['update']; ?>">
+											</a>
 										</article>
-										
-										<article>
-											<div>
-												<h3 style="vertical-align: center;">An Island Hoppin' Customer</h4>
-												<h4 style="padding-top:10px;">Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-												<br> <subscript style="text-align: center; margin-top:-50px;">June - 2019</subscript>
-												
-												<hr style="margin-top:-50px;" />
-												<h4 style="margin-top:-50px;"> We felt like we were meeting two friends as well as our crew.</h3>
-												<p style="text-align: center; line-height: 1.25em"> <?php
-													$starting = "We felt like we were meeting two friends as well as our crew.";
-													$text = "Jamie and Susannah met us when we arrived and quickly rolled all our bags down to the boat. They were friendly and professional all the while getting us quickly onbaord after snapping the first of many pictures for us. They looked sharp as did Island Hoppin'. We were shown to our cabin and told to settle a bit and come up for safety information before we set off. Everything was done to make us feel us welcomed. It was a perfect beginning to a wonderful week long charter. The crew went out of their way to find extra large size 14 fins for one guest. They also gave instruction and encouragement on the use of all equipment. The boat was very comfortable and we loved all the spaces to sun, read, dine or watch Jamie raise the sails. We're sailors so it was fascinating to view all the high tech equipment used for navigation and operating the sails. We had expressed a desire to sail as much as possible and Jamie was as happy as we were to watch the sails fill and the boat respond . There is nothing like the sounds and sights of sailing. Jamie was the perfect combination of professional captain and fun ship mate. We felt like friends all enjoying the same adventure. When time came for getting underway both Susannah and Jamie worked to secure the boat, pull the anchor and set the sails. They did all this easily and without any confusion. They made it look easy . They are fit, capable and knowledgeable. Jamie not only answered every sailing question he gave the guys a tour of the engine room too. They were fascinated by all the operating systems and Jamie gave them a great 'tour.' I have some funny pictures of Jamie standing in the opening and the men looking down into the compartment. We were pleased that our preferences were taken into consideration. Susannah prepared fresh fruit for our breakfast that was sweet and arranged on tray. There was always plenty served and the quality was outstanding. Crisp greens were used for our lunch salads and the dressings were all homemade. Susannah uses ingredients to create some of the best salads we've ever enjoyed. We encoured Sue to write up her recipes so we could attempt to recreate them. We had fish served with salsa's and sauces that were tasty and attractive. Jamie grilled delicious, tender chicken and beef which Susannah served up with roasted vegetables. Each dinner was served by Jamie who would explain what Susannah had created. When we had questions on ingredients Susannah would come out and give us the details on how she'd created our meal. I can't say enough about the quality of our meals. The desserts were amazing. Susannah surprised us with delicous desserts too. Each dinner ended with a sweet indulgence. I think my favorite was the Lemon Souffle served with raspberries. Chocolate brownie with a side of ice cream was Bill's favortie. All desserts were beautifully served too. The attention to detail of each meal served was outstanding. Susannah is an outstanding and competent chef, The food exceeded our expectations. We also were pleased that they prepared our food without excess salt and made sure we had no shellfish on the boat due to one passengers allergy. We have given a lot of thought and can't think of anything that wasn't addressed before we began our charter. The material and suggestions provided answered all our questions. What really helped us was the Facebook Island Hoppin' message board where we could ask Jamie and Susannah questions. They would answer quickly and it felt like we knew them before we even met. They were funny, helpful, and welcoming. All concerns were addressed so we felt completely relaxed and confident that we were going to enjoy an amazing charter. I'd direct future guests to use and view this media. It really gives you a clear picture of the boat, the crew and what to expect. When our cab which by the way Jamie arranged arrived at the marina we right away recognized Susannah and Jamie. We felt like we were meeting two friends as well as our crew.";
-													$remaining = 250 - strlen($starting);
-													echo ellipsis($text,$remaining);
-												?>
-												</p>
-												<br><a href="#modal<?php echo (2);?>" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal"><subscript>Click to read the full review</subscript></a>
-											</div>
-										</article>
-										
-										<article>
-											<div>
-												<h3 style="vertical-align: center;">Natalie and Stephen</h4>
-												<h4 style="padding-top:10px;">Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-												<br> <subscript style="text-align: center; margin-top:-50px;">December - 2018</subscript>
-												
-												<hr style="margin-top:-50px;" />
-												<h4 style="margin-top:-50px;"> I’m afraid we are ruined for sailing aboard anything other than Island Hoppin from here on in.</h3>
-												<p style="text-align: center; line-height: 1.25em"> <?php
-													$starting = "I’m afraid we are ruined for sailing aboard anything other than Island Hoppin from here on in.";
-													$text = "Happy New Year (can we still say that in February???)! Hope you two are doing well and enjoying smooth sailing. We so much enjoyed sailing with you in December... it was just lovely to meet you both! You’re a special couple. I have been meaning to send in this testimonial for weeks and things have just been absolutely insane in the month since we got home... So, work has just slowed down a bit this week and the first thing on my list was to get to writing this review for you... Here goes...";
-													$remaining = 250 - strlen($starting);
-													echo ellipsis($text,$remaining);
-												?>
-												</p>
-												<br><a href="#modal<?php echo (1);?>" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal"><subscript>Click to read the full review</subscript></a>
-											</div>
-										</article>
-											
-									
+									<?php endwhile ?>
 								</section>
-
+								<h3 style="text-align:center;">Click to enlarge photos.</h3>
 							</div>
 							<hr />
 							
@@ -701,7 +630,7 @@
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Island Hoppin' 2019. All rights reserved.</li>
+											<li>&copy; Island Hoppin' 2018. All rights reserved.</li>
 										</ul>
 									</div>
 							</div>

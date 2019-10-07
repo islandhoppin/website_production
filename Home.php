@@ -78,6 +78,7 @@
 										<li><a href="Crew.html#experience" class="scrolly">Experience</a></li>
 										<li><a href="Crew.html#qualifications">Qualifications</a></li>
 										<li><a href="Crew.html#photos">Photos</a></li>
+										<li><a href="Crew.html#past">Past Crews</a></li>
 									</ul>
 								</li>
 								<li>
@@ -130,11 +131,11 @@
 						</article>
 
 						<article>
-							<a href="Crew.html#meet" class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/General/Jamie&Susannah-tall.jpg" alt="Island Hoppin Crew" /></a>
+							<a href="Crew.html#meet" class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Crew/Taylor&Margaret-tall.png" alt="Island Hoppin Crew" /></a>
 							<header>
 								<h3><a href="Crew.html#meet">Meet the Crew</a></h3>
 							</header>
-							<p>Meet Captain Jamie & Chef Susannah, The Best of the Virgin Islands</p>
+							<p>Meet Captain Taylor & Chef Margaret, The Best of the Virgin Islands</p>
 						</article>
 						
 						<article>
@@ -285,7 +286,7 @@
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Island Hoppin' 2018. All rights reserved.</li>
+											<li>&copy; Island Hoppin' 2019. All rights reserved.</li>
 										</ul>
 									</div>
 							</div>

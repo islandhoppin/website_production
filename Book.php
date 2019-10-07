@@ -75,6 +75,7 @@
 										<li><a href="Crew.html#experience">Experience</a></li>
 										<li><a href="Crew.html#qualifications">Qualifications</a></li>
 										<li><a href="Crew.html#photos">Photos</a></li>
+										<li><a href="Crew.html#past">Past Crews</a></li>
 									</ul>
 								</li>
 								<li>
@@ -336,7 +337,7 @@
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Island Hoppin' 2018. All rights reserved.</li>
+											<li>&copy; Island Hoppin' 2019. All rights reserved.</li>
 										</ul>
 									</div>
 							</div>

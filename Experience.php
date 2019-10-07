@@ -1,15 +1,21 @@
 <?php     
 	require 'New/connection.inc.php'; 
       // This is a prepared statement, not necessary with this simple query with no variables, but anyway...
-	$sqltut = $dbconn->prepare("Select news_id, header, update, image, blank_1 From customertut ORDER BY news_id DESC") ; 
+	$testimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, crew, tripdate, extra_space, show FROM testimonials ORDER BY testimonial_id DESC") ;
 	$sqlfood = $dbconn->prepare("Select food_id, food_title, show, image, blank_1 From food WHERE show = 'Yes' ORDER BY food_id DESC") ; 
 	$sqlcustpics = $dbconn->prepare("Select pic_id, pic_title, show, image, blank_1 From customerpic WHERE show = 'Yes' ORDER BY pic_id DESC") ; 
 	$sqlcustvids = $dbconn->prepare("Select vid_id, vid_title, show, video_link, image, blank_1 From customervid WHERE show = 'Yes' ORDER BY vid_id DESC") ; 
       // Execute the query, if there were variables, they could be bound within the brackets
-    $sqltut->execute() ;
+    $testimonials->execute() ;
     $sqlfood->execute() ;
     $sqlcustpics->execute() ;
     $sqlcustvids->execute() ;
+    function ellipsis($text, $max=100, $append='&hellip;') {
+       if (strlen($text) <= $max) return $text;
+       $out = substr($text,0,$max);
+       if (strpos($text,' ') === FALSE) return $out.$append;
+       return preg_replace('/\w+$/','',$out).$append;
+	}
 ?>
 <!DOCTYPE HTML>
 <!--
@@ -20,7 +26,12 @@
 <html lang="en">
 	<head>
 		<!-- Global Site Tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107335403-1"></script>
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107335403-1"></script>
+		<!-- Remember to include jQuery :) -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+		<!-- jQuery Modal -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 		<script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments)};
@@ -42,13 +53,6 @@
 		<script type="text/javascript">
 			;( function( $ ) {
 			
-				$( '.swipebox' ).swipebox();
-			
-			} )( jQuery );
-		</script>
-		<script type="text/javascript">
-			;( function( $ ) {
-			
 				$( '.swipebox1' ).swipebox();
 			
 			} )( jQuery );
@@ -60,6 +64,25 @@
 			
 			} )( jQuery );
 		</script>
+		<style>
+			.row:after {
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
+			.modal {
+				width: 700;
+			}
+		@media all and (max-width: 737px) {
+		    .hideoffscreen { display: none; }
+		}
+		
+		@media (min-width: 700px) {
+   			.modal-size {
+      			width: 90%; 
+   			}
+		}
+		</style>
 		<meta name="description" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
 		<meta name="robots" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
 		<meta name="googlebot" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
@@ -98,6 +121,7 @@
 										<li><a href="Crew.html#experience">Experience</a></li>
 										<li><a href="Crew.html#qualifications">Qualifications</a></li>
 										<li><a href="Crew.html#photos">Photos</a></li>
+										<li><a href="Crew.html#past">Past Crews</a></li>
 									</ul>
 								</li>
 								<li>
@@ -545,15 +569,48 @@
 								</header>
 								<section  class="carousel">
 									<div class="reel">
-									<?php while( $row1 = $sqltut->fetch()) : ?>
+									<?php while( $row5 = $testimonials->fetch()) : ?>
 										<article>
-											<a href="<?php echo $row1['image']; ?>" class="swipebox" title="<?php echo $row1['header']; ?> - Date: <?php echo $row1['blank_1']; ?>">
-												<img class="image featured" style="width:290px; height:auto; margin-top:30px" src="<?php echo $row1['image']; ?>" alt="<?php echo $row1['update']; ?>">
-											</a>
+											<div>
+												<h3 style="vertical-align: center;"><?php echo $row5['title']; ?></h4>
+												<h4 style="padding-top:10px;">Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+												<br> <subscript style="text-align: center; margin-top:-50px;"><?php echo $row5['tripdate']; ?></subscript>
+												<hr style="margin-top:-50px;" />
+												<div class="hideoffscreen">
+													<h4 style="margin-top:-50px;"> <?php echo $row5['headline']; ?></h3>
+													<p style="text-align: center; line-height: 1.25em"> 
+														<?php
+															$starting = $row5['headline'];
+															$text = $row5['testimonial'];
+															if ($row5['extra_space'] == '1'){
+																$remaining = 260 - strlen($starting);
+															}
+															else{
+																$remaining = 250 - strlen($starting);
+																
+															}
+															echo ellipsis($text,$remaining);
+														?> 
+													</p>
+												</div>
+												<a href="#ex<?php echo $row5['testimonial_id'];?>" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
+											</div>
+											<div id="ex<?php echo $row5['testimonial_id'];?>" class="modal modal-size" style="background-color:#E5F5FA;">
+												<h3 style="text-align: center;">Guest Name: <?php echo $row5['title']; ?></h3>
+												<br />
+												<h3 style="text-align: center;">Trip Date: <?php echo $row5['tripdate']; ?></h3>
+												<hr style="margin-top:-50px;" />
+												<p style="margin-top:-50px;"><?php echo $row5['testimonial']; ?></p>
+												<p style="text-align: center;">Crew: <?php echo $row5['crew']; ?></p>
+												<hr style="margin-top:-50px;" />
+												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
+												<p style="text-align: center;" > &copy; Island Hoppin' 2019. All rights reserved.</p>
+											</div>
 										</article>
 									<?php endwhile ?>
+										
 								</section>
-								<h3 style="text-align:center;">Click to enlarge photos.</h3>
+
 							</div>
 							<hr />
 							
@@ -630,7 +687,7 @@
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Island Hoppin' 2018. All rights reserved.</li>
+											<li>&copy; Island Hoppin' 2019. All rights reserved.</li>
 										</ul>
 									</div>
 							</div>

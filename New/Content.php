@@ -50,7 +50,7 @@
 						    <header style="text-align:center;">
 								<h2>Admin Content Manager - Island Hoppin'</h2>
 								<p>
-									<a href="http://islandhoppincharters.com">Go to the Home Screen</a>
+									<a href="../Home.php">Go to the Home Screen</a>
 								</p>
 							</header>
 							
@@ -65,22 +65,14 @@
                                                     <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
                                                   <button type="submit" value="Submit" class="button" Style="margin-top:5px; margin-bottom:5px;">Edit News</button>
                                         </form>
-                                        <br />
                                         <form action="/New/Show/Testimonials.php" method="post" style="text-align: center;">
                                                     <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
                                                   <button type="submit" value="Submit" class="button" Style="margin-top:5px; margin-bottom:5px;">Edit Testimonials</button>
                                         </form>
-                                        <br />
-                                        <form action="/New/Show/Testimonials1.php" method="post" style="text-align: center;">
-                                                    <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
-                                                  <button type="submit" value="Submit" class="button" Style="margin-top:5px; margin-bottom:5px;">Edit Testimonials1</button>
-                                        </form>
-                                        <br />
                                         <form action="/New/Show/FAQ.php" method="post" style="text-align: center;">
                                                     <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
                                                   <button type="submit" value="Submit" class="button" Style="margin-top:5px; margin-bottom:5px;">Edit FAQs</button>
                                         </form>
-                                        <br />
                                         <form action="/New/Show/price.php" method="post" style="text-align: center;">
                                                     <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
                                                   <button type="submit" value="Submit" class="button" Style="margin-top:5px; margin-bottom:5px;">Edit Price Schedule</button>
@@ -105,7 +97,11 @@
                                                     <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
                                                   <button type="submit" value="Submit" class="button" Style="margin-top:5px; margin-bottom:5px;">Download all data</button>
                                         </form>
-										<br />						
+                                        <form action="/New/Show/Testimonials(deprecated).php" method="post" style="text-align: center;">
+                                                    <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
+                                                  <button type="submit" value="Submit" class="button" Style="margin-top:5px; margin-bottom:5px;">Edit Testimonials (Deprecated)</button>
+                                        </form>
+                                        <br />
 									</header>	
 								</section>
 							</div>				
@@ -146,7 +142,7 @@
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Island Hoppin' 2017. All rights reserved.</li>
+											<li>&copy; Island Hoppin' 2019. All rights reserved.</li>
 										</ul>
 									</div>
 							</div>

@@ -11,10 +11,10 @@
     
     if ($onPage == $verifyCode){
         $id = $_POST["testimonial_id"];
-        $table = $_POST["table"];
         $title = $_POST["Title"];
         $Headline = $_POST["Headline"];
         $Testimonial = $_POST["Testimonial"];
+        $Crew = $_POST["Crew"];
         $tripdate = $_POST["date"];
         
     }
@@ -59,23 +59,24 @@
 						    <header style="text-align:center;">
 								<h2>Admin Content Manager - Island Hoppin'</h2>
 								<p>
-									<a href="http://islandhoppincharters.com/New/Content.php?INTERNAL=<?php echo $onPage?>">Go to the Admin Screen</a>
+									<a href="../Content.php?INTERNAL=<?php echo $onPage?>">Go to the Admin Screen</a>
 								</p>
 							</header>
 							<div class="8u 12u(mobile)" id="content" style="margin-top:-50px;">
 								<article id="main">
 									<section>
 									<header><h2>Edit Data Fields</h2></header>
-                                    <form action = "../Alter/update.php" method = "post" enctype="multipart/form-data">
+                                    <form action = "../Alter/update.php" method = "post">
         		                        <header><h3>Family_Name</h3></header>
                                         <input type="text" name="family_name" value = "<?php echo $title;?>">
         		                        <header><h3>HeadLine</h3></header>
                                         <textarea type="text" name="head_line"  rows="3" cols="30"><?php echo $Headline;?></textarea>
                                         <header style="margin-top:25px;"><h3>Update Testimonial</h3></header>
                                         <textarea type="text" name="testimonial_text"  rows="6" cols="30"><?php echo $Testimonial;?></textarea>
-
+										<header style="margin-top:25px;"><h3>Crew</h3></header>
+                                        <input type="text" name="crew_name"  value = "<?php echo $Crew;?>">
                                         <header style="margin-top:25px;"><h3>Date</h3></header>
-                                        <input type="text" name="date" value = "<?php echo $tripdate;?>">
+                                        <input type="text" name="tripdate" value = "<?php echo $tripdate;?>">
                                         <header style="margin-top:25px;"><h3>Extra Space Flag</h3></header>
                                         <select name="line_break">
                                           <option value='1'>Yes</option>
@@ -88,7 +89,7 @@
                                         </select>
                                         <br />
                                         <input type="hidden" name="id" value = "<?php echo $id;?>">
-                                        <input type="hidden" name="table" value = "<?php echo $table;?>">
+                                        <input type="hidden" name="table" value = "testimonials">
                                         <input type="hidden" name="INTERNAL" value = "<?php echo $verifyCode;?>">
                                         <input type="submit" value="Submit">
                                     </form>
@@ -136,7 +137,7 @@
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Island Hoppin' 2017. All rights reserved.</li>
+											<li>&copy; Island Hoppin' 2019. All rights reserved.</li>
 										</ul>
 									</div>
 							</div>
