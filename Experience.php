@@ -596,16 +596,22 @@
 												<a href="#ex<?php echo $row5['testimonial_id'];?>" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
 											</div>
 											<div id="ex<?php echo $row5['testimonial_id'];?>" class="modal modal-size" style="background-color:#E5F5FA;">
+												<header>
+													<h2 style="font-family:'Shadows Into Light', 'Source Sans Pro', sans-serif">Guest: <?php echo $row5['title']; ?> </h2>
+													<p>
+														Where Luxury and Paradise come together.
+													</p>
+												</header>
 												<h3 style="text-algin: left">Guest: </h3><p style="text-algin: left"><?php echo $row5['title']; ?></p>
 												<br />
 												<h3 style="text-algin: left">Trip Date: </h3><p><?php echo $row5['tripdate']; ?></p>
 												<br />
 												<h3 style="text-algin: left">Crew: </h3><p><?php echo $row5['crew']; ?></p>
 												<hr style="margin-top:-50px;" />
-												<p><?php echo $row5['testimonial']; ?></p>
+												<p style="margin-top:-50px;"><?php echo $row5['testimonial']; ?></p>
 												<hr style="margin-top:-50px;" />
 												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
-												<li style="text-align: center;" >&copy; Island Hoppin' 2019. All rights reserved.</li>
+												<p style="text-align: center;" > &copy; Island Hoppin' 2019. All rights reserved.</p>
 											</div>
 										</article>
 									<?php endwhile ?>
