@@ -516,15 +516,13 @@
 									<h3>Dinner</h3>
 								</header>
 								<ul>
-									<li><div class="tooltip">&mdash;  <span class="tooltiptext"> </span> </div></li>
-									<li><div class="tooltip">&mdash;  <span class="tooltiptext"> </span> </div></li>
-									<li>&mdash; Pork escalope Holstein with fried duck egg, buckwheat tomato salad, anchovies topped with parsley and capper beurre noisette</li>
-									<li>&mdash; Braised lamb breast, boulangere potatoes, green beans and griddled courgettes</li>
-									<li>&mdash; Honey glazed ham knuckle with buttered new potatoes, parsley sauce, sautéed cabbage and sweet piccalli</li>
-									<li>&mdash; Confit duck ravioli with sage and hazelnut butter</li>
-									<li>&mdash; Marsala pork tenderloin with roasted asparagus and sweet potato puree</li>
-									<li>&mdash; Beef tenderloin with café paris butter, homemade fries, roasted tomatoes and portobella mushroom </li>
-									<li>&mdash; Mahi mahi fillet with saffron risotto and a mango cilantro sauce</li>
+									<li><div class="tooltip">&mdash; Ahi Tuna Tower with Sesame Wonton Crisps <span class="tooltiptext">A tower of sushi grade ahi tuna, sushi rice, mango-cucumber salad + microgreens with a Wasabi + Sriracha Aioli drizzle</span> </div></li>
+									<li><div class="tooltip">&mdash; Filet Mignon <span class="tooltiptext">Select tender, juicy filets grilled to order, paired with baked brussel sprouts + sautéed minced cauliflower, with an herbed mushroom cream sauce </span> </div></li>
+									<li><div class="tooltip">&mdash; Seafood Paella <span class="tooltiptext">A summer favorite and perfect base for the freshest seafood available, with notes of tangy lemon, fresh herbs, and mediterranean spices</span> </div></li>
+									<li><div class="tooltip">&mdash; Blackened Sesame Chicken Stir Fry <span class="tooltiptext">Wild rice sauteed in sesame oil with snap peas, broccoli, water chestnuts, celery, and carrots topped with sesame seeds + coconut aminos or soy sauce</span> </div></li>
+									<li><div class="tooltip">&mdash; Grilled Flank Steak  <span class="tooltiptext">Marinated overnight and flash grilled, this flank steak pairs perfectly with a corn + black bean salsa, grape tomatoes, microgreens, and homemade chimichurri</span> </div></li>
+									<li><div class="tooltip">&mdash; Simply Elegant Pasta* <span class="tooltiptext">Quinoa angel hair pasta mixed with sauteed onions, crispy bacon bites, sun dried tomatoes and zangy capers</span> </div></li>
+									<li><div class="tooltip">&mdash; Fresh Caught Grilled Lobster Tail** <span class="tooltiptext">Split tails grilled with garlic herbed butter, grilled red potatoes and baked avocado with red rice salsa</span> </div></li>
 								</ul>
 							</article>
 							<article class="6u 12u(mobile) special">
@@ -552,13 +550,10 @@
 									<h3>Desserts</h3>
 								</header>
 								<ul>
-									<li>&mdash; Ginger crème brulee</li>
-									<li>&mdash; Panna cotta with orange baked and glazed figs served along side tuille biscuits </li>
-									<li>&mdash; Chocolate fondant pudding with raspberry and champagne sorbet</li>
-									<li>&mdash; Irish cream Tiramisu</li>
-									<li>&mdash; Homemade profiteroles filled with crème diplomat and coated in dark chocolate sauce </li>
-									<li>&mdash; Fluffy lemon pudding with limoncello cream</li>
-									<li>&mdash; Bananas foster beignets with café brulot crème anglaise</li>
+									<li><div class="tooltip">&mdash; Homemade Chia Pudding*  <span class="tooltiptext">Chia seeds, almond milk, 100% cocoa, cinnamon + tropical fruit</span> </div></li>
+									<li><div class="tooltip">&mdash; Key Lime Pie  <span class="tooltiptext">Key lime juice, egg yolks, and sweetened condensed milk in a graham cracker pie crust</span> </div></li>
+									<li><div class="tooltip">&mdash; Crème Brûlée <span class="tooltiptext">In honor of her mother, Margaret prepares this traditional french dessert with love - a rich custard base + a contrasting layer of hard caramel</span> </div></li>
+									<li><div class="tooltip">&mdash; Cocoa Avocado Mouse <span class="tooltiptext">A creamy combination of local avocados, 100% cocoa, maple syrup + almond milk, topped with kiwi or caramelized pears</span> </div></li>
 								</ul>
 							</article>
 							<article class="6u 12u(mobile) special">
@@ -577,6 +572,7 @@
 									<li>&mdash; Requested Beverages (based on island availabity)</li>
 								</ul>
 							</article>
+							<p>* chef’s favorite **captain’s favorite </p>
 							</div>
 							<section  class="carousel">
 									<div class="reel">
