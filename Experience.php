@@ -82,6 +82,31 @@
       			width: 90%; 
    			}
 		}
+		
+		.tooltip {
+		  position: relative;
+		  display: inline-block;
+		  border-bottom: 1px dotted black;
+		}
+		
+		.tooltip .tooltiptext {
+		  visibility: hidden;
+		  width: 120px;
+		  background-color: black;
+		  color: #fff;
+		  text-align: center;
+		  border-radius: 6px;
+		  padding: 5px 0;
+		
+		  /* Position the tooltip */
+		  position: absolute;
+		  z-index: 1;
+		}
+		
+		.tooltip:hover .tooltiptext {
+		  visibility: visible;
+		}
+
 		</style>
 		<meta name="description" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
 		<meta name="robots" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
@@ -459,7 +484,7 @@
 									<h3>Breakfast</h3>
 								</header>
 								<ul>
-									<li>&mdash; Homemade buttermilk pancake stack served with bacon, dusted with icing sugar and a fresh berry sauce </li>
+									<div class="tooltip"><li>&mdash; Eggs-in-a-Bread*  </li> <span class="tooltiptext">A pair of french baguette rounds filled with eggs over easy, served with rosemary sweet potatoes + fresh fruit</span> </div>
 									<li>&mdash; Traditional Italian sausage frittata</li>
 									<li>&mdash; Classic eggs benedict with black forest ham, homemade hollandaise sauce and wilted spinach</li>
 									<li>&mdash; Full Irish: Authentic potato bread served with bacon, sausages, fried eggs and oven roasted vine tomatoes</li>
