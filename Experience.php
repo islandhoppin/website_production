@@ -484,8 +484,8 @@
 									<h3>Breakfast</h3>
 								</header>
 								<ul>
-									<div class="tooltip"><li>&mdash; Eggs-in-a-Bread*</li> <span class="tooltiptext">A pair of french baguette rounds filled with eggs over easy, served with rosemary sweet potatoes + fresh fruit</span> </div>
-									<div class="tooltip"><li>&mdash; Coconut Waffles with Strawberry Rhubarb Compote</li> <span class="tooltiptext">Traditional or gluten free waffle mix brought to life with coconut milk + coconut flakes</span> </div>
+									<li><div class="tooltip">&mdash; Eggs-in-a-Bread* <span class="tooltiptext">A pair of french baguette rounds filled with eggs over easy, served with rosemary sweet potatoes + fresh fruit</span> </div></li>
+									<li><div class="tooltip">&mdash; Coconut Waffles with Strawberry Rhubarb Compote <span class="tooltiptext">Traditional or gluten free waffle mix brought to life with coconut milk + coconut flakes</span> </div></li>
 									<div class="tooltip"><li>&mdash; Lemon Blueberry Granola and Yogurt</li> <span class="tooltiptext">Tangy, sweet, and slightly spiced, enjoy this homemade granola packed with nutrients over greek yogurt with local honey and fresh fruits</span> </div>
 									<div class="tooltip"><li>&mdash; Baked Greens Frittata</li> <span class="tooltiptext">Inspired by the signature Provençal chard omelet called trucha, this beautiful baked frittata incorporates thick Greek yogurt, lots of greens + garlic</span> </div>
 									<div class="tooltip"><li>&mdash; Southern Style Sausage and Gravy Biscuits**</li> <span class="tooltiptext">Our weeks wouldn’t be complete without a traditional, belly pleasing plate consisting of mouth watering butter biscuits + hearty sausage-studded white gravy</span> </div>
