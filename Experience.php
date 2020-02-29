@@ -91,7 +91,7 @@
 		
 		.tooltip .tooltiptext {
 		  visibility: hidden;
-		  width: 120px;
+		  width: 320px;
 		  background-color: black;
 		  color: #fff;
 		  text-align: center;
@@ -484,7 +484,7 @@
 									<h3>Breakfast</h3>
 								</header>
 								<ul>
-									<div class="tooltip"><li>&mdash; Eggs-in-a-Bread*  </li> <span class="tooltiptext">A pair of french baguette rounds filled with eggs over easy, served with rosemary sweet potatoes + fresh fruit</span> </div>
+									<div class="tooltip"><li>&mdash; Eggs-in-a-Bread*</li> <span class="tooltiptext">A pair of french baguette rounds filled with eggs over easy, served with rosemary sweet potatoes + fresh fruit</span> </div>
 									<li>&mdash; Traditional Italian sausage frittata</li>
 									<li>&mdash; Classic eggs benedict with black forest ham, homemade hollandaise sauce and wilted spinach</li>
 									<li>&mdash; Full Irish: Authentic potato bread served with bacon, sausages, fried eggs and oven roasted vine tomatoes</li>
