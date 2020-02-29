@@ -533,13 +533,14 @@
 									<h3>Appetizers</h3>
 								</header>
 								<ul>
-									<li>&mdash; Tomato and burrata bruschetta</li>
-									<li>&mdash; Oven baked brie with sautéed cinnamon walnuts</li>
-									<li>&mdash; Asian infused tuna on toasted bread</li>
-									<li>&mdash; Charcuterie platter with an assortment of international cheeses, crackers and olives </li>
-									<li>&mdash; Conch fritters with a chilli lime dipping sauce</li>
-									<li>&mdash; Tuna salad puff pastry bites</li>
-									<li>&mdash; Homemade falafel with cucumber yoghurt sauce</li>
+									<li><div class="tooltip">&mdash; Caribbean Conch Salad*  <span class="tooltiptext">Freshly cracked, local caught conch marinated in lime juice with bell peppers, onions, jalapeño + cilantro served with crunchy plantain chips</span> </div></li>
+									<li><div class="tooltip">&mdash; Tomato and Basil Bruschetta <span class="tooltiptext">A dreamy combination of tomatoes, boat grown basil, and italian herbs with a drizzle of balsamic reduction on crostinis </span> </div></li>
+									<li><div class="tooltip">&mdash; Bountiful Charcuterie Board <span class="tooltiptext">A board full of variety: Bold meats (prosciutto, salami, sopressata...) + a range of cheeses (truffle goat cheese, aged asiago, crumbled blue, merlot or espresso bellavitano, dill havarti...) + delectable spreads (fig jam, stone ground mustard, olive tapenade...) + pickled vegetables (beets, jalapenos, pepperoncinis…) + seasonal fruits</span> </div></li>
+									<li><div class="tooltip">&mdash; Homemade Hummus  <span class="tooltiptext">Ground chickpeas, nutty tahini, fresh squeezed lemon juice, smashed garlic, EVOO + served with warm pita bread and sliced vegetables</span> </div></li>
+									<li><div class="tooltip">&mdash; Watermelon Goat Cheese Salad*  <span class="tooltiptext">Watermelon spheres tossed with creamy crumbled goat cheese topped with fresh mint</span> </div></li>
+									<li><div class="tooltip">&mdash; Prosciutto Wrapped Melon** <span class="tooltiptext">Skewers of melon strips and prosciutto + drizzles of honey + rock salt</span> </div></li>
+									<li><div class="tooltip">&mdash; Baked Arancini and Bruschetta <span class="tooltiptext">Breaded risotto balls with mozzarella and select meats, grilled bread rubbed with garlic + topped with a fresh herbed tomato salad</span> </div></li>
+									<li><div class="tooltip">&mdash; Sizzling Shrimp Roll <span class="tooltiptext">Chili-garlic seared shrimp, cabbage, shredded carrots, bibb lettuce, cilantro, thai basil, mint + homemade chili hoisin peanut dipping sauce</span> </div></li>
 								</ul>
 							</article>
 							</div>
