@@ -91,7 +91,7 @@
 		
 		.tooltip .tooltiptext {
 		  visibility: hidden;
-		  width: 320px;
+		  width: 400px;
 		  background-color: black;
 		  color: #fff;
 		  text-align: center;
@@ -485,12 +485,12 @@
 								</header>
 								<ul>
 									<div class="tooltip"><li>&mdash; Eggs-in-a-Bread*</li> <span class="tooltiptext">A pair of french baguette rounds filled with eggs over easy, served with rosemary sweet potatoes + fresh fruit</span> </div>
-									<li>&mdash; Traditional Italian sausage frittata</li>
-									<li>&mdash; Classic eggs benedict with black forest ham, homemade hollandaise sauce and wilted spinach</li>
-									<li>&mdash; Full Irish: Authentic potato bread served with bacon, sausages, fried eggs and oven roasted vine tomatoes</li>
-									<li>&mdash; Caribbean French toast served with fried bananas, toasted coconut and drizzled with local Virgin Islands honey</li>
-									<li>&mdash; Smoked salmon, cream cheese and dill bagels</li>
-									<li>&mdash; Individual egg soufflés with feta cheese, spinach, tomatoes and oregano</li>
+									<div class="tooltip"><li>&mdash; Coconut Waffles with Strawberry Rhubarb Compote</li> <span class="tooltiptext">Traditional or gluten free waffle mix brought to life with coconut milk + coconut flakes</span> </div>
+									<div class="tooltip"><li>&mdash; Lemon Blueberry Granola and Yogurt</li> <span class="tooltiptext">Tangy, sweet, and slightly spiced, enjoy this homemade granola packed with nutrients over greek yogurt with local honey and fresh fruits</span> </div>
+									<div class="tooltip"><li>&mdash; Baked Greens Frittata</li> <span class="tooltiptext">Inspired by the signature Provençal chard omelet called trucha, this beautiful baked frittata incorporates thick Greek yogurt, lots of greens + garlic</span> </div>
+									<div class="tooltip"><li>&mdash; Southern Style Sausage and Gravy Biscuits**</li> <span class="tooltiptext">Our weeks wouldn’t be complete without a traditional, belly pleasing plate consisting of mouth watering butter biscuits + hearty sausage-studded white gravy</span> </div>
+									<div class="tooltip"><li>&mdash; Roasted Rosemary Sweet Potatoes, Poached Eggs + Avocado</li> <span class="tooltiptext">Poached eggs served on a bed of rosemary sweet potato fries, crispy baked bacon + avocado, served with a juicy, local fruit salad (dragon fruit, papaya, pineapple)</span> </div>
+									<div class="tooltip"><li>&mdash; Asparagus Shaksuka</li> <span class="tooltiptext">A delicious combination of poached eggs in a morning stew of tomatoes, asparagus, scallions and thyme. Served with rosemary sourdough and fresh fruit.</span> </div>
 								</ul>
 							</article>
 							<article class="6u 12u(mobile) special">
@@ -499,6 +499,8 @@
 									<h3>Lunch</h3>
 								</header>
 								<ul>
+									<div class="tooltip"><li>&mdash; </li> <span class="tooltiptext"> </span> </div>
+									<div class="tooltip"><li>&mdash; </li> <span class="tooltiptext"> </span> </div>
 									<li>&mdash; Moules marinere with freshly baked granary bread</li>
 									<li>&mdash; Citrus glazed salmon on a bed of seasonal greens</li>
 									<li>&mdash; Chicken pad thai tossed with beansprouts, fresh cilantro and roasted peanuts </li>
