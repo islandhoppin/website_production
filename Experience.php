@@ -101,6 +101,9 @@
 		  /* Position the tooltip */
 		  position: absolute;
 		  z-index: 1;
+		  top: 100%;
+		  left: 50%;
+		  margin-left: -60px;
 		}
 		
 		.tooltip:hover .tooltiptext {
@@ -572,10 +575,9 @@
 									<li>&mdash; Requested Beverages (based on island availabity)</li>
 								</ul>
 							</article>
-							</div>
-							
 							<subscript style="text-align: center;"> <b>Note:</b> Hover to See details  /  <b>Legend:</b> *Chef’s Favorite | **Captain’s Favorite </subscript>
-							
+							</div>
+
 							<section  class="carousel">
 									<div class="reel">
 									<?php while( $row2 = $sqlfood->fetch()) : ?>
