@@ -482,7 +482,7 @@
 						</header>
 							<div class="row">
 							<article class="6u 12u(mobile) special">
-								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/Breakfast.png" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
+								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/TMBreakfast.jpg" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
 								<header>
 									<h3>Breakfast</h3>
 								</header>
@@ -497,7 +497,7 @@
 								</ul>
 							</article>
 							<article class="6u 12u(mobile) special">
-								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/Lunch.png" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
+								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/TMLunch.jpg" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
 								<header>
 									<h3>Lunch</h3>
 								</header>
@@ -514,7 +514,7 @@
 							<hr />
 							<div class="row">
 							<article class="6u 12u(mobile) special">
-								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/Dinner.png" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
+								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/TMDinner.jpg" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
 								<header>
 									<h3>Dinner</h3>
 								</header>
@@ -529,7 +529,7 @@
 								</ul>
 							</article>
 							<article class="6u 12u(mobile) special">
-								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/Appetizer.png" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
+								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/TMAppetizer.jpg" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
 								<header>
 									<h3>Appetizers</h3>
 								</header>
@@ -548,7 +548,7 @@
 							<hr />
 							<div class="row">
 							<article class="6u 12u(mobile) special">
-								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/Dessert.png" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
+								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/TMDessert.jpg" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
 								<header>
 									<h3>Desserts</h3>
 								</header>
