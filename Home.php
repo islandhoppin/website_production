@@ -127,7 +127,7 @@
 							<header>
 								<h3><a href="Boat.html">Lagoon 52 Catamaran</a></h3>
 							</header>
-							<p>Check out what Island Hoppin' has to offer - "First class meets the Caribbean" </p>
+							<p>Enjoy first class in the Caribbean aboard Island Hoppin'" </p>
 						</article>
 
 						<article>
