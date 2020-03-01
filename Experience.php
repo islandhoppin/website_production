@@ -479,6 +479,7 @@
 						<hr id="menu"/>
 						<header style="text-align:center;">
 							<h2  style="font-family:'Shadows Into Light', 'Source Sans Pro', sans-serif; margin-bottom: 30px;">Sample Menu</h2>
+							<subscript style="text-align: center;"> <b>Note:</b> Hover to See details  /  <b>Legend:</b> *Chef’s Favorite | **Captain’s Favorite </subscript>
 						</header>
 							<div class="row">
 							<article class="6u 12u(mobile) special">
@@ -575,7 +576,7 @@
 									<li>&mdash; Requested Beverages (based on island availabity)</li>
 								</ul>
 							</article>
-							<subscript style="text-align: center;"> <b>Note:</b> Hover to See details  /  <b>Legend:</b> *Chef’s Favorite | **Captain’s Favorite </subscript>
+							
 							</div>
 
 							<section  class="carousel">
