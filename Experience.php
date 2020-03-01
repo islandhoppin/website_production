@@ -572,8 +572,10 @@
 									<li>&mdash; Requested Beverages (based on island availabity)</li>
 								</ul>
 							</article>
-							<subscript style="text-align: center;"> <b>Note:</b> Hover to See details  /  Legend: *Chef’s Favorite | **Captain’s Favorite </subscript>
 							</div>
+							
+							<subscript style="text-align: center;"> <b>Note:</b> Hover to See details  /  <b>Legend:</b> *Chef’s Favorite | **Captain’s Favorite </subscript>
+							
 							<section  class="carousel">
 									<div class="reel">
 									<?php while( $row2 = $sqlfood->fetch()) : ?>
