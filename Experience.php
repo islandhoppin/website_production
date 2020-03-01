@@ -572,7 +572,7 @@
 									<li>&mdash; Requested Beverages (based on island availabity)</li>
 								</ul>
 							</article>
-							<h4 align="center"> <b>Note:</b> Hover to See details / Legend: * Chef’s Favorite | ** Captain’s Favorite </h4>
+							<subscript style="text-align: center;"> <b>Note:</b> Hover to See details  /  Legend: *Chef’s Favorite | **Captain’s Favorite </subscript>
 							</div>
 							<section  class="carousel">
 									<div class="reel">
