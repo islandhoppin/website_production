@@ -127,7 +127,7 @@
 							<header>
 								<h3><a href="Boat.html">Lagoon 52 Catamaran</a></h3>
 							</header>
-							<p>Check out what Island Hoppin' has to offer.</p>
+							<p>Check out what Island Hoppin' has to offer - "First class meets the Caribbean" </p>
 						</article>
 
 						<article>
@@ -151,7 +151,7 @@
 							<header>
 								<h3><a href="Experience.html#menu">Whats Cookin...</a></h3>
 							</header>
-							<p>Check out the fine culinary skills aboard.</p>
+							<p>Check out the fine culinary skills aboard, you're taste buds will thank you!</p>
 						</article>
 						
 						<article>
@@ -165,7 +165,7 @@
 						<article>
 							<a href="Book.php#availability" class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/General/island-time.jpg" alt="Island Hoppin' Availability" /></a>
 							<header>
-								<h3>Check the Booking Availability</h3>
+								<h3>Booking Availability</h3>
 							</header>
 							<p>The availability is updated frequently to help you plan your perfect vacation.</p>
 						</article>
@@ -199,7 +199,7 @@
 							<header>
 								<h3><a href="Experience.html#menu">Hoppin' Swag</a></h3>
 							</header>
-							<p>Guests receive our limited edition water bottle.</p>
+							<p>All guests receive our environmentally friendly and seasonal edition water bottle.</p>
 						</article>
 
 						<article>
@@ -207,7 +207,7 @@
 							<header>
 								<h3>Starring: Island Hoppin'</h3>
 							</header>
-							<p>Check out the complete Island Hoppin' walk-through online now!</p>
+							<p>Check out the complete Island Hoppin' walk-through!</p>
 						</article>
 
 						<article>
@@ -215,7 +215,7 @@
 							<header>
 								<h3>Sample Itinerary</h3>
 							</header>
-							<p>Explore a sample itinerary of your future trip!</p>
+							<p>Explore a sample itinerary of your future trip! The possibilities are endless...</p>
 						</article>
 
 					</div>
