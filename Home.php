@@ -151,7 +151,7 @@
 							<header>
 								<h3><a href="Experience.html#menu">Whats Cookin...</a></h3>
 							</header>
-							<p>Check out the fine culinary skills aboard, you're taste buds will thank you!</p>
+							<p>With the fine culinary skills aboard, you're taste buds will thank you!</p>
 						</article>
 						
 						<article>
@@ -199,7 +199,7 @@
 							<header>
 								<h3><a href="Experience.html#menu">Hoppin' Swag</a></h3>
 							</header>
-							<p>All guests receive our environmentally friendly and seasonal edition water bottle.</p>
+							<p>All guests receive our environmentally friendly and seasonal water bottle.</p>
 						</article>
 
 						<article>
@@ -215,7 +215,7 @@
 							<header>
 								<h3>Sample Itinerary</h3>
 							</header>
-							<p>Explore a sample itinerary of your future trip! The possibilities are endless...</p>
+							<p>Explore a sample itinerary of your future trip! Oh the possibilities...</p>
 						</article>
 
 					</div>
