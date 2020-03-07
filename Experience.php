@@ -92,11 +92,12 @@
 		.tooltip .tooltiptext {
 		  visibility: hidden;
 		  width: 350px;
-		  background-color: #0066CC;
+		  font-family: 'Shadows Into Light';
+		  background-color: #0e5eb1;
 		  color: white;
 		  text-align: left;
 		  border-radius: 6px;
-		  padding: 5px 0;
+		  padding: 25px 50px 75px 100px;
 		
 		  /* Position the tooltip */
 		  position: absolute;
