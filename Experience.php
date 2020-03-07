@@ -99,10 +99,10 @@
 		  padding: 5px 0;
 		
 		  /* Position the tooltip */
-		  position: relative;
+		  position: absolute;
 		  z-index: 1;
-		  top: 100%;
-		  left: 50%;
+		  top: 120%;
+		  left: 40%;
 		  margin-left: -70px;
 		}
 		
