@@ -93,11 +93,11 @@
 		  visibility: hidden;
 		  width: 350px;
 		  font-family: 'Shadows Into Light';
-		  background-color: #0e5eb1;
+		  background-color: #0066CC;
 		  color: white;
 		  text-align: left;
 		  border-radius: 6px;
-		  padding: 25px 50px 75px 100px;
+		  padding: 10px 15px 10px;
 		
 		  /* Position the tooltip */
 		  position: absolute;
