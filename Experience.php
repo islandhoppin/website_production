@@ -94,12 +94,12 @@
 		  width: 350px;
 		  background-color: black;
 		  color: #fff;
-		  text-align: center;
+		  text-align: left;
 		  border-radius: 6px;
 		  padding: 5px 0;
 		
 		  /* Position the tooltip */
-		  position: absolute;
+		  position: relative;
 		  z-index: 1;
 		  top: 100%;
 		  left: 50%;

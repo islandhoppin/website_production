@@ -2255,7 +2255,7 @@
 		left: 0;
 		width: 100%;
 		text-align: center;
-		background-color: #0066CC; opacity: 0.75; filter: alpha(opacity=50);
+		background-color: #0066CC; opacity: 0.8; filter: alpha(opacity=8);
 		padding: 1.5em 0 1.5em 0;
 		z-index: 1;
 		overflow: hidden;
