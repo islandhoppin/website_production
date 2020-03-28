@@ -170,6 +170,7 @@
                                                     <input type="hidden" name="id" value="testimonial_id">
                                                     <input type="hidden" name="idnum" value="<?php echo $row1['testimonial_id']; ?>">
                                                     <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
+                                                    <input type="hidden" name="table" value="testimonials">
                                                   <button type="submit" value="Submit" Style="margin-top:5px; margin-bottom:5px; color:red;">Delete</button>
                                                 </form>
                                                 </td>

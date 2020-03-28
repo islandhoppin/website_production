@@ -1,7 +1,7 @@
 <?php     
 	require 'New/connection.inc.php'; 
       // This is a prepared statement, not necessary with this simple query with no variables, but anyway...
-	$testimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, crew, tripdate, extra_space, show FROM testimonials ORDER BY testimonial_id DESC") ;
+	$testimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, crew, tripdate, extra_space, show FROM testimonials WHERE show = 'Yes' ORDER BY testimonial_id DESC") ;
 	$sqlfood = $dbconn->prepare("Select food_id, food_title, show, image, blank_1 From food WHERE show = 'Yes' ORDER BY food_id DESC") ; 
 	$sqlcustpics = $dbconn->prepare("Select pic_id, pic_title, show, image, blank_1 From customerpic WHERE show = 'Yes' ORDER BY pic_id DESC") ; 
 	$sqlcustvids = $dbconn->prepare("Select vid_id, vid_title, show, video_link, image, blank_1 From customervid WHERE show = 'Yes' ORDER BY vid_id DESC") ; 
@@ -82,6 +82,35 @@
       			width: 90%; 
    			}
 		}
+		
+		.tooltip {
+		  position: relative;
+		  display: inline-block;
+		  border-bottom: 1px dotted black;
+		}
+		
+		.tooltip .tooltiptext {
+		  visibility: hidden;
+		  width: 350px;
+		  font-family: 'Shadows Into Light';
+		  background-color: #0066CC;
+		  color: white;
+		  text-align: left;
+		  border-radius: 6px;
+		  padding: 10px 15px 10px;
+		
+		  /* Position the tooltip */
+		  position: absolute;
+		  z-index: 1;
+		  top: 120%;
+		  left: 40%;
+		  margin-left: -70px;
+		}
+		
+		.tooltip:hover .tooltiptext {
+		  visibility: visible;
+		}
+
 		</style>
 		<meta name="description" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
 		<meta name="robots" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
@@ -451,87 +480,85 @@
 						<hr id="menu"/>
 						<header style="text-align:center;">
 							<h2  style="font-family:'Shadows Into Light', 'Source Sans Pro', sans-serif; margin-bottom: 30px;">Sample Menu</h2>
+							<subscript style="text-align: center;"> <b>Note:</b> Hover to See details  /  <b>Legend:</b> *Chef’s Favorite | **Captain’s Favorite </subscript>
 						</header>
 							<div class="row">
 							<article class="6u 12u(mobile) special">
-								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/Breakfast.png" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
+								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/TMBreakfast.jpg" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
 								<header>
 									<h3>Breakfast</h3>
 								</header>
 								<ul>
-									<li>&mdash; Homemade buttermilk pancake stack served with bacon, dusted with icing sugar and a fresh berry sauce </li>
-									<li>&mdash; Traditional Italian sausage frittata</li>
-									<li>&mdash; Classic eggs benedict with black forest ham, homemade hollandaise sauce and wilted spinach</li>
-									<li>&mdash; Full Irish: Authentic potato bread served with bacon, sausages, fried eggs and oven roasted vine tomatoes</li>
-									<li>&mdash; Caribbean French toast served with fried bananas, toasted coconut and drizzled with local Virgin Islands honey</li>
-									<li>&mdash; Smoked salmon, cream cheese and dill bagels</li>
-									<li>&mdash; Individual egg soufflés with feta cheese, spinach, tomatoes and oregano</li>
+									<li><div class="tooltip">&mdash; Eggs-in-a-Bread* <span class="tooltiptext">A pair of french baguette rounds filled with eggs over easy, served with rosemary sweet potatoes + fresh fruit</span> </div></li>
+									<li><div class="tooltip">&mdash; Coconut Waffles with Strawberry Rhubarb Compote <span class="tooltiptext">Traditional or gluten free waffle mix brought to life with coconut milk + coconut flakes</span> </div></li>
+									<li><div class="tooltip">&mdash; Lemon Blueberry Granola and Yogurt <span class="tooltiptext">Tangy, sweet, and slightly spiced, enjoy this homemade granola packed with nutrients over greek yogurt with local honey and fresh fruits</span> </div></li>
+									<li><div class="tooltip">&mdash; Baked Greens Frittata <span class="tooltiptext">Inspired by the signature Provençal chard omelet called trucha, this beautiful baked frittata incorporates thick Greek yogurt, lots of greens + garlic</span> </div></li>
+									<li><div class="tooltip">&mdash; Southern Style Sausage and Gravy Biscuits** <span class="tooltiptext">Our weeks wouldn’t be complete without a traditional, belly pleasing plate consisting of mouth watering butter biscuits + hearty sausage-studded white gravy</span> </div></li>
+									<li><div class="tooltip">&mdash; Roasted Rosemary Sweet Potatoes, Poached Eggs + Avocado <span class="tooltiptext">Poached eggs served on a bed of rosemary sweet potato fries, crispy baked bacon + avocado, served with a juicy, local fruit salad (dragon fruit, papaya, pineapple)</span> </div></li>
+									<li><div class="tooltip">&mdash; Asparagus Shaksuka <span class="tooltiptext">A delicious combination of poached eggs in a morning stew of tomatoes, asparagus, scallions and thyme. Served with rosemary sourdough and fresh fruit.</span> </div></li>
 								</ul>
 							</article>
 							<article class="6u 12u(mobile) special">
-								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/Lunch.png" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
+								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/TMLunch.jpg" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
 								<header>
 									<h3>Lunch</h3>
 								</header>
 								<ul>
-									<li>&mdash; Moules marinere with freshly baked granary bread</li>
-									<li>&mdash; Citrus glazed salmon on a bed of seasonal greens</li>
-									<li>&mdash; Chicken pad thai tossed with beansprouts, fresh cilantro and roasted peanuts </li>
-									<li>&mdash; Seared scallops and crispy prosciutto with roasted tomatoes and smashed white beans </li>
-									<li>&mdash; Grilled swordfish, green beans and spicy tomato salsa</li>
-									<li>&mdash; Sweet okra shrimp curry with plantain puree</li>
-									<li>&mdash; Caribbean jerk burgers with pineapple relish and spicy coleslaw</li>
+									<li><div class="tooltip">&mdash; Baltimore-Style Crab Cakes <span class="tooltiptext">Kept simple and focused on the jumbo lump crab meat, experience unadulterated crab cake heaven paired with a tri-color slaw + zesty lime dressing</span> </div></li>
+									<li><div class="tooltip">&mdash; Local Mahi Tacos*  <span class="tooltiptext">Grilled Mahi Mahi seasoned with a signature blend of spices on roasted corn tortillas topped with cabbage, avocado, mango salsa + a lime cilantro aioli drizzle</span> </div></li>
+									<li><div class="tooltip">&mdash; Grilled Chicken Caesar Salad <span class="tooltiptext">Crunch romaine tossed with homemade garlicky caesar dressing, shaved Parmesan, homemade crispy croutons.</span> </div></li>
+									<li><div class="tooltip">&mdash; Grilled Portobello Sandwich*  <span class="tooltiptext">Juicy portobello steaks marinated in olive oil + balsamic vinegar, grilled until lightly crispy, topped with caramelized onion, melted feta, roasted red peppers, drizzled with basil aioli on a ciabatta bun</span> </div></li>
+									<li><div class="tooltip">&mdash; Shrimp on Cauliflower Fried Rice Bowl <span class="tooltiptext">This paleo-friendly, 5-ingredient meal is loaded with fresh vegetables, tender shrimp, and signature Asian flavors</span> </div></li>
+									<li><div class="tooltip">&mdash; Salmon Arugula Salad <span class="tooltiptext">Zesty, grilled salmon atop a bed of spicy arugula, local heirloom cherry tomatoes, shaved asiago, pine nuts, dressed with a tangy lemon pepper vinaigrette</span> </div></li>
 								</ul>
 							</article>
 							</div>
 							<hr />
 							<div class="row">
 							<article class="6u 12u(mobile) special">
-								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/Dinner.png" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
+								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/TMDinner.jpg" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
 								<header>
 									<h3>Dinner</h3>
 								</header>
 								<ul>
-									<li>&mdash; Pork escalope Holstein with fried duck egg, buckwheat tomato salad, anchovies topped with parsley and capper beurre noisette</li>
-									<li>&mdash; Braised lamb breast, boulangere potatoes, green beans and griddled courgettes</li>
-									<li>&mdash; Honey glazed ham knuckle with buttered new potatoes, parsley sauce, sautéed cabbage and sweet piccalli</li>
-									<li>&mdash; Confit duck ravioli with sage and hazelnut butter</li>
-									<li>&mdash; Marsala pork tenderloin with roasted asparagus and sweet potato puree</li>
-									<li>&mdash; Beef tenderloin with café paris butter, homemade fries, roasted tomatoes and portobella mushroom </li>
-									<li>&mdash; Mahi mahi fillet with saffron risotto and a mango cilantro sauce</li>
+									<li><div class="tooltip">&mdash; Ahi Tuna Tower with Sesame Wonton Crisps <span class="tooltiptext">A tower of sushi grade ahi tuna, sushi rice, mango-cucumber salad + microgreens with a Wasabi + Sriracha Aioli drizzle</span> </div></li>
+									<li><div class="tooltip">&mdash; Filet Mignon <span class="tooltiptext">Select tender, juicy filets grilled to order, paired with baked brussel sprouts + sautéed minced cauliflower, with an herbed mushroom cream sauce </span> </div></li>
+									<li><div class="tooltip">&mdash; Seafood Paella <span class="tooltiptext">A summer favorite and perfect base for the freshest seafood available, with notes of tangy lemon, fresh herbs, and mediterranean spices</span> </div></li>
+									<li><div class="tooltip">&mdash; Blackened Sesame Chicken Stir Fry <span class="tooltiptext">Wild rice sauteed in sesame oil with snap peas, broccoli, water chestnuts, celery, and carrots topped with sesame seeds + coconut aminos or soy sauce</span> </div></li>
+									<li><div class="tooltip">&mdash; Grilled Flank Steak  <span class="tooltiptext">Marinated overnight and flash grilled, this flank steak pairs perfectly with a corn + black bean salsa, grape tomatoes, microgreens, and homemade chimichurri</span> </div></li>
+									<li><div class="tooltip">&mdash; Simply Elegant Pasta* <span class="tooltiptext">Quinoa angel hair pasta mixed with sauteed onions, crispy bacon bites, sun dried tomatoes and zangy capers</span> </div></li>
+									<li><div class="tooltip">&mdash; Fresh Caught Grilled Lobster Tail** <span class="tooltiptext">Split tails grilled with garlic herbed butter, grilled red potatoes and baked avocado with red rice salsa</span> </div></li>
 								</ul>
 							</article>
 							<article class="6u 12u(mobile) special">
-								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/Appetizer.png" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
+								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/TMAppetizer.jpg" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
 								<header>
 									<h3>Appetizers</h3>
 								</header>
 								<ul>
-									<li>&mdash; Tomato and burrata bruschetta</li>
-									<li>&mdash; Oven baked brie with sautéed cinnamon walnuts</li>
-									<li>&mdash; Asian infused tuna on toasted bread</li>
-									<li>&mdash; Charcuterie platter with an assortment of international cheeses, crackers and olives </li>
-									<li>&mdash; Conch fritters with a chilli lime dipping sauce</li>
-									<li>&mdash; Tuna salad puff pastry bites</li>
-									<li>&mdash; Homemade falafel with cucumber yoghurt sauce</li>
+									<li><div class="tooltip">&mdash; Caribbean Conch Salad*  <span class="tooltiptext">Freshly cracked, local caught conch marinated in lime juice with bell peppers, onions, jalapeño + cilantro served with crunchy plantain chips</span> </div></li>
+									<li><div class="tooltip">&mdash; Tomato and Basil Bruschetta <span class="tooltiptext">A dreamy combination of tomatoes, boat grown basil, and italian herbs with a drizzle of balsamic reduction on crostinis </span> </div></li>
+									<li><div class="tooltip">&mdash; Bountiful Charcuterie Board <span class="tooltiptext">A board full of variety: Bold meats (prosciutto, salami, sopressata...) + a range of cheeses (truffle goat cheese, aged asiago, crumbled blue, merlot or espresso bellavitano, dill havarti...) + delectable spreads (fig jam, stone ground mustard, olive tapenade...) + pickled vegetables (beets, jalapenos, pepperoncinis…) + seasonal fruits</span> </div></li>
+									<li><div class="tooltip">&mdash; Homemade Hummus  <span class="tooltiptext">Ground chickpeas, nutty tahini, fresh squeezed lemon juice, smashed garlic, EVOO + served with warm pita bread and sliced vegetables</span> </div></li>
+									<li><div class="tooltip">&mdash; Watermelon Goat Cheese Salad*  <span class="tooltiptext">Watermelon spheres tossed with creamy crumbled goat cheese topped with fresh mint</span> </div></li>
+									<li><div class="tooltip">&mdash; Prosciutto Wrapped Melon** <span class="tooltiptext">Skewers of melon strips and prosciutto + drizzles of honey + rock salt</span> </div></li>
+									<li><div class="tooltip">&mdash; Baked Arancini and Bruschetta <span class="tooltiptext">Breaded risotto balls with mozzarella and select meats, grilled bread rubbed with garlic + topped with a fresh herbed tomato salad</span> </div></li>
+									<li><div class="tooltip">&mdash; Sizzling Shrimp Roll <span class="tooltiptext">Chili-garlic seared shrimp, cabbage, shredded carrots, bibb lettuce, cilantro, thai basil, mint + homemade chili hoisin peanut dipping sauce</span> </div></li>
 								</ul>
 							</article>
 							</div>
 							<hr />
 							<div class="row">
 							<article class="6u 12u(mobile) special">
-								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/Dessert.png" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
+								<a class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Food/TMDessert.jpg" style="max-height:420px; text-align:center; overflow: hidden;" alt="" /></a>
 								<header>
 									<h3>Desserts</h3>
 								</header>
 								<ul>
-									<li>&mdash; Ginger crème brulee</li>
-									<li>&mdash; Panna cotta with orange baked and glazed figs served along side tuille biscuits </li>
-									<li>&mdash; Chocolate fondant pudding with raspberry and champagne sorbet</li>
-									<li>&mdash; Irish cream Tiramisu</li>
-									<li>&mdash; Homemade profiteroles filled with crème diplomat and coated in dark chocolate sauce </li>
-									<li>&mdash; Fluffy lemon pudding with limoncello cream</li>
-									<li>&mdash; Bananas foster beignets with café brulot crème anglaise</li>
+									<li><div class="tooltip">&mdash; Homemade Chia Pudding*  <span class="tooltiptext">Chia seeds, almond milk, 100% cocoa, cinnamon + tropical fruit</span> </div></li>
+									<li><div class="tooltip">&mdash; Key Lime Pie  <span class="tooltiptext">Key lime juice, egg yolks, and sweetened condensed milk in a graham cracker pie crust</span> </div></li>
+									<li><div class="tooltip">&mdash; Crème Brûlée <span class="tooltiptext">In honor of her mother, Margaret prepares this traditional french dessert with love - a rich custard base + a contrasting layer of hard caramel</span> </div></li>
+									<li><div class="tooltip">&mdash; Cocoa Avocado Mouse <span class="tooltiptext">A creamy combination of local avocados, 100% cocoa, maple syrup + almond milk, topped with kiwi or caramelized pears</span> </div></li>
 								</ul>
 							</article>
 							<article class="6u 12u(mobile) special">
@@ -550,7 +577,9 @@
 									<li>&mdash; Requested Beverages (based on island availabity)</li>
 								</ul>
 							</article>
+							
 							</div>
+
 							<section  class="carousel">
 									<div class="reel">
 									<?php while( $row2 = $sqlfood->fetch()) : ?>
