@@ -3,7 +3,7 @@
     require 'New/connection.inc.php'; 
     
     // This is a prepared statement, not necessary with this simple query with no variables, but anyway...
-    $sqlnew = $dbconn->prepare("Select news_id, header, update, image, blank_1 From newsupdates ORDER BY news_id DESC LIMIT 9") ; 
+    $sqlnew = $dbconn->prepare("Select news_id, header, update, image, blank_1 From newsupdates ORDER BY news_id DESC LIMIT 15") ; 
     // Execute the query, if there were variables, they could be bound within the brackets
     $sqlnew->execute() ;
 ?>

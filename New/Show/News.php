@@ -93,7 +93,7 @@
 										<b>Update Text:</b> This will the text of the news event. <br />
 										<b>Image:</b>Before Uploading ensure the image is Rectangular Photo: 1200px by 902px; Long: 1024px by 1280px <a href="http://picresize.com/" target="_blank">Image Resizer</a>.<br />
 										<b>URL:</b> This process is shown in the video button below. No additional alteration of the url is need for content delivery.
-										<br /><b>The current query supports the 9 most recent posts, placing them in the order of most recent on top.</b>
+										<br /><b>The current query supports the 15 most recent posts, placing them in the order of most recent on top.</b>
 									</p>
 								</section>
 							</div>

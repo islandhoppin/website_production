@@ -88,13 +88,9 @@
 										<b>Title:</b> This will display on the top bar of the photo once clicked.<br />
 										<b>Image:</b>Before Uploading ensure the image is 1000px by 676px <a href="http://picresize.com/" target="_blank">Image Resizer</a>.<br />
 										<b>URL:</b> This process is shown in the video button below. No additional alteration of the url is need for content delivery.
-										<br /><b>All testimonials will be shown in the photo carousel, the order will favor the most recent first.</b>
+										<br /><b>All photos will be shown in the photo carousel, the order will favor the most recent first.</b>
 									</p><br>
-									<form action="Download_Customer_pic.php" method="post" style="text-align: center;">
-                                                    <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
-                                                  <button type="submit" value="Submit" class="button" Style="margin-top:5px; margin-bottom:5px;">Download CSV</button>
-                                        </form>
-									<a href="Download_Customer_pic.php" target="_blank"><strong>Download CSV</strong></a>
+									
 									
 								</section>
 							</div>
