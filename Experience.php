@@ -600,17 +600,11 @@
 									<article id="main" class="special">
 										<div class="row">
 											<article class="6u 12u(mobile) special">
-												<h2 style="padding-top:10px; text-align: center; font-size:2.2em;">Taylor Smith</h3>
+												<h2 style="padding-top:10px; text-align: center; font-size:2.2em;">The iHop Yeti</h3>
 												<hr style="margin-top:-50px;" />
-												<ul style="margin-top:-40px; margin-left:25px;">
-													<li>&mdash; USCG 100grt Master, Near Coastal, Auxiliary Sail</li>
-													<li>&mdash; STCW 2010 Basic Safety Training</li>
-													<li>&mdash; ENG 1</li>
-													<li>&mdash; PADI Open Water Dive Instructor</li>
-													<li>&mdash; Emergency First Response Instructor</li>
-													<li>&mdash; American Sailing Association 101, 103</li>
-													<li>&mdash; Virginia Boaters Safety</li>
-												</ul>
+												<p>
+													Introducing our new Island Hoppin' Yeti 20 oz. Rambler® Tumbler with MagSlider™ LidTumbler, available in two timeless colors (White and SeaFoam). Ask the 
+												</p>
 											</article>
 											<article class="6u 12u(mobile) special">
 												<a href="#meet" class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Yeti-swag.jpeg" alt="Island hoppin Swag - Assorted Yeti Cups" /></a>
