@@ -591,6 +591,14 @@
 									<?php endwhile ?>
 							</section>
 							<hr />
+							<div>
+								<!-- Motion Photos -->
+								<header style="text-align:center;">
+									<h2 style="font-family:'Shadows Into Light', 'Source Sans Pro', sans-serif">Island Swag</h2>
+								</header>
+								
+							</div>
+							<hr />
 							<div id="testimonials">
 								<!-- Motion Photos -->
 								<header style="text-align:center;">
