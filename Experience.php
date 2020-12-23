@@ -599,7 +599,7 @@
 								<div id="swag">
 									<article id="main" class="special">
 										<div class="row">
-											<article class="3u 12u(mobile) special">
+											<article class="6u 12u(mobile) special">
 												<h2 style="padding-top:10px; text-align: center; font-size:2.2em;">The iHop Yeti</h3>
 												<hr style="margin-top:-50px;" />
 												<p> Introducing our new Island Hoppin' Yeti 20 oz. Rambler® Tumbler with MagSlider™ LidTumbler.</p>
