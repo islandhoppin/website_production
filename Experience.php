@@ -591,13 +591,35 @@
 									<?php endwhile ?>
 							</section>
 							<hr />
+							
 							<div>
-								<!-- Motion Photos -->
 								<header style="text-align:center;">
 									<h2 style="font-family:'Shadows Into Light', 'Source Sans Pro', sans-serif">Island Swag</h2>
 								</header>
-								
+								<div id="swag">
+									<article id="main" class="special">
+										<div class="row">
+											<article class="6u 12u(mobile) special">
+												<h2 style="padding-top:10px; text-align: center; font-size:2.2em;">Taylor Smith</h3>
+												<hr style="margin-top:-50px;" />
+												<ul style="margin-top:-40px; margin-left:25px;">
+													<li>&mdash; USCG 100grt Master, Near Coastal, Auxiliary Sail</li>
+													<li>&mdash; STCW 2010 Basic Safety Training</li>
+													<li>&mdash; ENG 1</li>
+													<li>&mdash; PADI Open Water Dive Instructor</li>
+													<li>&mdash; Emergency First Response Instructor</li>
+													<li>&mdash; American Sailing Association 101, 103</li>
+													<li>&mdash; Virginia Boaters Safety</li>
+												</ul>
+											</article>
+											<article class="6u 12u(mobile) special">
+												<a href="#meet" class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Yeti-swag.jpeg" alt="Island hoppin Swag - Assorted Yeti Cups" /></a>
+											</article>
+										</div>
+									</article>
+								</div>
 							</div>
+							
 							<hr />
 							<div id="testimonials">
 								<!-- Motion Photos -->
