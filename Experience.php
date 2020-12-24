@@ -602,7 +602,8 @@
 											<article class="6u 12u(mobile) special">
 												<h2 style="padding-top:10px; text-align: center; font-size:2.2em;">The iHop Yeti</h3>
 												<hr style="margin-top:-50px;" />
-												<p> Introducing our new Island Hoppin' Yeti 20 oz. Rambler® Tumbler with MagSlider™ LidTumbler.</p>
+												<p> Introducing our new Island Hoppin' Yeti 20 oz. Rambler® Tumbler with MagSlider™ LidTumbler. 
+												These cups were made for the islands, keeping your beverages cold throughout the day, making sure you get to enjoy every sip.</p>
 												<p> While aboard, don't forget to purchase your perfect souvenir, available in White and Seafoam Blue.</p>
 											</article>
 											<article class="6u 12u(mobile) special">
