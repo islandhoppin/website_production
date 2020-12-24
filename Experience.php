@@ -604,7 +604,7 @@
 												<hr style="margin-top:-50px;" />
 												<p> Introducing our new Island Hoppin' Yeti 20 oz. Rambler® Tumbler with MagSlider™ LidTumbler. </p>
 												<p> These cups were made for the islands, keeping your beverages cold throughout the day while ensuring you get to enjoy every sip with a spill-proof lid.
-												When you get home, these Tumblers are also perfect for keeping you hot beverages warm for hours.</p>
+												When you get home, these Tumblers are also perfect for keeping your hot beverages warm for hours.</p>
 												<p> While aboard, don't forget to purchase your perfect souvenir, available in White and Seafoam Blue.</p>
 											</article>
 											<article class="6u 12u(mobile) special">
