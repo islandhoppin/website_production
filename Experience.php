@@ -591,6 +591,31 @@
 									<?php endwhile ?>
 							</section>
 							<hr />
+							
+							<div>
+								<header style="text-align:center;">
+									<h2 style="font-family:'Shadows Into Light', 'Source Sans Pro', sans-serif">Island Swag</h2>
+								</header>
+								<div id="swag">
+									<article id="main" class="special">
+										<div class="row">
+											<article class="6u 12u(mobile) special">
+												<h2 style="padding-top:10px; text-align: center; font-size:2.2em;">The iHop Yeti</h3>
+												<hr style="margin-top:-50px;" />
+												<p> Introducing our new Island Hoppin' Yeti 20 oz. Rambler® Tumbler with MagSlider™ LidTumbler. </p>
+												<p> These cups were made for the islands, keeping your beverages cold throughout the day while ensuring you get to enjoy every sip with a spill-proof lid.
+												When you get home, these Tumblers are also perfect for keeping your hot beverages warm for hours.</p>
+												<p> While aboard, don't forget to purchase your perfect souvenir, available in White and Seafoam Blue.</p>
+											</article>
+											<article class="6u 12u(mobile) special">
+												<a href="#meet" class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Yeti-swag.jpeg" alt="Island hoppin Swag - Assorted Yeti Cups" /></a>
+											</article>
+										</div>
+									</article>
+								</div>
+							</div>
+							
+							<hr />
 							<div id="testimonials">
 								<!-- Motion Photos -->
 								<header style="text-align:center;">
