@@ -147,7 +147,7 @@
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['headline']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><a href="#ex<?php echo $row1['testimonial_id'];?>" rel="modal:open">Click to Preview</a></td>
                                             <div id="ex<?php echo $row1['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
-												<p><?php echo $row1['testimonial']; ?></p>
+												<p><?php echo nl2br($row1['testimonial']); ?></p>
 												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="../../images/logo.png" alt="" /></a>
 											</div>
 											<td border=1 style='border: 1px solid #000000;'><?php echo $row1['crew']; ?></td>
@@ -160,7 +160,7 @@
                                                     <input type="hidden" name="table" value="testimonials">
                                                     <input type="hidden" name="Title" value="<?php echo $row1['title']; ?>">
                                                     <input type="hidden" name="Headline" value="<?php echo $row1['headline']; ?>">
-                                                    <input type="hidden" name="Testimonial" value="<?php echo $row1['testimonial']; ?>">
+                                                    <input type="hidden" name="Testimonial" value="<?php echo nl2br($row1['testimonial']); ?>">
                                                     <input type="hidden" name="Crew" value="<?php echo $row1['crew']; ?>">
                                                     <input type="hidden" name="date" value="<?php echo $row1['tripdate']; ?>">
                                                     <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
