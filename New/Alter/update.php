@@ -103,12 +103,13 @@ if ($verifyCode == $onPage){
     	    $preference_order = pg_escape_string($_POST["preference_order"]);
     		$title = pg_escape_string($_POST["family_name"]);
     		$headline = pg_escape_string($_POST["head_line"]);
+    		$star_count = pg_escape_string($_POST["star_count"]);
     		$testimonial = pg_escape_string($_POST["testimonial_text"]);
     		$crew = pg_escape_string($_POST["crew_name"]);
     		$tripdate = pg_escape_string($_POST["tripdate"]);
     		$extra_space = $_POST["line_break"];
     		$show = pg_escape_string($_POST["show"]);
-    		$query = "UPDATE testimonials SET title = '$title', headline = '$headline', testimonial = '$testimonial', crew = '$crew', tripdate = '$tripdate', extra_space = '$extra_space', show = '$show', preference_order = '$preference_order' WHERE testimonial_id = $testimonial_id";
+    		$query = "UPDATE testimonials SET title = '$title', headline = '$headline', testimonial = '$testimonial', crew = '$crew', tripdate = '$tripdate', extra_space = '$extra_space', show = '$show', star_count = '$star_count', preference_order = '$preference_order' WHERE testimonial_id = $testimonial_id";
     	}
     	if ($table == "faqList"){
     		$faq_id = $_POST["faq_id"];

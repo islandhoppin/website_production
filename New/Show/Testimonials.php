@@ -11,7 +11,7 @@
     if ($onPage == $verifyCode){
         require '../connection.inc.php'; 
         // This is a prepared statement, not necessary with this simple query with no variables, but anyway...
-    	$testimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, crew, tripdate, extra_space, show, preference_order FROM testimonials ORDER BY testimonial_id ASC") ; 
+    	$testimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, crew, tripdate, extra_space, show, star_count, preference_order FROM testimonials ORDER BY testimonial_id ASC") ; 
     	// Execute the query, if there were variables, they could be bound within the brackets
     	$testimonials->execute() ;
     }
@@ -130,6 +130,7 @@
                                             <th border=1 style='border: 1px solid #000000;'>Preference Order</th>
                                             <th border=1 style='border: 1px solid #000000;'>Title</th>
                                             <th border=1 style='border: 1px solid #000000;'>Headline</th>
+                                            <th border=1 style='border: 1px solid #000000;'>Star Count</th>
                                             <th border=1 style='border: 1px solid #000000;'>Testimonial</th>
                                             <th border=1 style='border: 1px solid #000000;'>Crew</th>
                                             <th border=1 style='border: 1px solid #000000;'>Date</th>
@@ -147,6 +148,7 @@
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['preference_order']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['title']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['headline']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row1['star_count']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><a href="#ex<?php echo $row1['testimonial_id'];?>" rel="modal:open">Click to Preview</a></td>
                                             <div id="ex<?php echo $row1['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
 												<p><?php echo nl2br($row1['testimonial']); ?></p>
@@ -163,6 +165,7 @@
                                                     <input type="hidden" name="table" value="testimonials">
                                                     <input type="hidden" name="Title" value="<?php echo $row1['title']; ?>">
                                                     <input type="hidden" name="Headline" value="<?php echo $row1['headline']; ?>">
+                                                    <input type="hidden" name="Stars" value="<?php echo $row1['star_count']; ?>">
                                                     <input type="hidden" name="Testimonial" value="<?php echo $row1['testimonial']; ?>">
                                                     <input type="hidden" name="Crew" value="<?php echo $row1['crew']; ?>">
                                                     <input type="hidden" name="date" value="<?php echo $row1['tripdate']; ?>">
