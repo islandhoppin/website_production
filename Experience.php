@@ -657,7 +657,7 @@
 												<p style="margin-top:-50px; text-align:left"><?php echo nl2br($row5['testimonial']); ?></p>
 												<p style="text-align: center;"><b>Crew: </b><?php echo $row5['crew']; ?></p>
 												<hr style="margin-top:-50px;" />
-												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
+												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="https://dzx3g8o0zzxkn.cloudfront.net/General/Greyside.png" alt="" /></a>
 												<p style="text-align: center;" > &copy; Island Hoppin' 2019. All rights reserved.</p>
 											</div>
 										</article>
