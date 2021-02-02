@@ -71,7 +71,7 @@
 			  clear: both;
 			}
 			.modal {
-				width: 700;
+				width: 900;
 			}
 		@media all and (max-width: 737px) {
 		    .hideoffscreen { display: none; }
