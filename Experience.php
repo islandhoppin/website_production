@@ -110,6 +110,13 @@
 		.tooltip:hover .tooltiptext {
 		  visibility: visible;
 		}
+		
+		.style-two {
+			border: 0;
+			height: 0;
+			border-top: 1px solid rgba(0, 0, 0, 0.1);
+			border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		}
 
 		</style>
 		<meta name="description" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
@@ -649,13 +656,13 @@
 												</div>
 												<a href="#ex<?php echo $row5['testimonial_id'];?>" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
 											</div>
-											<div id="ex<?php echo $row5['testimonial_id'];?>" class="modal modal-size" style="background-color:#E5F5FA;">
+											<div id="ex<?php echo $row5['testimonial_id'];?>" class="modal modal-size" style="background-color:#CCDBEE;">
 												<h3 style="text-align: center;">Guest Name: <?php echo $row5['title']; ?></h3>
 												<br />
 												<h3 style="text-align: center;">Trip Date: <?php echo $row5['tripdate']; ?></h3>
 												<br />
 												<p style="text-align: center;"><b>Crew: </b><?php echo $row5['crew']; ?></p>
-												<hr />
+												<hr class="style-two"/>
 												<p style="margin-top:-50px; text-align:left"><?php echo nl2br($row5['testimonial']); ?></p>
 												<hr style="margin-top:-50px;" />
 												<p style="text-align: center;" > &copy; Island Hoppin' 2019. All rights reserved.</p>
