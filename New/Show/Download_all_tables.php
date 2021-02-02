@@ -33,9 +33,13 @@
     	// Execute the query, if there were variables, they could be bound within the brackets
     	$specialnew->execute() ;
     	
-    	$sqltut = $dbconn->prepare("Select news_id, header, update, image, blank_1 From customertut ORDER BY news_id ASC") ; 
+    	$sqltestimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, crew, tripdate, extra_space, show FROM testimonials ORDER BY testimonial_id ASC") ; 
     	// Execute the query, if there were variables, they could be bound within the brackets
-    	$sqltut->execute() ;
+    	$sqltestimonials->execute() ;
+    	
+    	//$sqltut = $dbconn->prepare("Select news_id, header, update, image, blank_1 From customertut ORDER BY news_id ASC") ; 
+    	// Execute the query, if there were variables, they could be bound within the brackets
+    	//$sqltut->execute() ;
     }
     
 ?>
@@ -301,6 +305,63 @@
 				                    <table cellpadding='3' border=1 style='border-collapse:collapse;width:100%;border: 1px solid #000000;'>
                                     <thead>
                                         <tr cellpadding='3' border=1 style='border-collapse:collapse;width:100%;border: 1px solid #000000;'>
+                                            <th border=1 style='border: 1px solid #000000;'>Testimonial ID</th>
+                                            <th border=1 style='border: 1px solid #000000;'>Title</th>
+                                            <th border=1 style='border: 1px solid #000000;'>Headline</th>
+                                            <th border=1 style='border: 1px solid #000000;'>Testimonial</th>
+                                            <th border=1 style='border: 1px solid #000000;'>Crew</th>
+                                            <th border=1 style='border: 1px solid #000000;'>Date</th>
+                                            <th border=1 style='border: 1px solid #000000;'>Space Flag</th>
+                                            <th border=1 style='border: 1px solid #000000;'>Show</th>
+                                            <th border=1 style='border: 1px solid #000000;'>Alter</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!--Use a while loop to make a table row for every DB row-->
+                                        <?php while( $row1 = $testimonials->fetch()) : ?>
+                                        <tr cellpadding='3' border=1 style='border-collapse:collapse;width:100%;border: 1px solid #000000;'>
+                                            <!--Each table column is echoed in to a td cell-->
+                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row1['testimonial_id']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row1['title']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row1['headline']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000;'><a href="#ex<?php echo $row1['testimonial_id'];?>" rel="modal:open">Click to Preview</a></td>
+                                            <div id="ex<?php echo $row1['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
+												<p><?php echo $row1['testimonial']; ?></p>
+												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="../../images/logo.png" alt="" /></a>
+											</div>
+											<td border=1 style='border: 1px solid #000000;'><?php echo $row1['crew']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row1['tripdate']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row1['extra_space']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row1['show']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center;'>
+                                            	<form action="/New/Show/UpdateTestimonial.php" method="post">
+                                                    <input type="hidden" name="testimonial_id" value=<?php echo $row1['testimonial_id'];?>>
+                                                    <input type="hidden" name="table" value="testimonials">
+                                                    <input type="hidden" name="Title" value="<?php echo $row1['title']; ?>">
+                                                    <input type="hidden" name="Headline" value="<?php echo $row1['headline']; ?>">
+                                                    <input type="hidden" name="Testimonial" value="<?php echo $row1['testimonial']; ?>">
+                                                    <input type="hidden" name="Crew" value="<?php echo $row1['crew']; ?>">
+                                                    <input type="hidden" name="date" value="<?php echo $row1['tripdate']; ?>">
+                                                    <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
+                                                  <button type="submit" value="Submit" Style="margin-top:5px;">Edit</button>
+                                                </form>
+                                            	<form action="../Alter/delete.php" method="post">
+                                                    <input type="hidden" name="id" value="testimonial_id">
+                                                    <input type="hidden" name="idnum" value="<?php echo $row1['testimonial_id']; ?>">
+                                                    <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
+                                                    <input type="hidden" name="table" value="testimonials">
+                                                  <button type="submit" value="Submit" Style="margin-top:5px; margin-bottom:5px; color:red;">Delete</button>
+                                                </form>
+                                                </td>
+                                        </tr>
+                                        <?php endwhile ?>
+
+                                    </tbody>
+                                    </table>
+				                    
+				                    <!-- <table cellpadding='3' border=1 style='border-collapse:collapse;width:100%;border: 1px solid #000000;'>
+                                    <thead>
+                                        <tr cellpadding='3' border=1 style='border-collapse:collapse;width:100%;border: 1px solid #000000;'>
                                             <th border=1 style='border: 1px solid #000000;'>News ID</th>
                                             <th border=1 style='border: 1px solid #000000;'>Header</th>
                                             <th border=1 style='border: 1px solid #000000;'>Update</th>
@@ -308,12 +369,12 @@
                                             <th border=1 style='border: 1px solid #000000;'>Date</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody>-->
                                         <!--Use a while loop to make a table row for every DB row-->
-                                        <?php while( $row8 = $sqltut->fetch()) : ?>
-                                        <tr cellpadding='3' border=1 style='border-collapse:collapse;width:100%;border: 1px solid #000000;'>
+                                        <!--<?php while( $row8 = $sqltut->fetch()) : ?>
+                                        <tr cellpadding='3' border=1 style='border-collapse:collapse;width:100%;border: 1px solid #000000;'> -->
                                             <!--Each table column is echoed in to a td cell-->
-                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row8['news_id']; ?></td>
+                                            <!--<td border=1 style='border: 1px solid #000000;'><?php echo $row8['news_id']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['header']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['update']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['image']; ?></td>
@@ -324,7 +385,7 @@
                                         </tr>
                                         <?php endwhile ?>
                                     </tbody>
-                                    </table>
+                                    </table> -->
 				                </article>
 				        </div>
 				    	</div>
