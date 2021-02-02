@@ -323,11 +323,7 @@
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['testimonial_id']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['title']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['headline']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000;'><a href="#ex<?php echo $row8['testimonial_id'];?>" rel="modal:open">Click to Preview</a></td>
-                                            <div id="ex<?php echo $row1['testimonial_id'];?>" class="modal" style="background-color:#E5F5FA;">
-												<p><?php echo $row1['testimonial']; ?></p>
-												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="../../images/logo.png" alt="" /></a>
-											</div>
+                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row8['testimonial']; ?></td>
 											<td border=1 style='border: 1px solid #000000;'><?php echo $row8['crew']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['tripdate']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['extra_space']; ?></td>
@@ -338,34 +334,6 @@
 
                                     </tbody>
                                     </table>
-				                    
-				                    <!-- <table cellpadding='3' border=1 style='border-collapse:collapse;width:100%;border: 1px solid #000000;'>
-                                    <thead>
-                                        <tr cellpadding='3' border=1 style='border-collapse:collapse;width:100%;border: 1px solid #000000;'>
-                                            <th border=1 style='border: 1px solid #000000;'>News ID</th>
-                                            <th border=1 style='border: 1px solid #000000;'>Header</th>
-                                            <th border=1 style='border: 1px solid #000000;'>Update</th>
-                                            <th border=1 style='border: 1px solid #000000;'>Url</th>
-                                            <th border=1 style='border: 1px solid #000000;'>Date</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>-->
-                                        <!--Use a while loop to make a table row for every DB row-->
-                                        <!--<?php while( $row8 = $sqltut->fetch()) : ?>
-                                        <tr cellpadding='3' border=1 style='border-collapse:collapse;width:100%;border: 1px solid #000000;'> -->
-                                            <!--Each table column is echoed in to a td cell-->
-                                            <!--<td border=1 style='border: 1px solid #000000;'><?php echo $row8['news_id']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row8['header']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row8['update']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row8['image']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row8['blank_1']; ?></td>
-                            
-                                                </form>
-                                                </td>
-                                        </tr>
-                                        <?php endwhile ?>
-                                    </tbody>
-                                    </table> -->
 				                </article>
 				        </div>
 				    	</div>
