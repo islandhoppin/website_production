@@ -631,7 +631,7 @@
 												<h4 style="padding-top:10px;">Overall Experience: </h4>
 												<?php 
 													for ($x = 0; $x <= $row5['star_count']; $x++) {
-														echo <i class=\"fa fa-star\" aria-hidden=\"true\">;
+														echo '<i class=\"fa fa-star\" aria-hidden=\"true\">';
 													}
 												?>
 												<!-- <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> -->
