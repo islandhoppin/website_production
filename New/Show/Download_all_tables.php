@@ -33,7 +33,7 @@
     	// Execute the query, if there were variables, they could be bound within the brackets
     	$specialnew->execute() ;
     	
-    	$sqltestimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, crew, tripdate, extra_space, show, preference_order FROM testimonials ORDER BY testimonial_id ASC") ; 
+    	$sqltestimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, crew, tripdate, extra_space, show, star_count, preference_order FROM testimonials ORDER BY testimonial_id ASC") ; 
     	// Execute the query, if there were variables, they could be bound within the brackets
     	$sqltestimonials->execute() ;
     	
@@ -309,6 +309,7 @@
                                             <th border=1 style='border: 1px solid #000000;'>Preference Order</th>
                                             <th border=1 style='border: 1px solid #000000;'>Title</th>
                                             <th border=1 style='border: 1px solid #000000;'>Headline</th>
+                                            <th border=1 style='border: 1px solid #000000;'>Star Count</th>
                                             <th border=1 style='border: 1px solid #000000;'>Testimonial</th>
                                             <th border=1 style='border: 1px solid #000000;'>Testimonial Formatted</th>
                                             <th border=1 style='border: 1px solid #000000;'>Crew</th>
@@ -326,6 +327,7 @@
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['preference_order']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['title']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['headline']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row8['star_count']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['testimonial']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo nl2br($row8['testimonial']); ?></td>
 											<td border=1 style='border: 1px solid #000000;'><?php echo $row8['crew']; ?></td>
