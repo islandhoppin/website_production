@@ -14,6 +14,7 @@
         $order = $_POST["preference_order"];
         $title = $_POST["Title"];
         $Headline = $_POST["Headline"];
+        $Star_Count = $_POST["Stars"];
         $Testimonial = $_POST["Testimonial"];
         $Crew = $_POST["Crew"];
         $tripdate = $_POST["date"];
@@ -74,6 +75,8 @@
                                         <input type="text" name="family_name" value = "<?php echo $title;?>">
         		                        <header><h3>HeadLine</h3></header>
                                         <textarea type="text" name="head_line"  rows="3" cols="30"><?php echo $Headline;?></textarea>
+                                        <header><h3>Star Count</h3></header>
+                                        <input type="text" name="star_count" value = "<?php echo $Star_Count;?>">
                                         <header style="margin-top:25px;"><h3>Update Testimonial</h3></header>
                                         <textarea type="text" name="testimonial_text"  rows="6" cols="30"><?php echo $Testimonial;?></textarea>
 										<header style="margin-top:25px;"><h3>Crew</h3></header>
