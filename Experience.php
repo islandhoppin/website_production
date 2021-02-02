@@ -634,7 +634,7 @@
 													}
 												?>
 												<h4 style="padding-top:10px;">Overall Experience: <?php echo $row5['star_count']; ?></h4>
-												<?php echo $stars; ?>
+
 												<!-- <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> -->
 												<br> <subscript style="text-align: center; margin-top:-50px;"><?php echo $row5['tripdate']; ?></subscript>
 												<hr style="margin-top:-50px;" />
