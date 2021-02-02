@@ -159,6 +159,7 @@
 										<li><a href="#itinerary">Sample Itinerary</a></li>
 										<li><a href="#explore">Points of Interest</a></li>
 										<li><a href="#menu">Sample Menu</a></li>
+										<li><a href="#swag">Island Swag</a></li>
 										<li><a href="#testimonials">Testimonials</a></li>
 										<li><a href="#customerVideos">Sailor Content</a></li>
 									</ul>

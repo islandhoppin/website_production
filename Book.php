@@ -84,6 +84,7 @@
 										<li><a href="Experience.php#itinerary">Sample Itinerary</a></li>
 										<li><a href="Experience.php#explore">Points of Interest</a></li>
 										<li><a href="Experience.php#menu">Sample Menu</a></li>
+										<li><a href="Experience.php#swag">Island Swag</a></li>
 										<li><a href="Experience.php#testimonials">Testimonials</a></li>
 										<li><a href="Experience.php#customerVideos">Sailor Content</a></li>
 									</ul>

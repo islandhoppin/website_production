@@ -87,6 +87,7 @@
 										<li><a href="Experience.php#itinerary">Sample Itinerary</a></li>
 										<li><a href="Experience.php#explore">Points of Interest</a></li>
 										<li><a href="Experience.php#menu">Sample Menu</a></li>
+										<li><a href="Experience.php#swag">Island Swag</a></li>
 										<li><a href="Experience.php#testimonials">Testimonials</a></li>
 										<li><a href="Experience.php#customerVideos">Sailor Content</a></li>
 									</ul>
@@ -199,7 +200,7 @@
 							<header>
 								<h3><a href="Experience.php#swag">Hoppin' Swag</a></h3>
 							</header>
-							<p>All guests receive our environmentally friendly and seasonal water bottle.</p>
+							<p>Check out our new Yeti Tumbler available for purchase while aboard.</p>
 						</article>
 
 						<article>
