@@ -632,19 +632,19 @@
 												<?php
 													$count = $row5['star_count'];
 													switch ($count) {
-													  case 1:
+													  case '1':
 													    echo <i class="fa fa-star" aria-hidden="true">;
 													    break;
-													  case 2:
+													  case '2':
 													    echo <i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true">;
 													    break;
-													  case 3:
+													  case '3':
 													    echo <i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true">;
 													    break;
-													  case 4:
+													  case '4':
 													    echo <i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true">;
 													    break;
-													  case 5:
+													  case '5':
 													    echo <i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true">;
 													    break;
 													}
