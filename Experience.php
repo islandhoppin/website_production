@@ -654,7 +654,7 @@
 												<br />
 												<h3 style="text-align: center;">Trip Date: <?php echo $row5['tripdate']; ?></h3>
 												<hr style="margin-top:-50px;" />
-												<p style="margin-top:-50px; text-align:center"><?php echo nl2br($row5['testimonial']); ?></p>
+												<p style="margin-top:-50px; text-align:left"><?php echo nl2br($row5['testimonial']); ?></p>
 												<p style="text-align: center;"><b>Crew: </b><?php echo $row5['crew']; ?></p>
 												<hr style="margin-top:-50px;" />
 												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
