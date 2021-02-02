@@ -195,7 +195,7 @@
 						</article>
 						
 						<article>
-							<a href="Experience.php#swag" class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/Experience/Yeti-swag.jpeg" alt="Island Hoppin' Bottle" /></a>
+							<a href="Experience.php#swag" class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/General/rsz_yeti-swag.png" alt="Island Hoppin' Yeti" /></a>
 							<header>
 								<h3><a href="Experience.php#swag">Hoppin' Swag</a></h3>
 							</header>
