@@ -112,7 +112,7 @@
 		}
 		
 		.style-two {
-			margin-top: 1%;
+			margin-top: -10%;
 		}
 
 		</style>
