@@ -629,6 +629,7 @@
 											<div>
 												<h3 style="vertical-align: center;"><?php echo $row5['title']; ?></h4>
 												<?php 
+													$stars = "";
 													for ($x = 0; $x = $row5['star_count']; $x++) {
 														$stars = $stars + "<i class=\"fa fa-star\" aria-hidden=\"true\">";
 													}
