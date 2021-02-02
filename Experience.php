@@ -592,7 +592,7 @@
 							</section>
 							<hr />
 							
-							<div>
+							<div id="swag">
 								<header style="text-align:center;">
 									<h2 style="font-family:'Shadows Into Light', 'Source Sans Pro', sans-serif">Island Swag</h2>
 								</header>

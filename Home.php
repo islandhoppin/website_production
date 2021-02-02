@@ -197,7 +197,7 @@
 						<article>
 							<a href="Experience.php#menu" class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/General/water_bottle.png" alt="Island Hoppin' Bottle" /></a>
 							<header>
-								<h3><a href="Experience.html#menu">Hoppin' Swag</a></h3>
+								<h3><a href="Experience.php#swag">Hoppin' Swag</a></h3>
 							</header>
 							<p>All guests receive our environmentally friendly and seasonal water bottle.</p>
 						</article>
