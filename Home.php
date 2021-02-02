@@ -87,6 +87,7 @@
 										<li><a href="Experience.php#itinerary">Sample Itinerary</a></li>
 										<li><a href="Experience.php#explore">Points of Interest</a></li>
 										<li><a href="Experience.php#menu">Sample Menu</a></li>
+										<li><a href="Experience.php#swag">Island Swag</a></li>
 										<li><a href="Experience.php#testimonials">Testimonials</a></li>
 										<li><a href="Experience.php#customerVideos">Sailor Content</a></li>
 									</ul>
@@ -195,11 +196,11 @@
 						</article>
 						
 						<article>
-							<a href="Experience.php#menu" class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/General/water_bottle.png" alt="Island Hoppin' Bottle" /></a>
+							<a href="Experience.php#swag" class="image featured"><img src="https://dzx3g8o0zzxkn.cloudfront.net/General/rsz_yeti-swag.png" alt="Island Hoppin' Yeti" /></a>
 							<header>
-								<h3><a href="Experience.html#menu">Hoppin' Swag</a></h3>
+								<h3><a href="Experience.php#swag">Hoppin' Swag</a></h3>
 							</header>
-							<p>All guests receive our environmentally friendly and seasonal water bottle.</p>
+							<p>Check out our new Yeti Tumbler available for purchase while aboard.</p>
 						</article>
 
 						<article>
@@ -286,7 +287,7 @@
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Island Hoppin' 2019. All rights reserved.</li>
+											<li>&copy; Island Hoppin' <script>document.write(new Date().getFullYear())</script>. All rights reserved.</li>
 										</ul>
 									</div>
 							</div>

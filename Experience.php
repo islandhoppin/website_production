@@ -71,7 +71,7 @@
 			  clear: both;
 			}
 			.modal {
-				width: 700;
+				max-width: 80%;
 			}
 		@media all and (max-width: 737px) {
 		    .hideoffscreen { display: none; }
@@ -159,6 +159,7 @@
 										<li><a href="#itinerary">Sample Itinerary</a></li>
 										<li><a href="#explore">Points of Interest</a></li>
 										<li><a href="#menu">Sample Menu</a></li>
+										<li><a href="#swag">Island Swag</a></li>
 										<li><a href="#testimonials">Testimonials</a></li>
 										<li><a href="#customerVideos">Sailor Content</a></li>
 									</ul>
@@ -592,7 +593,7 @@
 							</section>
 							<hr />
 							
-							<div>
+							<div id="swag">
 								<header style="text-align:center;">
 									<h2 style="font-family:'Shadows Into Light', 'Source Sans Pro', sans-serif">Island Swag</h2>
 								</header>
@@ -649,16 +650,16 @@
 												</div>
 												<a href="#ex<?php echo $row5['testimonial_id'];?>" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
 											</div>
-											<div id="ex<?php echo $row5['testimonial_id'];?>" class="modal modal-size" style="background-color:#E5F5FA;">
+											<div id="ex<?php echo $row5['testimonial_id'];?>" class="modal modal-size" style="background-color:#CCDBEE;">
 												<h3 style="text-align: center;">Guest Name: <?php echo $row5['title']; ?></h3>
 												<br />
-												<h3 style="text-align: center;">Trip Date: <?php echo $row5['tripdate']; ?></h3>
+												<h3 style="text-align: center; margin-top:-20px;">Trip Date: <?php echo $row5['tripdate']; ?></h3>
+												<br />
+												<p style="text-align: center; margin-top:-20px;"><b>Crew: </b><?php echo $row5['crew']; ?></p>
+												<hr style="margin-top:-70px;"/>
+												<p style="margin-top:-50px; text-align:left"><?php echo nl2br($row5['testimonial']); ?></p>
 												<hr style="margin-top:-50px;" />
-												<p style="margin-top:-50px;"><?php echo $row5['testimonial']; ?></p>
-												<p style="text-align: center;">Crew: <?php echo $row5['crew']; ?></p>
-												<hr style="margin-top:-50px;" />
-												<a href="#" rel="modal:close" class="image featured" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"><img src="images/logo.png" alt="" /></a>
-												<p style="text-align: center;" > &copy; Island Hoppin' 2019. All rights reserved.</p>
+												<p style="text-align: center; margin-top:-50px;" > &copy; Island Hoppin' <script>document.write(new Date().getFullYear())</script>. All rights reserved.</p>
 											</div>
 										</article>
 									<?php endwhile ?>
@@ -741,7 +742,7 @@
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Island Hoppin' 2019. All rights reserved.</li>
+											<li>&copy; Island Hoppin' <script>document.write(new Date().getFullYear())</script>. All rights reserved.</li>
 										</ul>
 									</div>
 							</div>
