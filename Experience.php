@@ -629,9 +629,25 @@
 											<div>
 												<h3 style="vertical-align: center;"><?php echo $row5['title']; ?></h4>
 												<h4 style="padding-top:10px;">Overall Experience: </h4>
-												<?php 
-													for ($x = 0; $x <= $row5['star_count']; $x++) {
-														echo '<i class="fa fa-star" aria-hidden="true">';
+												<?php
+													$count = $row5['star_count'];
+													
+													switch ($count) {
+													  case "1":
+													    echo <i class="fa fa-star" aria-hidden="true">;
+													    break;
+													  case "2":
+													    echo <i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true">;
+													    break;
+													  case "3":
+													    echo <i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true">;
+													    break;
+													  case "4":
+													    echo <i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true">;
+													    break;
+													  case "5":
+													    echo <i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true">;
+													    break;
 													}
 												?>
 												<!-- <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> -->
