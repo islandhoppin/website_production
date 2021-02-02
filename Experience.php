@@ -628,7 +628,13 @@
 										<article>
 											<div>
 												<h3 style="vertical-align: center;"><?php echo $row5['title']; ?></h4>
-												<h4 style="padding-top:10px;">Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+												<h4 style="padding-top:10px;">Overall Experience: </h4>
+												<?php 
+													for ($x = 0; $x <= $row5['star_count']; $x++) {
+														echo <i class=\"fa fa-star\" aria-hidden=\"true\">;
+													}
+												?>
+												<!-- <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> -->
 												<br> <subscript style="text-align: center; margin-top:-50px;"><?php echo $row5['tripdate']; ?></subscript>
 												<hr style="margin-top:-50px;" />
 												<div class="hideoffscreen">
