@@ -160,7 +160,7 @@
                                                     <input type="hidden" name="table" value="testimonials">
                                                     <input type="hidden" name="Title" value="<?php echo $row1['title']; ?>">
                                                     <input type="hidden" name="Headline" value="<?php echo $row1['headline']; ?>">
-                                                    <input type="hidden" name="Testimonial" value="<?php echo nl2br($row1['testimonial']); ?>">
+                                                    <input type="hidden" name="Testimonial" value="<?php echo $row1['testimonial']; ?>">
                                                     <input type="hidden" name="Crew" value="<?php echo $row1['crew']; ?>">
                                                     <input type="hidden" name="date" value="<?php echo $row1['tripdate']; ?>">
                                                     <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
