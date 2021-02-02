@@ -11,6 +11,7 @@
     
     if ($onPage == $verifyCode){
         $id = $_POST["testimonial_id"];
+        $order = $_POST["preference_order"];
         $title = $_POST["Title"];
         $Headline = $_POST["Headline"];
         $Testimonial = $_POST["Testimonial"];
@@ -67,6 +68,8 @@
 									<section>
 									<header><h2>Edit Data Fields</h2></header>
                                     <form action = "../Alter/update.php" method = "post">
+        		                        <header><h3>Preference Order</h3></header>
+                                        <input type="text" name="preference_order" value = "<?php echo $order;?>">
         		                        <header><h3>Family_Name</h3></header>
                                         <input type="text" name="family_name" value = "<?php echo $title;?>">
         		                        <header><h3>HeadLine</h3></header>
