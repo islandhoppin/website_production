@@ -310,6 +310,7 @@
                                             <th border=1 style='border: 1px solid #000000;'>Title</th>
                                             <th border=1 style='border: 1px solid #000000;'>Headline</th>
                                             <th border=1 style='border: 1px solid #000000;'>Testimonial</th>
+                                            <th border=1 style='border: 1px solid #000000;'>Testimonial Formatted</th>
                                             <th border=1 style='border: 1px solid #000000;'>Crew</th>
                                             <th border=1 style='border: 1px solid #000000;'>Date</th>
                                             <th border=1 style='border: 1px solid #000000;'>Space Flag</th>
@@ -322,9 +323,10 @@
                                         <tr cellpadding='3' border=1 style='border-collapse:collapse;width:100%;border: 1px solid #000000;'>
                                             <!--Each table column is echoed in to a td cell-->
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['testimonial_id']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row8['preference']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row8['preference_order']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['title']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['headline']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row8['testimonial']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo nl2br($row8['testimonial']); ?></td>
 											<td border=1 style='border: 1px solid #000000;'><?php echo $row8['crew']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['tripdate']; ?></td>
