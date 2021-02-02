@@ -110,10 +110,6 @@
 		.tooltip:hover .tooltiptext {
 		  visibility: visible;
 		}
-		
-		.style-two {
-			margin-top: -10%;
-		}
 
 		</style>
 		<meta name="description" content="The experience offered aboard ISLAND HOPPIN' will make never want to go on a different vacation again! From diving shipwrecks to experiencing castaway islands, ISLAND HOPPIN' provides a one in a lifetime adventure for all those join!" />
@@ -656,10 +652,10 @@
 											<div id="ex<?php echo $row5['testimonial_id'];?>" class="modal modal-size" style="background-color:#CCDBEE;">
 												<h3 style="text-align: center;">Guest Name: <?php echo $row5['title']; ?></h3>
 												<br />
-												<h3 style="text-align: center;">Trip Date: <?php echo $row5['tripdate']; ?></h3>
+												<h3 style="text-align: center; margin-top:-20px;">Trip Date: <?php echo $row5['tripdate']; ?></h3>
 												<br />
-												<p style="text-align: center;"><b>Crew: </b><?php echo $row5['crew']; ?></p>
-												<hr class="style-two"/>
+												<p style="text-align: center; margin-top:-20px;"><b>Crew: </b><?php echo $row5['crew']; ?></p>
+												<hr style="margin-top:-50px;"/>
 												<p style="margin-top:-50px; text-align:left"><?php echo nl2br($row5['testimonial']); ?></p>
 												<hr style="margin-top:-50px;" />
 												<p style="text-align: center;" > &copy; Island Hoppin' 2019. All rights reserved.</p>
