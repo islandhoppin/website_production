@@ -655,7 +655,7 @@
 												<h3 style="text-align: center; margin-top:-20px;">Trip Date: <?php echo $row5['tripdate']; ?></h3>
 												<br />
 												<p style="text-align: center; margin-top:-20px;"><b>Crew: </b><?php echo $row5['crew']; ?></p>
-												<hr style="margin-top:-50px;"/>
+												<hr style="margin-top:-70px;"/>
 												<p style="margin-top:-50px; text-align:left"><?php echo nl2br($row5['testimonial']); ?></p>
 												<hr style="margin-top:-50px;" />
 												<p style="text-align: center;" > &copy; Island Hoppin' 2019. All rights reserved.</p>
