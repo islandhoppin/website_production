@@ -323,7 +323,7 @@
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['testimonial_id']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['title']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['headline']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row8['testimonial']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000;'><?php echo nl2br($row8['testimonial'];) ?></td>
 											<td border=1 style='border: 1px solid #000000;'><?php echo $row8['crew']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['tripdate']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row8['extra_space']; ?></td>
