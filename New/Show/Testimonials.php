@@ -11,7 +11,7 @@
     if ($onPage == $verifyCode){
         require '../connection.inc.php'; 
         // This is a prepared statement, not necessary with this simple query with no variables, but anyway...
-    	$testimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, crew, tripdate, extra_space, show, star_count, preference_order FROM testimonials ORDER BY testimonial_id ASC") ; 
+    	$testimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, crew, tripdate, extra_space, show, star_count, blank_1, preference_order FROM testimonials ORDER BY testimonial_id ASC") ; 
     	// Execute the query, if there were variables, they could be bound within the brackets
     	$testimonials->execute() ;
     }
@@ -81,6 +81,11 @@
                                         <input type="text" name="crew_name" value="Taylor & Margaret">
                                         <header style="margin-top:25px;"><h3>Date</h3></header>
                                         <input type="text" name="date" placeholder = "Month - Year">
+                                        <header style="margin-top:25px;"><h3>Number of Trips</h3></header>
+                                        <select name="blank_1">
+                                          <option value='1'><i class="fa fa-anchor" aria-hidden="true"></i> - First Time Sailers</option>
+                                          <option value='0'>No</option>
+                                        </select>
                                         <header style="margin-top:25px;"><h3>Extra Space Flag</h3></header>
                                         <select name="line_break">
                                           <option value='1'>Yes</option>
