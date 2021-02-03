@@ -1,7 +1,7 @@
 <?php     
 	require 'New/connection.inc.php'; 
       // This is a prepared statement, not necessary with this simple query with no variables, but anyway...
-	$testimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, crew, tripdate, extra_space, show, star_count, preference_order FROM testimonials WHERE show = 'Yes' ORDER BY preference_order DESC") ;
+	$testimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, crew, tripdate, extra_space, show, star_count, blank_1, preference_order FROM testimonials WHERE show = 'Yes' ORDER BY preference_order DESC") ;
 	$sqlfood = $dbconn->prepare("Select food_id, food_title, show, image, blank_1 From food WHERE show = 'Yes' ORDER BY food_id DESC") ; 
 	$sqlcustpics = $dbconn->prepare("Select pic_id, pic_title, show, image, blank_1 From customerpic WHERE show = 'Yes' ORDER BY pic_id DESC") ; 
 	$sqlcustvids = $dbconn->prepare("Select vid_id, vid_title, show, video_link, image, blank_1 From customervid WHERE show = 'Yes' ORDER BY vid_id DESC") ; 
@@ -635,10 +635,30 @@
 													}
 												?>
 												<!-- <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> -->
-												<br> <subscript style="text-align: center; margin-top:-50px;"><?php echo $row5['tripdate']; ?></subscript>
-												<hr style="margin-top:-50px;" /> 
+												<br> <subscript style="text-align: center; margin-top:-50px;"><?php echo $row5['tripdate']; ?></subscript> <br>
+												<?php
+													$count = $row5['blank_1'];
+													
+													switch ($count) {
+													  case "1":
+													    echo '<i class="fa fa-anchor" aria-hidden="true"></i><subscript style="padding-top:10px;"> - First Time Sailers</subscript>';
+													    break;
+													  case "2":
+													    echo '<i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" aria-hidden="true"></i><subscript style="padding-top:10px;"> - Returning Sailers</subscript>';
+													    break;
+													  case "3":
+													    echo '<i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" aria-hidden="true"></i><subscript style="padding-top:10px;"> - Experienced Sailer</subscript>';
+													    break;
+													  case "4":
+													    echo '<i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" aria-hidden="true"></i><subscript style="padding-top:10px;">+ - Seasoned Salties</subscript>';
+													    break;
+													  default:
+													    echo '<i class="fa fa-anchor" aria-hidden="true"></i><subscript style="padding-top:10px;"> - First Time Sailer</subscript>';
+													}
+												?>
+												<hr style="margin-top:-50px;" />
 												<div class="hideoffscreen">
-													<h4 style="margin-top:-50px;"> <?php echo $row5['headline']; ?></h3>
+													<h4 style="margin-top:-60px;"> <?php echo $row5['headline']; ?></h3>
 													<p style="text-align: center; line-height: 1.25em"> 
 														<?php
 															$starting = $row5['headline'];
@@ -657,10 +677,29 @@
 												<a href="#ex<?php echo $row5['testimonial_id'];?>" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
 											</div>
 											<div id="ex<?php echo $row5['testimonial_id'];?>" class="modal modal-size" style="background-color:#CCDBEE;">
+												<h3 style="text-align: center;">Trip Date: <?php echo $row5['tripdate']; ?></h3>
 												<h3 style="text-align: center;">Guest Name: <?php echo $row5['title']; ?></h3>
 												<br />
-												<h3 style="text-align: center; margin-top:-20px;">Trip Date: <?php echo $row5['tripdate']; ?></h3>
-												<br />
+												<?php
+													$count = $row5['blank_1'];
+													
+													switch ($count) {
+													  case "1":
+													    echo '<p style="text-align: center; margin-top:-30px;"><i class="fa fa-anchor" aria-hidden="true"></i><subscript> - First Time Sailers</subscript></p>';
+													    break;
+													  case "2":
+													    echo '<p style="text-align: center; margin-top:-30px;"><i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" aria-hidden="true"></i><subscript> - Returning Sailers</subscript></p>';
+													    break;
+													  case "3":
+													    echo '<p style="text-align: center; margin-top:-30px;"><i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" aria-hidden="true"></i><subscript> - Experienced Sailer</subscript></p>';
+													    break;
+													  case "4":
+													    echo '<p style="text-align: center; margin-top:-30px;"><i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" aria-hidden="true"></i><subscript>+ - Seasoned Salties</subscript></p>';
+													    break;
+													  default:
+													    echo '<p style="text-align: center; margin-top:-30px;"><i class="fa fa-anchor" aria-hidden="true"></i><subscript> - First Time Sailer</subscript></p>';
+													}
+												?>
 												<p style="text-align: center; margin-top:-20px;"><b>Crew: </b><?php echo $row5['crew']; ?></p>
 												<hr style="margin-top:-70px;"/>
 												<p style="margin-top:-50px; text-align:left"><?php echo nl2br($row5['testimonial']); ?></p>
