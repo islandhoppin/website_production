@@ -641,16 +641,16 @@
 													
 													switch ($count) {
 													  case "1":
-													    echo '<i class="fa fa-anchor" aria-hidden="true"></i><subscript style="padding-top:10px;"> - First Time Sailers</subscript>';
+													    echo '<i class="fa fa-anchor" aria-hidden="true"></i><subscript style="padding-top:10px;"> - First Time Sailer</subscript>';
 													    break;
 													  case "2":
-													    echo '<i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" aria-hidden="true"></i><subscript style="padding-top:10px;"> - Returning Sailers</subscript>';
+													    echo '<i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" aria-hidden="true"></i><subscript style="padding-top:10px;"> - Returning Sailer</subscript>';
 													    break;
 													  case "3":
 													    echo '<i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" aria-hidden="true"></i><subscript style="padding-top:10px;"> - Experienced Sailer</subscript>';
 													    break;
 													  case "4":
-													    echo '<i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" aria-hidden="true"></i><subscript style="padding-top:10px;">+ - Seasoned Salties</subscript>';
+													    echo '<i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" aria-hidden="true"></i><subscript style="padding-top:10px;">+ - Seasoned Salty</subscript>';
 													    break;
 													  default:
 													    echo '<i class="fa fa-anchor" aria-hidden="true"></i><subscript style="padding-top:10px;"> - First Time Sailer</subscript>';
@@ -685,16 +685,16 @@
 													
 													switch ($count) {
 													  case "1":
-													    echo '<p style="text-align: center; margin-top:-30px;"><i class="fa fa-anchor" aria-hidden="true"></i><subscript> - First Time Sailers</subscript></p>';
+													    echo '<p style="text-align: center; margin-top:-30px;"><i class="fa fa-anchor" aria-hidden="true"></i><subscript> - First Time Sailer</subscript></p>';
 													    break;
 													  case "2":
-													    echo '<p style="text-align: center; margin-top:-30px;"><i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" aria-hidden="true"></i><subscript> - Returning Sailers</subscript></p>';
+													    echo '<p style="text-align: center; margin-top:-30px;"><i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" aria-hidden="true"></i><subscript> - Returning Sailer</subscript></p>';
 													    break;
 													  case "3":
 													    echo '<p style="text-align: center; margin-top:-30px;"><i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" aria-hidden="true"></i><subscript> - Experienced Sailer</subscript></p>';
 													    break;
 													  case "4":
-													    echo '<p style="text-align: center; margin-top:-30px;"><i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" aria-hidden="true"></i><subscript>+ - Seasoned Salties</subscript></p>';
+													    echo '<p style="text-align: center; margin-top:-30px;"><i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" style="padding-right:5px;" aria-hidden="true"></i><i class="fa fa-anchor" aria-hidden="true"></i><subscript>+ - Seasoned Salty</subscript></p>';
 													    break;
 													  default:
 													    echo '<p style="text-align: center; margin-top:-30px;"><i class="fa fa-anchor" aria-hidden="true"></i><subscript> - First Time Sailer</subscript></p>';

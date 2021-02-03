@@ -15,6 +15,7 @@
         $title = $_POST["Title"];
         $Headline = $_POST["Headline"];
         $Star_Count = $_POST["Stars"];
+        $blank_1 = $_POST["Trips"];
         $Testimonial = $_POST["Testimonial"];
         $Crew = $_POST["Crew"];
         $tripdate = $_POST["date"];
@@ -83,6 +84,14 @@
                                         <input type="text" name="crew_name"  value = "<?php echo $Crew;?>">
                                         <header style="margin-top:25px;"><h3>Date</h3></header>
                                         <input type="text" name="tripdate" value = "<?php echo $tripdate;?>">
+                                        <header style="margin-top:25px;"><h3>Number of Trips</h3></header>
+                                        <select name="blank_1">
+                                          <option value='1'>(1) First Time Sailer</option>
+                                          <option value='2'>(2) Returning Sailer</option>
+                                          <option value='3'>(3) Experienced Sailer</option>
+                                          <option value='4'>(4) Seasoned Salty</option>
+                                          <option value='1'>Never Sailed</option>
+                                        </select>
                                         <header style="margin-top:25px;"><h3>Extra Space Flag</h3></header>
                                         <select name="line_break">
                                           <option value='1'>Yes</option>

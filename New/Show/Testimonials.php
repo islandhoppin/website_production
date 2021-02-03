@@ -83,8 +83,11 @@
                                         <input type="text" name="date" placeholder = "Month - Year">
                                         <header style="margin-top:25px;"><h3>Number of Trips</h3></header>
                                         <select name="blank_1">
-                                          <option value='1'><i class="fa fa-anchor" aria-hidden="true"></i> - First Time Sailers</option>
-                                          <option value='0'>No</option>
+                                          <option value='1'>(1) First Time Sailer</option>
+                                          <option value='2'>(2) Returning Sailer</option>
+                                          <option value='3'>(3) Experienced Sailer</option>
+                                          <option value='4'>(4) Seasoned Salty</option>
+                                          <option value='1'>Never Sailed</option>
                                         </select>
                                         <header style="margin-top:25px;"><h3>Extra Space Flag</h3></header>
                                         <select name="line_break">
@@ -140,6 +143,7 @@
                                             <th border=1 style='border: 1px solid #000000;'>Crew</th>
                                             <th border=1 style='border: 1px solid #000000;'>Date</th>
                                             <th border=1 style='border: 1px solid #000000;'>Space Flag</th>
+                                            <th border=1 style='border: 1px solid #000000;'>Trips</th>
                                             <th border=1 style='border: 1px solid #000000;'>Show</th>
                                             <th border=1 style='border: 1px solid #000000;'>Alter</th>
                                         </tr>
@@ -162,6 +166,7 @@
 											<td border=1 style='border: 1px solid #000000;'><?php echo $row1['crew']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['tripdate']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['extra_space']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000;'><?php echo $row1['blank_1']; ?></td>
                                             <td border=1 style='border: 1px solid #000000;'><?php echo $row1['show']; ?></td>
                                             <td border=1 style='border: 1px solid #000000; text-align:center;'>
                                             	<form action="/New/Show/UpdateTestimonial.php" method="post">
@@ -171,6 +176,7 @@
                                                     <input type="hidden" name="Title" value="<?php echo $row1['title']; ?>">
                                                     <input type="hidden" name="Headline" value="<?php echo $row1['headline']; ?>">
                                                     <input type="hidden" name="Stars" value="<?php echo $row1['star_count']; ?>">
+                                                    <input type="hidden" name="Trips" value="<?php echo $row1['blank_1']; ?>">
                                                     <input type="hidden" name="Testimonial" value="<?php echo $row1['testimonial']; ?>">
                                                     <input type="hidden" name="Crew" value="<?php echo $row1['crew']; ?>">
                                                     <input type="hidden" name="date" value="<?php echo $row1['tripdate']; ?>">
