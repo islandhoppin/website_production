@@ -636,7 +636,7 @@
 												?>
 												<!-- <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> -->
 												<br> <subscript style="text-align: center; margin-top:-50px;"><?php echo $row5['tripdate']; ?></subscript>
-												<hr style="margin-top:-50px;" />
+												<hr style="margin-top:-50px;" /> 
 												<div class="hideoffscreen">
 													<h4 style="margin-top:-50px;"> <?php echo $row5['headline']; ?></h3>
 													<p style="text-align: center; line-height: 1.25em"> 
