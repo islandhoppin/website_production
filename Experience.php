@@ -1,7 +1,7 @@
 <?php     
 	require 'New/connection.inc.php'; 
       // This is a prepared statement, not necessary with this simple query with no variables, but anyway...
-	$testimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, crew, tripdate, extra_space, show FROM testimonials WHERE show = 'Yes' ORDER BY testimonial_id DESC") ;
+	$testimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, crew, tripdate, extra_space, show, star_count, preference_order FROM testimonials WHERE show = 'Yes' ORDER BY preference_order DESC") ;
 	$sqlfood = $dbconn->prepare("Select food_id, food_title, show, image, blank_1 From food WHERE show = 'Yes' ORDER BY food_id DESC") ; 
 	$sqlcustpics = $dbconn->prepare("Select pic_id, pic_title, show, image, blank_1 From customerpic WHERE show = 'Yes' ORDER BY pic_id DESC") ; 
 	$sqlcustvids = $dbconn->prepare("Select vid_id, vid_title, show, video_link, image, blank_1 From customervid WHERE show = 'Yes' ORDER BY vid_id DESC") ; 
@@ -628,7 +628,13 @@
 										<article>
 											<div>
 												<h3 style="vertical-align: center;"><?php echo $row5['title']; ?></h4>
-												<h4 style="padding-top:10px;">Overall Experience: </h4><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+												<h4 style="padding-top:10px;">Overall Experience: </h4>
+												<?php 
+													for ($x = 0; $x <= ($row5['star_count']-1); $x++) {
+														echo '<i class="fa fa-star" aria-hidden="true"></i>';
+													}
+												?>
+												<!-- <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> -->
 												<br> <subscript style="text-align: center; margin-top:-50px;"><?php echo $row5['tripdate']; ?></subscript>
 												<hr style="margin-top:-50px;" />
 												<div class="hideoffscreen">
