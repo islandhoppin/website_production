@@ -78,7 +78,12 @@
                                         <header style="margin-top:25px;"><h3>Testimonial</h3></header>
 										<textarea type="text" name="testimonial_text"  rows="6" cols="30"></textarea>
 										<header style="margin-top:25px;"><h3>Crew</h3></header>
-                                        <input type="text" name="crew_name" value="Taylor & Margaret">
+										<select name="crew_name">
+                                          <option value='Jamie and Susannah'>Jamie and Susannah</option>
+                                          <option value='Taylor & Margaret'>Taylor & Margaret</option>
+                                          <option selected="selected" value='Jack & Kaycee'>Jack & Kaycee</option>
+                                        </select>
+                                       <!-- <input type="text" name="crew_name" value="Taylor & Margaret"> -->
                                         <header style="margin-top:25px;"><h3>Date</h3></header>
                                         <input type="text" name="date" placeholder = "Month - Year">
                                         <header style="margin-top:25px;"><h3>Number of Trips</h3></header>
