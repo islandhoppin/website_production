@@ -35,7 +35,7 @@ $context  = stream_context_create($options);
 //$result = file_get_contents(sprintf($endpoint, $spaceID), false, $context);
 $result = file_get_contents($URL, false, $context);
 
-if ($result === FALSE) { /* Handle error */ }
+//if ($result === FALSE) { /* Handle error */ }
 
 var_dump($result);
 
