@@ -1,9 +1,9 @@
 <?php
-$spaceID = parse_url(getenv('SPACEID'));
-$accessToken = parse_url(getenv('ACCESSTOKEN'));
-$endpoint = parse_url(getenv('ENDPOINT'));
+$spaceID = getenv('SPACEID');
+$accessToken = getenv('ACCESSTOKEN');
+$endpoint = getenv('ENDPOINT');
 
-echo $spaceID[0];
+echo $spaceID;
 echo $accessToken;
 echo $endpoint;
 
