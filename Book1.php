@@ -3,6 +3,10 @@ $spaceID = parse_url(getenv('SPACEID'));
 $accessToken = parse_url(getenv('ACCESSTOKEN'));
 $endpoint = parse_url(getenv('ENDPOINT'));
 
+echo $spaceID
+echo $accessToken
+echo $endpoint
+
 $endpoint = "https://graphql.contentful.com/content/v1/spaces/%s";
 
 $query = "query {
