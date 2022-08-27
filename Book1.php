@@ -20,7 +20,7 @@ $query = "query {
 
 $data = array ('query' => $query);
 $data = http_build_query($data);
-
+echo $data;
 $options = array(
   'http' => array(
     'header'  => sprintf("Content-Type: application/json",$accessToken),
@@ -28,8 +28,10 @@ $options = array(
     'content' => $data
   )
 );
-
+echo $options;
 $context  = stream_context_create($options);
+echo $context;
+
 $result = file_get_contents(sprintf($endpoint, $spaceID), false, $context);
 
 if ($result === FALSE) { /* Handle error */ }
