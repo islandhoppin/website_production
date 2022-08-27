@@ -1,7 +1,8 @@
 <?php
-$spaceID = getenv('SPACEID');
+//$spaceID = getenv('SPACEID');
 $accessToken = getenv('ACCESSTOKEN');
-$endpoint = getenv('ENDPOINT');
+//$endpoint = getenv('ENDPOINT');
+$URL = getenv('CONTENTFULURL');
 
 $query = "query {
   priceScheduleCollection(order: orderId_ASC, limit:5, where: {show: true}) {
@@ -28,10 +29,11 @@ $options = array(
     'content' => $data
   )
 );
-echo $options['http'];
+
 $context  = stream_context_create($options);
 
-$result = file_get_contents(sprintf($endpoint, $spaceID), false, $context);
+//$result = file_get_contents(sprintf($endpoint, $spaceID), false, $context);
+$result = file_get_contents(sprintf($URL), false, $context);
 
 if ($result === FALSE) { /* Handle error */ }
 
