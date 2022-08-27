@@ -28,7 +28,7 @@ $options = array(
     'content' => $data
   )
 );
-echo $options['http'['header']];
+echo $options['http'];
 $context  = stream_context_create($options);
 
 $result = file_get_contents(sprintf($endpoint, $spaceID), false, $context);
