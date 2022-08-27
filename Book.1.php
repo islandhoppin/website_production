@@ -25,7 +25,7 @@ $data = http_build_query($data);
 
 $options = array(
   'http' => array(
-    'header'  => sprintf("Authorization: Bearer %s",$accessToken),
+    'header'  => sprintf("Content-Type: application/json, Authorization: Bearer %s",$accessToken),
     'method'  => 'POST',
     'content' => $data
   )
