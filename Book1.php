@@ -3,7 +3,7 @@ $spaceID = parse_url(getenv('SPACEID'));
 $accessToken = parse_url(getenv('ACCESSTOKEN'));
 $endpoint = parse_url(getenv('ENDPOINT'));
 
-echo $spaceID;
+echo $spaceID[0];
 echo $accessToken;
 echo $endpoint;
 
