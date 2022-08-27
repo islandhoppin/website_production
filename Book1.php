@@ -3,12 +3,6 @@ $spaceID = getenv('SPACEID');
 $accessToken = getenv('ACCESSTOKEN');
 $endpoint = getenv('ENDPOINT');
 
-echo $spaceID;
-echo $accessToken;
-echo $endpoint;
-
-$endpoint = "https://graphql.contentful.com/content/v1/spaces/%s";
-
 $query = "query {
   priceScheduleCollection(order: orderId_ASC, limit:5, where: {show: true}) {
     items {
@@ -29,7 +23,7 @@ $data = http_build_query($data);
 
 $options = array(
   'http' => array(
-    'header'  => sprintf("Content-Type: application/json, Authorization: Bearer %s",$accessToken),
+    'header'  => sprintf("Content-Type: application/json",$accessToken),
     'method'  => 'POST',
     'content' => $data
   )
