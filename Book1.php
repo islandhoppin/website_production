@@ -4,13 +4,13 @@
 	//$sqlprice = $dbconn->prepare("Select price_id, season, twopax, threepax, fourpax, fivepax, sixpax, sevenpax, eightpax, show From priceSchedule Where show = 'Yes' ORDER BY price_id ASC") ;
 	//$sqlfaq = $dbconn->prepare("Select question, answer, faqorder, show From faqList Where show = 'Yes' ORDER BY faqorder ASC") ;
 	
-	$specialnew = $dbconn->prepare("Select special_title, offer, special_order, show, image From specials Where show = 'Yes' ORDER BY special_order ASC LIMIT 3") ; 
-	$specialcount = $dbconn->prepare("Select COUNT(special_id) From specials Where show = 'Yes'") ; 
+	//$specialnew = $dbconn->prepare("Select special_title, offer, special_order, show, image From specials Where show = 'Yes' ORDER BY special_order ASC LIMIT 3") ; 
+	//$specialcount = $dbconn->prepare("Select COUNT(special_id) From specials Where show = 'Yes'") ; 
       // Execute the query, if there were variables, they could be bound within the brackets
     //$sqlprice->execute() ;
     //$sqlfaq->execute() ;
-    $specialnew->execute() ;
-    $specialcount->execute() ;
+    //$specialnew->execute() ;
+    //$specialcount->execute() ;
     $errorDisplay = '<article id="main" class="special"><header><p>***No Specials are currently offered, please check back soon for new upcoming offers!***</p></header></article>';
 
 
@@ -40,12 +40,15 @@ Function getData($data){
 
     $priceQuery = '{"query":"query {priceScheduleCollection(order: orderId_ASC, limit:5, where: {show: true}) {items {season pax2 pax3 pax4 pax5 pax6 pax7 pax8}}}"}';
     $priceSchedule = getData($priceQuery);
-    $priceScheduleCount = count($priceSchedule['data']['priceScheduleCollection']['items']);
+    //$priceScheduleCount = count($priceSchedule['data']['priceScheduleCollection']['items']);
 
     $faqQuery = '{"query":"query {faqCollection (order: orderId_DESC, where: {show: true}) {items {question answer date}}}"}';
     $faqs = getData($faqQuery);
-    $faqsCount = count($faqs['data']['faqCollection']['items']);
+    //$faqsCount = count($faqs['data']['faqCollection']['items']);
 
+	$specialsQuery = '{"query":"query {specialsCollection (order: orderId_ASC, where: {show: true}) {items {title offer photo {title description contentType fileName size url width height}}}}"}';
+    $specials = getData($specialsQuery);
+    $specialsCount = count($specials['data']['specialsCollection']['items']);
 
 ?>
 <!DOCTYPE HTML>
@@ -277,19 +280,18 @@ Function getData($data){
 						</header>
 						<div class="row" id="specials">
 							
-							<?php while( $row3 = $specialnew->fetch()) : ?>
+							<?php foreach($specials['data']['specialsCollection']['items'] as $value) : ?>
 									<article class="4u 12u(mobile) special">
-										<a  class="image featured" style="width:350px;"> <img src="<?php echo $row3['image']; ?>" alt="<?php echo $row3['special_title']; ?>"/></a>
+										<a  class="image featured" style="width:350px;"> <img src="<?php echo $value['photo']['url']; ?>" alt="<?php echo $value['title']; ?>"/></a>
 										<header>
-											<h3><?php echo $row3['special_title']; ?></h3>
+											<h3><?php echo $value['title']; ?></h3>
 										</header>
 										<p>
-											<?php echo $row3['offer']; ?>
+											<?php echo $value['offer']; ?>
 										</p>	
 									</article>
-							<?php endwhile ?>
-							<?php $row4 = $specialcount->fetch() ?>
-							<?php if ($row4[0] == 0) { echo $errorDisplay; }?>
+							<?php endforeach ?>
+							<?php if ($specialsCount == 0) { echo $errorDisplay; }?>
 							
 							
 							
