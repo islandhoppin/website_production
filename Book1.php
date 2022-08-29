@@ -174,13 +174,13 @@ Function getData($data){
                                         <tr cellpadding='3' border=1 style='border-collapse:collapse;width:100%;border: 1px solid #000000;'>
                                             <!--Each table column is echoed in to a td cell-->
                                             <td border=1 style='border: 1px solid #000000; text-align:center;'><b><?php echo $value['season']; ?></b></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $value['pax2']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $value['pax3']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $value['pax4']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $value['pax5']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $value['pax6']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $value['pax7']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $value['pax8']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo number_format($value['pax2']); ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo number_format($value['pax3']); ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo number_format($value['pax4']); ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo number_format($value['pax5']); ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo number_format($value['pax6']); ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo number_format($value['pax7']); ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo number_format($value['pax8']); ?></td>
                                         </tr>
                                         <?php endforeach; ?>
                                     </tbody>
@@ -310,13 +310,13 @@ Function getData($data){
 									<h2 style="font-family:'Shadows Into Light', 'Source Sans Pro', sans-serif;">Frequently Asked Questions</h2>
 									<h3 style="text-align:center;">Click to expand the answer.</h3>
 								</header>
-							<?php while( $row2 = $sqlfaq->fetch()) : ?>
+							<?php foreach($faqs['data']['faqCollection']['items'] as $value) : ?>
 								<br />
-								<button class="accordion"><?php echo $row2['question']; ?></button>
+								<button class="accordion"><?php echo $value['question']; ?></button>
 								<div class="panel">
-								  <p><?php echo $row2['answer']; ?></p>
+								  <p><?php echo $value['answer']; ?></p>
 								</div>
-							<?php endwhile ?>
+							<?php endforeach ?>
 						</div>
 						<hr id="contact"/>
 						<article id="main" class="special">
