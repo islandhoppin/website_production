@@ -170,20 +170,19 @@ Function getData($data){
                                     </thead>
                                     <tbody>
                                         <!--Use a while loop to make a table row for every DB row-->
-                                        <?php $x1 = 0; while( $priceScheduleCount === $x1) : ?>
+                                        <?php foreach($priceSchedule['data']['priceScheduleCollection']['items'] as $value) : ?>
                                         <tr cellpadding='3' border=1 style='border-collapse:collapse;width:100%;border: 1px solid #000000;'>
                                             <!--Each table column is echoed in to a td cell-->
-                                            <td border=1 style='border: 1px solid #000000; text-align:center;'><b><?php echo $priceSchedule['data']['priceScheduleCollection']['items'][$x1]['season']; ?></b></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $priceSchedule['data']['priceScheduleCollection']['items'][$x1]['pax2']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $priceSchedule['data']['priceScheduleCollection']['items'][$x1]['pax3']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $priceSchedule['data']['priceScheduleCollection']['items'][$x1]['pax4']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $priceSchedule['data']['priceScheduleCollection']['items'][$x1]['pax5']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $priceSchedule['data']['priceScheduleCollection']['items'][$x1]['pax6']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $priceSchedule['data']['priceScheduleCollection']['items'][$x1]['pax7']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $priceSchedule['data']['priceScheduleCollection']['items'][$x1]['pax8']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center;'><b><?php echo $value['season']; ?></b></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $value['pax2']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $value['pax3']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $value['pax4']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $value['pax5']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $value['pax6']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $value['pax7']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $value['pax8']; ?></td>
                                         </tr>
-                                        <?php $x1 +=1; ?>
-                                        <?php endwhile ?>
+                                        <?php endforeach; ?>
                                     </tbody>
                                     </table>
 									<p style="text-align: center;">Rates are subject to change, please contact your broker/clearing house for the most current rates.<br /> ***All prices are in USD***</p>
