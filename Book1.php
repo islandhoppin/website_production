@@ -1,43 +1,51 @@
-<?php
-//$spaceID = getenv('SPACEID');
-$accessToken = getenv('ACCESSTOKEN');
-//$endpoint = getenv('ENDPOINT');
-$URL = getenv('CONTENTFULURL');
+<?php     
+	require 'New/connection.inc.php'; 
+      // This is a prepared statement, not necessary with this simple query with no variables, but anyway...
+	//$sqlprice = $dbconn->prepare("Select price_id, season, twopax, threepax, fourpax, fivepax, sixpax, sevenpax, eightpax, show From priceSchedule Where show = 'Yes' ORDER BY price_id ASC") ;
+	//$sqlfaq = $dbconn->prepare("Select question, answer, faqorder, show From faqList Where show = 'Yes' ORDER BY faqorder ASC") ;
+	
+	$specialnew = $dbconn->prepare("Select special_title, offer, special_order, show, image From specials Where show = 'Yes' ORDER BY special_order ASC LIMIT 3") ; 
+	$specialcount = $dbconn->prepare("Select COUNT(special_id) From specials Where show = 'Yes'") ; 
+      // Execute the query, if there were variables, they could be bound within the brackets
+    //$sqlprice->execute() ;
+    //$sqlfaq->execute() ;
+    $specialnew->execute() ;
+    $specialcount->execute() ;
+    $errorDisplay = '<article id="main" class="special"><header><p>***No Specials are currently offered, please check back soon for new upcoming offers!***</p></header></article>';
 
-$query = "query {
-  priceScheduleCollection(order: orderId_ASC, limit:5, where: {show: true}) {
-    items {
-      season
-      show
-      pax2
-      pax3
-      pax4
-      pax5
-      pax6
-      pax7
-      pax8
-    }
-  }";
 
-$data = array ('query' => $query);
-$data = http_build_query($data);
+Function getData($data){
 
-$options = array(
-  'http' => array(
-    'header'  => sprintf("Content-Type: application/json",$accessToken),
-    'method'  => 'POST',
-    'content' => $data
-  )
-);
+    $url = getenv('CONTENTFULURL');
+    $authorizationBearer = getenv('ACCESSTOKEN');
 
-$context  = stream_context_create($options);
+    $curl = curl_init($url);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_URL, $url);
 
-//$result = file_get_contents(sprintf($endpoint, $spaceID), false, $context);
-$result = file_get_contents($URL, false, $context);
+    $headers = array(
+       "Content-Type: application/json",
+       $authorizationBearer,
+    );
+    curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
 
-//if ($result === FALSE) { /* Handle error */ }
+    $response = curl_exec($curl);
+    //dumps all the data for from the array
+    //var_dump(json_decode($response, true));
+    $output = json_decode($response, true);
+    return $output;
 
-var_dump($result);
+}
+
+    $priceQuery = '{"query":"query {priceScheduleCollection(order: orderId_ASC, limit:5, where: {show: true}) {items {season pax2 pax3 pax4 pax5 pax6 pax7 pax8}}}"}';
+    $priceSchedule = getData($priceQuery);
+    $priceScheduleCount = count($priceSchedule['data']['priceScheduleCollection']['items']);
+
+    $faqQuery = '{"query":"query {faqCollection (order: orderId_DESC, where: {show: true}) {items {question answer date}}}"}';
+    $faqs = getData($faqQuery);
+    $faqsCount = count($faqs['data']['faqCollection']['items']);
+
 
 ?>
 <!DOCTYPE HTML>
@@ -146,7 +154,38 @@ var_dump($result);
 								</p>
 							</header>
 							<section>
-								<?php echo $result; ?>
+								<table cellpadding='3' style='border-collapse:collapse;width:100%;border: 1px solid #000000;'>
+                                    <thead>
+                                        <tr cellpadding='3' border=1 style='border-collapse:collapse;width:90%;border: 1px solid #000000;'>
+                                            
+                                            <th border=1 style='border: 1px solid #000000;'><b>Season</b></th>
+                                            <th border=1 style='border: 1px solid #000000;'><b>2 Pax</b></th>
+                                            <th border=1 style='border: 1px solid #000000;'><b>3 Pax</b></th>
+                                            <th border=1 style='border: 1px solid #000000;'><b>4 Pax</b></th>
+                                            <th border=1 style='border: 1px solid #000000;'><b>5 Pax</b></th>
+                                            <th border=1 style='border: 1px solid #000000;'><b>6 Pax</b></th>
+                                            <th border=1 style='border: 1px solid #000000;'><b>7 Pax</b></th>
+                                            <th border=1 style='border: 1px solid #000000;'><b>8 Pax</b></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!--Use a while loop to make a table row for every DB row-->
+                                        <?php $x1 = 0; while( $priceScheduleCount === $x1) : ?>
+                                        <tr cellpadding='3' border=1 style='border-collapse:collapse;width:100%;border: 1px solid #000000;'>
+                                            <!--Each table column is echoed in to a td cell-->
+                                            <td border=1 style='border: 1px solid #000000; text-align:center;'><b><?php echo $priceSchedule['data']['priceScheduleCollection']['items'][$x1]['season']; ?></b></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $priceSchedule['data']['priceScheduleCollection']['items'][$x1]['pax2']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $priceSchedule['data']['priceScheduleCollection']['items'][$x1]['pax3']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $priceSchedule['data']['priceScheduleCollection']['items'][$x1]['pax4']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $priceSchedule['data']['priceScheduleCollection']['items'][$x1]['pax5']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $priceSchedule['data']['priceScheduleCollection']['items'][$x1]['pax6']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $priceSchedule['data']['priceScheduleCollection']['items'][$x1]['pax7']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $priceSchedule['data']['priceScheduleCollection']['items'][$x1]['pax8']; ?></td>
+                                        </tr>
+                                        <?php $x1 +=1; ?>
+                                        <?php endwhile ?>
+                                    </tbody>
+                                    </table>
 									<p style="text-align: center;">Rates are subject to change, please contact your broker/clearing house for the most current rates.<br /> ***All prices are in USD***</p>
 							</section>
 							<hr style="margin-top:-50px; margin-bottom:100px" />
@@ -239,7 +278,19 @@ var_dump($result);
 						</header>
 						<div class="row" id="specials">
 							
-							
+							<?php while( $row3 = $specialnew->fetch()) : ?>
+									<article class="4u 12u(mobile) special">
+										<a  class="image featured" style="width:350px;"> <img src="<?php echo $row3['image']; ?>" alt="<?php echo $row3['special_title']; ?>"/></a>
+										<header>
+											<h3><?php echo $row3['special_title']; ?></h3>
+										</header>
+										<p>
+											<?php echo $row3['offer']; ?>
+										</p>	
+									</article>
+							<?php endwhile ?>
+							<?php $row4 = $specialcount->fetch() ?>
+							<?php if ($row4[0] == 0) { echo $errorDisplay; }?>
 							
 							
 							
@@ -260,7 +311,13 @@ var_dump($result);
 									<h2 style="font-family:'Shadows Into Light', 'Source Sans Pro', sans-serif;">Frequently Asked Questions</h2>
 									<h3 style="text-align:center;">Click to expand the answer.</h3>
 								</header>
-							
+							<?php while( $row2 = $sqlfaq->fetch()) : ?>
+								<br />
+								<button class="accordion"><?php echo $row2['question']; ?></button>
+								<div class="panel">
+								  <p><?php echo $row2['answer']; ?></p>
+								</div>
+							<?php endwhile ?>
 						</div>
 						<hr id="contact"/>
 						<article id="main" class="special">
