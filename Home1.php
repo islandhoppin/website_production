@@ -269,7 +269,7 @@ Function getData($data){
 									</a>
 									<header>
 										<h3><?php echo $value['header']; ?></h3>
-										<h3><i><?php echo $value['date']; ?></i></h3>
+										<h3><i><?php $newsDate=date_create($value['date']); echo date_format($newsDate,"F j, Y"); ?></i></h3>
 									</header>
 									<p><?php echo $value['update']; ?></p>
 								</article>
