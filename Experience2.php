@@ -650,7 +650,7 @@
 								</header>
 								<section  class="carousel">
 									<div class="reel">
-									<?php foreach(testimonials['data']['customerTestimonialsCollection']['items'] as $value) : ?>
+									<?php foreach($testimonials['data']['customerTestimonialsCollection']['items'] as $value) : ?>
 										<article>
 											<div>
 												<h3 style="vertical-align: center;"><?php echo $value['title']; ?></h4>
