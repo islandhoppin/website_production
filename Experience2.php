@@ -661,7 +661,7 @@
 													}
 												?>
 												<!-- <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> -->
-												<br> <subscript style="text-align: center; margin-top:-50px;"><?php echo $newsDate=date_create($value['date']); echo date_format($newsDate,"F - Y"); ?></subscript> <br>
+												<br> <subscript style="text-align: center; margin-top:-50px;"><?php $newsDate=date_create($value['date']); echo date_format($newsDate,"F - Y"); ?></subscript> <br>
 												<?php
 													$count = $value['starCount'];
 													
@@ -703,7 +703,7 @@
 												<a href="#ex<?php echo $value['orderId'];?>" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
 											</div>
 											<div id="ex<?php echo $value['orderId'];?>" class="modal modal-size" style="background-color:#CCDBEE;">
-												<h3 style="text-align: center;">Trip Date: <?php echo $newsDate=date_create($value['date']); echo date_format($newsDate,"F - Y"); ?></h3>
+												<h3 style="text-align: center;">Trip Date: <?php $newsDate=date_create($value['date']); echo date_format($newsDate,"F - Y"); ?></h3>
 												<h3 style="text-align: center;">Guest Name: <?php echo $value['title']; ?></h3>
 												<br />
 												<?php
