@@ -1,19 +1,5 @@
 <?php     
-	require 'New/connection.inc.php'; 
-      // This is a prepared statement, not necessary with this simple query with no variables, but anyway...
-	//$sqlprice = $dbconn->prepare("Select price_id, season, twopax, threepax, fourpax, fivepax, sixpax, sevenpax, eightpax, show From priceSchedule Where show = 'Yes' ORDER BY price_id ASC") ;
-	//$sqlfaq = $dbconn->prepare("Select question, answer, faqorder, show From faqList Where show = 'Yes' ORDER BY faqorder ASC") ;
-	
-	//$specialnew = $dbconn->prepare("Select special_title, offer, special_order, show, image From specials Where show = 'Yes' ORDER BY special_order ASC LIMIT 3") ; 
-	//$specialcount = $dbconn->prepare("Select COUNT(special_id) From specials Where show = 'Yes'") ; 
-      // Execute the query, if there were variables, they could be bound within the brackets
-    //$sqlprice->execute() ;
-    //$sqlfaq->execute() ;
-    //$specialnew->execute() ;
-    //$specialcount->execute() ;
-    $errorDisplay = '<article id="main" class="special"><header><p>***No Specials are currently offered, please check back soon for new upcoming offers!***</p></header></article>';
-
-
+    
 Function getData($data){
 
     $url = getenv('CONTENTFULURL');
@@ -49,6 +35,7 @@ Function getData($data){
 	$specialsQuery = '{"query":"query {specialsCollection (order: orderId_ASC, where: {show: true}) {items {title offer photo {title description contentType fileName size url width height}}}}"}';
     $specials = getData($specialsQuery);
     $specialsCount = count($specials['data']['specialsCollection']['items']);
+    $errorDisplay = '<article id="main" class="special"><header><p>***No Specials are currently offered, please check back soon for new upcoming offers!***</p></header></article>';
 
 ?>
 <!DOCTYPE HTML>

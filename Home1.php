@@ -1,12 +1,5 @@
 <?php
-    // First connect to the database via your connection insert file
-    //require 'New/connection.inc.php'; 
-    
-    // This is a prepared statement, not necessary with this simple query with no variables, but anyway...
-    //$sqlnew = $dbconn->prepare("Select news_id, header, update, image, blank_1 From newsupdates ORDER BY news_id DESC LIMIT 15") ; 
-    // Execute the query, if there were variables, they could be bound within the brackets
-    //$sqlnew->execute() ;
-    
+
 Function getData($data){
 
     $url = getenv('CONTENTFULURL');
@@ -33,7 +26,7 @@ Function getData($data){
 
     $newsQuery = '{"query":"query {newsCollection (order: orderId_DESC, limit:15, where: {show: true}) {items {header update date photo {title description contentType fileName size url width height}}}}"}';
     $news = getData($newsQuery);
-    $newsCount = count($news['data']['newsCollection']['items']);
+    //$newsCount = count($news['data']['newsCollection']['items']);
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
@@ -264,7 +257,7 @@ Function getData($data){
 								$i++; 
 								if($i % 3 == 1){echo '<div class="row">';}?>
 								<article class="4u 12u(mobile) special">
-									<a href="<?php echo $value['photo']['url']; ?>" class="image featured swipebox" title="<?php echo $value['header']; ?>  ---  <?php echo $value['update']; ?>">
+									<a href="<?php echo $value['photo']['url']; ?>" class="image featured swipebox" title="<?php $newsDate=date_create($value['date']); echo date_format($newsDate,"F j, Y"); ?>:  <?php echo $value['header']; ?>">
 										<img class="image featured" src="<?php echo $value['photo']['url']; ?>" alt="<?php echo $value['update']; ?>" />
 									</a>
 									<header>
