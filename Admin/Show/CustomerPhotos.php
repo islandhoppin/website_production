@@ -33,7 +33,7 @@ Function getData($data){
         header( 'Location: /Admin.html') ;
     }
     if ($onPage == $verifyCode){
-        $customerPhotosQuery = '{"query":"query {customerPhotosCollection (order: orderId_ASC}) {items {title orderId show date photo {title description contentType fileName size url width height}}}}"}';
+        $customerPhotosQuery = '{"query":"query {customerPhotosCollection (order: orderId_ASC) {items {title orderId show date photo {title description contentType fileName size url width height}}}}"}';
     	$customerPhotos = getData($customerPhotosQuery);
 		
 		date_default_timezone_set('US/Eastern');
