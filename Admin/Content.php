@@ -37,6 +37,11 @@
 		<link rel="apple-touch-icon" href="/images/favicon.png" />
 		<link rel="shortcut icon" href="/images/favicon.png" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<style>
+		table, th, td {
+		  border: 1px solid black;
+		}
+		</style>
 	</head>
 	
 	<body class="right-sidebar">
@@ -51,7 +56,6 @@
 								<h2>Admin Content Manager - Island Hoppin'</h2>
 								<p>
 									<a href="../Home.php">Go to the Home Screen</a>
-									</br><a href="https://app.contentful.com/spaces/feujzg2f0w3f/home">Managed in Contentful</a>
 								</p>
 							</header>
 							
