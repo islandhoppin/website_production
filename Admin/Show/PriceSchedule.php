@@ -92,6 +92,17 @@ Function getData($data){
 						<div class="row 200%">
 				        <div class="11u 12u(mobile) important(mobile)" id="content">
 				                <article id="main">
+				                	<section>
+										<header>
+											<h3>General Information</h3>
+										</header>
+										<p>
+											All Pricing Schedule Information is manually collected from 
+											</br><a href="https://www.cyabrochure.com/eb/205/pyaX/5323/4/9/1/">CYA Brochure</a>
+
+										</p>
+									</section>
+									<section>
 				                	<center>
 				                		<h1 style="color:green">Price Schedule Table</h1>
 				                	</center>
@@ -125,10 +136,12 @@ Function getData($data){
 							            <?php endforeach; ?>
 							        </table>
 							        <br><br>
-							        <button type="button" onclick="tableToCSV()">
-							            download CSV
-							        </button>
-								    
+							        <center>
+							        	<button type="button" onclick="tableToCSV()">
+							            	download CSV
+							        	</button>
+							        </center>
+							        </section>
 				                </article>
 				            </div>
 				            </div>
