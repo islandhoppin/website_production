@@ -92,7 +92,10 @@ Function getData($data){
 						<div class="row 200%">
 				        <div class="11u 12u(mobile) important(mobile)" id="content">
 				                <article id="main">
-        							<h1 style="color:green">Price Schedule Table</h1>
+				                	<center>
+				                		<h1 style="color:green">Price Schedule Table</h1>
+				                	</center>
+        							
 								    <table border="1" cellspacing="0" cellpadding="10">
 							            <tr>
 							                <th>Season</th>
