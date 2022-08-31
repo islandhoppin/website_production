@@ -33,7 +33,7 @@ Function getData($data){
         header( 'Location: /Admin.html') ;
     }
     if ($onPage == $verifyCode){
-        $testimonialsQuery = '{"query":"query {customerTestimonialsCollection (order: orderId_DESC, where: {show: true}) {items {orderId title headline testimonial trips starCount crew date spaceFlag show}}}"}';
+        $testimonialsQuery = '{"query":"query {customerTestimonialsCollection (order: orderId_ASC, where: {show: true}) {items {orderId title headline testimonial trips starCount crew date spaceFlag show}}}"}';
     	$testimonials = getData($testimonialsQuery);
 		
 		date_default_timezone_set('US/Eastern');
@@ -66,6 +66,11 @@ Function getData($data){
 		<link rel="apple-touch-icon" href="/images/favicon.png" />
 		<link rel="shortcut icon" href="/images/favicon.png" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<style>
+		table, th, td, tr {
+		  border: 1px solid black;
+		}
+		</style>
 	</head>
 	
 	<body class="right-sidebar">

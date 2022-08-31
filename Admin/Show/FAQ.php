@@ -67,7 +67,7 @@ Function getData($data){
 		<link rel="shortcut icon" href="/images/favicon.png" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<style>
-		table, th, td {
+		table, th, td, tr {
 		  border: 1px solid black;
 		}
 		</style>
