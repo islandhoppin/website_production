@@ -37,11 +37,6 @@
 		<link rel="apple-touch-icon" href="/images/favicon.png" />
 		<link rel="shortcut icon" href="/images/favicon.png" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<style>
-		table, th, td {
-		  border: 1px solid black;
-		}
-		</style>
 	</head>
 	
 	<body class="right-sidebar">
