@@ -33,12 +33,11 @@ Function getData($data){
         header( 'Location: /Admin.html') ;
     }
     if ($onPage == $verifyCode){
-        $priceQuery = '{"query":"query {priceScheduleCollection(order: orderId_ASC) {items {season orderId show pax2 pax3 pax4 pax5 pax6 pax7 pax8}}}"}';
-    	$priceSchedule = getData($priceQuery);
-	    //$priceScheduleCount = count($priceSchedule['data']['priceScheduleCollection']['items']);
+        $customerVideosQuery = '{"query":"query {customerVideosCollection (order: orderId_ASC) {items {title orderId show date url photo {title description contentType fileName size url width height}}}}"}';
+    	$customerVideos = getData($customerVideosQuery);
 		
 		date_default_timezone_set('US/Eastern');
-    	$downloadData = "News-" . date("Y-m-d_h:i:sa") . ".csv";
+    	$downloadData = "CustomerVideos-" . date("Y-m-d_h:i:sa") . ".csv";
     }
 
 ?>
@@ -98,42 +97,36 @@ Function getData($data){
 											<h3>General Information</h3>
 										</header>
 										<p>
-											Before Uploading ensure the image is </br> Rectangular Photo: 1200px by 902px; </br>Long: 1024px by 1280px
-											</br><a href="http://picresize.com/" target="_blank" >Image Resizer.</a>
-											</br>The current query supports the 15 most recent posts, placing them in the order of most recent on top.
-											
+											Before Uploading ensure the image is 1000px by 676px.
+											<a href="http://picresize.com/" target="_blank" >Image Resizer.</a>
+											</br>All photos will be shown in the photo carousel, the order will favor the most recent first.
+
 										</p>
 									</section>
 									<section>
 				                	<center>
-				                		<h1 style="color:green">Price Schedule Table</h1>
+				                		<h1 style="color:green">Customer Video Table</h1>
 				                	</center>
         							
 								    <table border="1" cellspacing="0" cellpadding="10">
 							            <tr>
-							                <th>Season</th>
+							                <th>Title</th>
 							                <th>Order ID</th>
 							                <th>Show</th>
-							                <th>pax2</th>
-							                <th>pax3</th>
-							                <th>pax4</th>
-							                <th>pax5</th>
-							                <th>pax6</th>
-							                <th>pax7</th>
-							                <th>pax8</th>
+							                <th>Date</th>
+							                <th>Video-URL</th>
+							                <th>Photo-Title</th>
+							                <th>Photo-URL</th>
 							            </tr>
-							            <?php foreach($priceSchedule['data']['priceScheduleCollection']['items'] as $value) : ?>
+							            <?php foreach($customerPhotos['data']['customerVideosCollection']['items'] as $value) : ?>
 							            <tr>
-							                <th><?php echo $value['season']; ?></th>
+							                <th><?php echo $value['title']; ?></th>
 							                <th><?php echo $value['orderId']; ?></th>
 							                <th><?php if($value['show'] === TRUE) { echo "Yes";} else {echo "No";} ?></th>
-							                <th><?php echo $value['pax2']; ?></th>
-							                <th><?php echo $value['pax3']; ?></th>
-							                <th><?php echo $value['pax4']; ?></th>
-							                <th><?php echo $value['pax5']; ?></th>
-							                <th><?php echo $value['pax6']; ?></th>
-							                <th><?php echo $value['pax7']; ?></th>
-							                <th><?php echo $value['pax8']; ?></th>
+							                <th><?php echo $value['date']; ?></th>
+							                <th><?php echo $value['url']; ?></th>
+							                <th><?php echo $value['photo']['title']; ?></th>
+							                <th><?php echo $value['photo']['url']; ?></th>
 							            </tr>
 							            <?php endforeach; ?>
 							        </table>
