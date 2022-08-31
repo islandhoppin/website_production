@@ -1,16 +1,42 @@
 <?php     
-	require 'New/connection.inc.php'; 
-      // This is a prepared statement, not necessary with this simple query with no variables, but anyway...
-	$sqlprice = $dbconn->prepare("Select price_id, season, twopax, threepax, fourpax, fivepax, sixpax, sevenpax, eightpax, show From priceSchedule Where show = 'Yes' ORDER BY price_id ASC") ;
-	$sqlfaq = $dbconn->prepare("Select question, answer, faqorder, show From faqList Where show = 'Yes' ORDER BY faqorder ASC") ;
-	$specialnew = $dbconn->prepare("Select special_title, offer, special_order, show, image From specials Where show = 'Yes' ORDER BY special_order ASC LIMIT 3") ; 
-	$specialcount = $dbconn->prepare("Select COUNT(special_id) From specials Where show = 'Yes'") ; 
-      // Execute the query, if there were variables, they could be bound within the brackets
-    $sqlprice->execute() ;
-    $sqlfaq->execute() ;
-    $specialnew->execute() ;
-    $specialcount->execute() ;
+    
+Function getData($data){
+
+    $url = getenv('CONTENTFULURL');
+    $authorizationBearer = getenv('ACCESSTOKEN');
+
+    $curl = curl_init($url);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_URL, $url);
+
+    $headers = array(
+       "Content-Type: application/json",
+       $authorizationBearer,
+    );
+    curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+
+    $response = curl_exec($curl);
+    //dumps all the data for from the array
+    //var_dump(json_decode($response, true));
+    $output = json_decode($response, true);
+    return $output;
+
+}
+
+    $priceQuery = '{"query":"query {priceScheduleCollection(order: orderId_ASC, limit:5, where: {show: true}) {items {season pax2 pax3 pax4 pax5 pax6 pax7 pax8}}}"}';
+    $priceSchedule = getData($priceQuery);
+    //$priceScheduleCount = count($priceSchedule['data']['priceScheduleCollection']['items']);
+
+    $faqQuery = '{"query":"query {faqCollection (order: orderId_DESC, where: {show: true}) {items {question answer date}}}"}';
+    $faqs = getData($faqQuery);
+    //$faqsCount = count($faqs['data']['faqCollection']['items']);
+
+	$specialsQuery = '{"query":"query {specialsCollection (order: orderId_ASC, where: {show: true}) {items {title offer photo {title description contentType fileName size url width height}}}}"}';
+    $specials = getData($specialsQuery);
+    $specialsCount = count($specials['data']['specialsCollection']['items']);
     $errorDisplay = '<article id="main" class="special"><header><p>***No Specials are currently offered, please check back soon for new upcoming offers!***</p></header></article>';
+
 ?>
 <!DOCTYPE HTML>
 <!--
@@ -20,14 +46,14 @@
 -->
 <html lang="en">
 	<head>
-		<!-- Global Site Tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107335403-1"></script>
+		<!-- Google tag (gtag.js) - Google Analytics GA4 -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-HW283MKCHL"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments)};
+		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
 		
-		  gtag('config', 'UA-107335403-1');
+		  gtag('config', 'G-HW283MKCHL');
 		</script>
 		<title>Island Hoppin' Charters</title>
 		<meta charset="utf-8" />
@@ -134,19 +160,19 @@
                                     </thead>
                                     <tbody>
                                         <!--Use a while loop to make a table row for every DB row-->
-                                        <?php while( $row1 = $sqlprice->fetch()) : ?>
+                                        <?php foreach($priceSchedule['data']['priceScheduleCollection']['items'] as $value) : ?>
                                         <tr cellpadding='3' border=1 style='border-collapse:collapse;width:100%;border: 1px solid #000000;'>
                                             <!--Each table column is echoed in to a td cell-->
-                                            <td border=1 style='border: 1px solid #000000; text-align:center;'><b><?php echo $row1['season']; ?></b></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $row1['twopax']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $row1['threepax']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $row1['fourpax']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $row1['fivepax']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $row1['sixpax']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $row1['sevenpax']; ?></td>
-                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo $row1['eightpax']; ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center;'><b><?php echo $value['season']; ?></b></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo number_format($value['pax2']); ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo number_format($value['pax3']); ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo number_format($value['pax4']); ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo number_format($value['pax5']); ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo number_format($value['pax6']); ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo number_format($value['pax7']); ?></td>
+                                            <td border=1 style='border: 1px solid #000000; text-align:center; background-color:#D3D3D3;'><?php echo number_format($value['pax8']); ?></td>
                                         </tr>
-                                        <?php endwhile ?>
+                                        <?php endforeach; ?>
                                     </tbody>
                                     </table>
 									<p style="text-align: center;">Rates are subject to change, please contact your broker/clearing house for the most current rates.<br /> ***All prices are in USD***</p>
@@ -163,6 +189,9 @@
 								<p>
 									We know flights can be hard to arrange, so to make sure you don't miss out on anytime on the water, we offer a sleep aboard on the night before your charter. 
 									The current rate is $1200 for the entire group and allows you the ability to board the vessel an entire day early!
+									<br />***Guests arrive to the yacht at 5pm***
+									<br />***Snacks and welcome drink served, this is not an open bar. Dinner is ashore on clients expense.***
+									<br />***Continental breakfast provided next morning. Vessel departs at noon.***
 									<br />***Based on availability and boat readiness*** 
 								</p>
 								
@@ -192,6 +221,7 @@
 								<h2 style="font-family:'Shadows Into Light', 'Source Sans Pro', sans-serif; padding-top:10px; text-align: center; font-size:2.2em;">Reductions</h2>
 							</header>
 							
+							<!--- Captain Only Rate Appears to have been removed 
 							<section>
 								<header>
 									<h3>Captain Only</h3>
@@ -203,6 +233,7 @@
 									<br /> ***Diving & Provisioning services can be arranged***
 								</p>
 							</section>
+							-->
 							<section>
 								<header>
 									<h3>Half Board</h3>
@@ -218,8 +249,10 @@
 									<h3>Child Discount</h3>
 								</header>
 								<p>
-									Island Hoppin' is family friendly, and that's why we are currently offering a $250 discount per child under 15 years old. (Max Discount - 4 Children)
-									<br />***Based on the Charter Sailing date, not booking the date.***
+									Island Hoppin' is family friendly, and that's why we are currently offering a $250 discount per child under 15 years old.
+									<br />***Does not combine with half board options.***
+									<br />***Age is determined on the Charter Sailing date, not booking the date.***
+									<br />***Max Discount - 4 Children.***
 								</p>
 							</section>
 							<section>
@@ -241,19 +274,18 @@
 						</header>
 						<div class="row" id="specials">
 							
-							<?php while( $row3 = $specialnew->fetch()) : ?>
+							<?php foreach($specials['data']['specialsCollection']['items'] as $value) : ?>
 									<article class="4u 12u(mobile) special">
-										<a  class="image featured" style="width:350px;"> <img src="<?php echo $row3['image']; ?>" alt="<?php echo $row3['special_title']; ?>"/></a>
+										<a  class="image featured" style="width:350px;"> <img src="<?php echo $value['photo']['url']; ?>" alt="<?php echo $value['title']; ?>"/></a>
 										<header>
-											<h3><?php echo $row3['special_title']; ?></h3>
+											<h3><?php echo $value['title']; ?></h3>
 										</header>
 										<p>
-											<?php echo $row3['offer']; ?>
+											<?php echo $value['offer']; ?>
 										</p>	
 									</article>
-							<?php endwhile ?>
-							<?php $row4 = $specialcount->fetch() ?>
-							<?php if ($row4[0] == 0) { echo $errorDisplay; }?>
+							<?php endforeach ?>
+							<?php if ($specialsCount == 0) { echo $errorDisplay; }?>
 							
 							
 							
@@ -274,13 +306,13 @@
 									<h2 style="font-family:'Shadows Into Light', 'Source Sans Pro', sans-serif;">Frequently Asked Questions</h2>
 									<h3 style="text-align:center;">Click to expand the answer.</h3>
 								</header>
-							<?php while( $row2 = $sqlfaq->fetch()) : ?>
+							<?php foreach($faqs['data']['faqCollection']['items'] as $value) : ?>
 								<br />
-								<button class="accordion"><?php echo $row2['question']; ?></button>
+								<button class="accordion"><?php echo $value['question']; ?></button>
 								<div class="panel">
-								  <p><?php echo $row2['answer']; ?></p>
+								  <p><?php echo $value['answer']; ?></p>
 								</div>
-							<?php endwhile ?>
+							<?php endforeach ?>
 						</div>
 						<hr id="contact"/>
 						<article id="main" class="special">

@@ -1,21 +1,47 @@
 <?php     
-	require 'New/connection.inc.php'; 
-      // This is a prepared statement, not necessary with this simple query with no variables, but anyway...
-	$testimonials = $dbconn->prepare("SELECT testimonial_id, title, headline, testimonial, crew, tripdate, extra_space, show, star_count, blank_1, preference_order FROM testimonials WHERE show = 'Yes' ORDER BY preference_order DESC") ;
-	$sqlfood = $dbconn->prepare("Select food_id, food_title, show, image, blank_1 From food WHERE show = 'Yes' ORDER BY food_id DESC") ; 
-	$sqlcustpics = $dbconn->prepare("Select pic_id, pic_title, show, image, blank_1 From customerpic WHERE show = 'Yes' ORDER BY pic_id DESC") ; 
-	$sqlcustvids = $dbconn->prepare("Select vid_id, vid_title, show, video_link, image, blank_1 From customervid WHERE show = 'Yes' ORDER BY vid_id DESC") ; 
-      // Execute the query, if there were variables, they could be bound within the brackets
-    $testimonials->execute() ;
-    $sqlfood->execute() ;
-    $sqlcustpics->execute() ;
-    $sqlcustvids->execute() ;
+
     function ellipsis($text, $max=100, $append='&hellip;') {
        if (strlen($text) <= $max) return $text;
        $out = substr($text,0,$max);
        if (strpos($text,' ') === FALSE) return $out.$append;
        return preg_replace('/\w+$/','',$out).$append;
 	}
+	
+	Function getData($data){
+
+    $url = getenv('CONTENTFULURL');
+    $authorizationBearer = getenv('ACCESSTOKEN');
+
+    $curl = curl_init($url);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_URL, $url);
+
+    $headers = array(
+       "Content-Type: application/json",
+       $authorizationBearer,
+    );
+    curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+
+    $response = curl_exec($curl);
+    //dumps all the data for from the array
+    //var_dump(json_decode($response, true));
+    $output = json_decode($response, true);
+    return $output;
+
+}
+
+    $foodImagesQuery = '{"query":"query {foodImagesCollection (order: orderId_DESC, where: {show: true}) {items {title date photo {title description contentType fileName size url width height}}}}"}';
+    $foodImages = getData($foodImagesQuery);
+    
+    $testimonialsQuery = '{"query":"query {customerTestimonialsCollection (order: orderId_DESC, where: {show: true}) {items {orderId title headline testimonial starCount crew date spaceFlag}}}"}';
+    $testimonials = getData($testimonialsQuery);
+    
+    $customerPhotosQuery = '{"query":"query {customerPhotosCollection (order: orderId_DESC, where: {show: true}) {items {title date photo {title description contentType fileName size url width height}}}}"}';
+    $customerPhotos = getData($customerPhotosQuery);
+    
+    $customerVideosQuery = '{"query":"query {customerVideosCollection (order: orderId_DESC, where: {show: true}) {items {title date url photo {title description contentType fileName size url width height}}}}"}';
+    $customerVideos = getData($customerVideosQuery);
 ?>
 <!DOCTYPE HTML>
 <!--
@@ -25,20 +51,20 @@
 -->
 <html lang="en">
 	<head>
-		<!-- Global Site Tag (gtag.js) - Google Analytics -->
-			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107335403-1"></script>
-		<!-- Remember to include jQuery :) -->
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-		<!-- jQuery Modal -->
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+		<!-- Google tag (gtag.js) - Google Analytics GA4 -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-HW283MKCHL"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments)};
+		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
 		
-		  gtag('config', 'UA-107335403-1');
+		  gtag('config', 'G-HW283MKCHL');
 		</script>
+		<!-- Remember to include jQuery :) -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+		<!-- jQuery Modal -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 		<title>Island Hoppin' Charters</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -583,13 +609,13 @@
 
 							<section  class="carousel">
 									<div class="reel">
-									<?php while( $row2 = $sqlfood->fetch()) : ?>
+									<?php foreach($foodImages['data']['foodImagesCollection']['items'] as $value) : ?>
 										<article>
-											<a href="<?php echo $row2['image']; ?>" class="swipebox1" title="<?php echo $row2['food_title']; ?> - Date: <?php echo $row2['blank_1']; ?>">
-												<img class="image featured" style="width:290px; height:auto; margin-top:30px" src="<?php echo $row2['image']; ?>" alt="<?php echo $row2['food_title']; ?>">
+											<a href="<?php echo $value['photo']['url']; ?>" class="swipebox1" title="<?php echo $value['title']; ?> - Date: <?php $newsDate=date_create($value['date']); echo date_format($newsDate,"F j, Y"); ?>">
+												<img class="image featured" style="width:290px; height:auto; margin-top:30px" src="<?php echo $value['photo']['url']; ?>" alt="<?php echo $value['title']; ?>">
 											</a>
 										</article>
-									<?php endwhile ?>
+									<?php endforeach ?>
 							</section>
 							<hr />
 							
@@ -624,20 +650,20 @@
 								</header>
 								<section  class="carousel">
 									<div class="reel">
-									<?php while( $row5 = $testimonials->fetch()) : ?>
+									<?php foreach($testimonials['data']['customerTestimonialsCollection']['items'] as $value) : ?>
 										<article>
 											<div>
-												<h3 style="vertical-align: center;"><?php echo $row5['title']; ?></h4>
+												<h3 style="vertical-align: center;"><?php echo $value['title']; ?></h4>
 												<h4 style="padding-top:10px;">Overall Experience: </h4>
 												<?php 
-													for ($x = 0; $x <= ($row5['star_count']-1); $x++) {
+													for ($x = 0; $x <= ($value['starCount']-1); $x++) {
 														echo '<i class="fa fa-star" aria-hidden="true"></i>';
 													}
 												?>
 												<!-- <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> -->
-												<br> <subscript style="text-align: center; margin-top:-50px;"><?php echo $row5['tripdate']; ?></subscript> <br>
+												<br> <subscript style="text-align: center; margin-top:-50px;"><?php $newsDate=date_create($value['date']); echo date_format($newsDate,"F - Y"); ?></subscript> <br>
 												<?php
-													$count = $row5['blank_1'];
+													$count = $value['starCount'];
 													
 													switch ($count) {
 													  case "1":
@@ -658,12 +684,12 @@
 												?>
 												<hr style="margin-top:-50px;" />
 												<div class="hideoffscreen">
-													<h4 style="margin-top:-60px;"> <?php echo $row5['headline']; ?></h3>
+													<h4 style="margin-top:-60px;"> <?php echo $value['headline']; ?></h3>
 													<p style="text-align: center; line-height: 1.25em"> 
 														<?php
-															$starting = $row5['headline'];
-															$text = $row5['testimonial'];
-															if ($row5['extra_space'] == '1'){
+															$starting = $value['headline'];
+															$text = $value['testimonial'];
+															if ($value['spaceFlag'] == '1'){
 																$remaining = 260 - strlen($starting);
 															}
 															else{
@@ -674,14 +700,14 @@
 														?> 
 													</p>
 												</div>
-												<a href="#ex<?php echo $row5['testimonial_id'];?>" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
+												<a href="#ex<?php echo $value['orderId'];?>" rel="modal:open" class="btn btn-lg btn-success"><subscript>Click to read the full review</subscript></a>
 											</div>
-											<div id="ex<?php echo $row5['testimonial_id'];?>" class="modal modal-size" style="background-color:#CCDBEE;">
-												<h3 style="text-align: center;">Trip Date: <?php echo $row5['tripdate']; ?></h3>
-												<h3 style="text-align: center;">Guest Name: <?php echo $row5['title']; ?></h3>
+											<div id="ex<?php echo $value['orderId'];?>" class="modal modal-size" style="background-color:#CCDBEE;">
+												<h3 style="text-align: center;">Trip Date: <?php $newsDate=date_create($value['date']); echo date_format($newsDate,"F - Y"); ?></h3>
+												<h3 style="text-align: center;">Guest Name: <?php echo $value['title']; ?></h3>
 												<br />
 												<?php
-													$count = $row5['blank_1'];
+													$count = $value['starCount'];
 													
 													switch ($count) {
 													  case "1":
@@ -700,14 +726,14 @@
 													    echo '<p style="text-align: center; margin-top:-30px;"><i class="fa fa-anchor" aria-hidden="true"></i><subscript> - First Time Sailer</subscript></p>';
 													}
 												?>
-												<p style="text-align: center; margin-top:-20px;"><b>Crew: </b><?php echo $row5['crew']; ?></p>
+												<p style="text-align: center; margin-top:-20px;"><b>Crew: </b><?php echo $value['crew']; ?></p>
 												<hr style="margin-top:-70px;"/>
-												<p style="margin-top:-50px; text-align:left"><?php echo nl2br($row5['testimonial']); ?></p>
+												<p style="margin-top:-50px; text-align:left"><?php echo nl2br($value['testimonial']); ?></p>
 												<hr style="margin-top:-50px;" />
 												<p style="text-align: center; margin-top:-50px;" > &copy; Island Hoppin' <script>document.write(new Date().getFullYear())</script>. All rights reserved.</p>
 											</div>
 										</article>
-									<?php endwhile ?>
+									<?php endforeach ?>
 										
 								</section>
 
@@ -722,13 +748,13 @@
 								</header>
 								<section  class="carousel">
 									<div class="reel">
-									<?php while( $row3 = $sqlcustpics->fetch()) : ?>
+									<?php foreach($customerPhotos['data']['customerPhotosCollection']['items'] as $value) : ?>
 										<article>
-											<a href="<?php echo $row3['image']; ?>" class="swipebox2" title="<?php echo $row3['pic_title']; ?> - Date: <?php echo $row3['blank_1']; ?>">
-												<img class="image featured" style="width:290px; height:auto; margin-top:30px" src="<?php echo $row3['image']; ?>" alt="<?php echo $row3['pic_title']; ?>">
+											<a href="<?php echo $value['photo']['url']; ?>" class="swipebox2" title="<?php $newsDate=date_create($value['date']); echo date_format($newsDate,"F j, Y"); ?>:  <?php echo $value['title']; ?>">
+												<img class="image featured" style="width:290px; height:auto; margin-top:30px" src="<?php echo $value['photo']['url']; ?>" alt="<?php echo $value['title']; ?>">
 											</a>
 										</article>
-									<?php endwhile ?>
+									<?php endforeach ?>
 								</section>
 								<h3 style="text-align:center;">Click to enlarge photos.</h3>
 								<hr />
@@ -737,15 +763,15 @@
 								</header>
 								<section  class="carousel">
 									<div class="reel">
-									<?php while( $row4 = $sqlcustvids->fetch()) : ?>
+									<?php foreach($customerVideos['data']['customerVideosCollection']['items'] as $value) : ?>
 										<article>
-											<a href="<?php echo $row4['video_link']; ?>" target="_blank" class="image featured"><img src="<?php echo $row4['image']; ?>" alt="<?php echo $row4['vid_title']; ?>" /></a>
+											<a href="<?php echo $value['url']; ?>" target="_blank" class="image featured"><img src="<?php echo $value['photo']['url']; ?>" alt="<?php echo $value['title']; ?>" /></a>
 											<header>
-												<h3><a href="<?php echo $row4['video_link']; ?>" target="_blank"><?php echo $row4['vid_title']; ?> - Date: <?php echo $row4['blank_1']; ?></a></h3>
+												<h3><a href="<?php echo $value['url']; ?>" target="_blank"><?php echo $value['title']; ?> - Date: <?php $newsDate=date_create($value['date']); echo date_format($newsDate,"F j, Y"); ?></a></h3>
 											</header>
 											</a>
 										</article>
-									<?php endwhile ?>
+									<?php endforeach ?>
 								</section>
 								</div>
 							</div>

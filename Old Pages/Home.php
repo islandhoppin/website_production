@@ -1,32 +1,11 @@
 <?php
-
-Function getData($data){
-
-    $url = getenv('CONTENTFULURL');
-    $authorizationBearer = getenv('ACCESSTOKEN');
-
-    $curl = curl_init($url);
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($curl, CURLOPT_URL, $url);
-
-    $headers = array(
-       "Content-Type: application/json",
-       $authorizationBearer,
-    );
-    curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
-
-    $response = curl_exec($curl);
-    //dumps all the data for from the array
-    //var_dump(json_decode($response, true));
-    $output = json_decode($response, true);
-    return $output;
-
-}
-
-    $newsQuery = '{"query":"query {newsCollection (order: orderId_DESC, limit:15, where: {show: true}) {items {header update date photo {title description contentType fileName size url width height}}}}"}';
-    $news = getData($newsQuery);
-    //$newsCount = count($news['data']['newsCollection']['items']);
+    // First connect to the database via your connection insert file
+    require 'New/connection.inc.php'; 
+    
+    // This is a prepared statement, not necessary with this simple query with no variables, but anyway...
+    $sqlnew = $dbconn->prepare("Select news_id, header, update, image, blank_1 From newsupdates ORDER BY news_id DESC LIMIT 15") ; 
+    // Execute the query, if there were variables, they could be bound within the brackets
+    $sqlnew->execute() ;
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
@@ -253,21 +232,21 @@ Function getData($data){
 							<p>Stay up to date with everything happening aboard Island Hoppin'.</p>
 						</header>
 							<?php $i=0;
-							foreach($news['data']['newsCollection']['items'] as $value) : 
+							while( $row = $sqlnew->fetch()) : 
 								$i++; 
 								if($i % 3 == 1){echo '<div class="row">';}?>
 								<article class="4u 12u(mobile) special">
-									<a href="<?php echo $value['photo']['url']; ?>" class="image featured swipebox" title="<?php $newsDate=date_create($value['date']); echo date_format($newsDate,"F j, Y"); ?>:  <?php echo $value['header']; ?>">
-										<img class="image featured" src="<?php echo $value['photo']['url']; ?>" alt="<?php echo $value['update']; ?>" />
+									<a href="<?php echo $row['image']; ?>" class="image featured swipebox" title="<?php echo $row['header']; ?>  ---  <?php echo $row['update']; ?>">
+										<img class="image featured" src="<?php echo $row['image']; ?>" alt="<?php echo $row['update']; ?>" />
 									</a>
 									<header>
-										<h3><?php echo $value['header']; ?></h3>
-										<h3><i><?php $newsDate=date_create($value['date']); echo date_format($newsDate,"F j, Y"); ?></i></h3>
+										<h3><?php echo $row['header']; ?></h3>
+										<h3><i><?php echo $row['blank_1']; ?></i></h3>
 									</header>
-									<p><?php echo $value['update']; ?></p>
+									<p><?php echo $row['update']; ?></p>
 								</article>
 							<?php if ($i % 3 == 0) {echo "</div> <hr />";}
-							endforeach;
+							endwhile;
 							if ($i % 3 != 0) {echo "</div>";}?>
 
 					</section>
