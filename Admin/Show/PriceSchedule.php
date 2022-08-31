@@ -33,8 +33,8 @@ Function getData($data){
         header( 'Location: /Admin.html') ;
     }
     if ($onPage == $verifyCode){
-        $priceQuery = '{"query":"query {priceScheduleCollection(order: orderId_ASC, limit:5, where: {show: true}) {items {season pax2 pax3 pax4 pax5 pax6 pax7 pax8}}}"}';
-	    $priceSchedule = getData($priceQuery);
+        $priceQuery = '{"query":"query {priceScheduleCollection(order: orderId_ASC) {items {season orderId show pax2 pax3 pax4 pax5 pax6 pax7 pax8}}}"}';
+    	$priceSchedule = getData($priceQuery);
 	    //$priceScheduleCount = count($priceSchedule['data']['priceScheduleCollection']['items']);
 		
 		date_default_timezone_set('US/Eastern');
@@ -92,41 +92,40 @@ Function getData($data){
 						<div class="row 200%">
 				        <div class="11u 12u(mobile) important(mobile)" id="content">
 				                <article id="main">
-				                    <center>
-        								<h1 style="color:green">Price Schedule Table</h1>
-								        <table border="1" cellspacing="0" cellpadding="10">
-								            <tr>
-								                <th>Season</th>
-								                <th>Order ID</th>
-								                <th>Show</th>
-								                <th>pax2</th>
-								                <th>pax3</th>
-								                <th>pax4</th>
-								                <th>pax5</th>
-								                <th>pax6</th>
-								                <th>pax7</th>
-								                <th>pax8</th>
-								            </tr>
-								            <?php foreach($priceSchedule['data']['priceScheduleCollection']['items'] as $value) : ?>
-								            <tr>
-								                <th><?php echo $value['season']; ?></th>
-								                <th><?php echo $value['orderId']; ?></th>
-								                <th><?php if($value['show'] === TRUE) { echo "Yes";} else {echo "No";} ?></th>
-								                <th><?php echo $value['pax2']; ?></th>
-								                <th><?php echo $value['pax3']; ?></th>
-								                <th><?php echo $value['pax4']; ?></th>
-								                <th><?php echo $value['pax5']; ?></th>
-								                <th><?php echo $value['pax6']; ?></th>
-								                <th><?php echo $value['pax7']; ?></th>
-								                <th><?php echo $value['pax8']; ?></th>
-								            </tr>
-								            <?php endforeach; ?>
-								        </table>
-								        <br><br>
-								        <button type="button" onclick="tableToCSV()">
-								            download CSV
-								        </button>
-								    </center>
+        							<h1 style="color:green">Price Schedule Table</h1>
+								    <table border="1" cellspacing="0" cellpadding="10">
+							            <tr>
+							                <th>Season</th>
+							                <th>Order ID</th>
+							                <th>Show</th>
+							                <th>pax2</th>
+							                <th>pax3</th>
+							                <th>pax4</th>
+							                <th>pax5</th>
+							                <th>pax6</th>
+							                <th>pax7</th>
+							                <th>pax8</th>
+							            </tr>
+							            <?php foreach($priceSchedule['data']['priceScheduleCollection']['items'] as $value) : ?>
+							            <tr>
+							                <th><?php echo $value['season']; ?></th>
+							                <th><?php echo $value['orderId']; ?></th>
+							                <th><?php if($value['show'] === TRUE) { echo "Yes";} else {echo "No";} ?></th>
+							                <th><?php echo $value['pax2']; ?></th>
+							                <th><?php echo $value['pax3']; ?></th>
+							                <th><?php echo $value['pax4']; ?></th>
+							                <th><?php echo $value['pax5']; ?></th>
+							                <th><?php echo $value['pax6']; ?></th>
+							                <th><?php echo $value['pax7']; ?></th>
+							                <th><?php echo $value['pax8']; ?></th>
+							            </tr>
+							            <?php endforeach; ?>
+							        </table>
+							        <br><br>
+							        <button type="button" onclick="tableToCSV()">
+							            download CSV
+							        </button>
+								    
 				                </article>
 				            </div>
 				            </div>

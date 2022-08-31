@@ -51,7 +51,7 @@
 								<h2>Admin Content Manager - Island Hoppin'</h2>
 								<p>
 									<a href="../Home.php">Go to the Home Screen</a>
-									<a href="https://app.contentful.com/spaces/feujzg2f0w3f/home">Managed in Contentful</a>
+									</br><a href="https://app.contentful.com/spaces/feujzg2f0w3f/home">Managed in Contentful</a>
 								</p>
 							</header>
 							
