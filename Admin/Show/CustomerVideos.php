@@ -118,7 +118,7 @@ Function getData($data){
 							                <th>Photo-Title</th>
 							                <th>Photo-URL</th>
 							            </tr>
-							            <?php foreach($customerPhotos['data']['customerVideosCollection']['items'] as $value) : ?>
+							            <?php foreach($customerVideos['data']['customerVideosCollection']['items'] as $value) : ?>
 							            <tr>
 							                <th><?php echo $value['title']; ?></th>
 							                <th><?php echo $value['orderId']; ?></th>
