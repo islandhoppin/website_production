@@ -40,10 +40,6 @@ Function getData($data){
 		date_default_timezone_set('US/Eastern');
     	$downloadData = "PriceSchedule-" . date("Y-m-d_h:i:sa") . ".csv";
     }
-    
-    // First connect to the database via your connection insert file
-
-    
 
 ?>
 <!DOCTYPE HTML>

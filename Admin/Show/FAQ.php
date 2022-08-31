@@ -33,13 +33,13 @@ Function getData($data){
         header( 'Location: /Admin.html') ;
     }
     if ($onPage == $verifyCode){
-        $testimonialsQuery = '{"query":"query {customerTestimonialsCollection (order: orderId_DESC, where: {show: true}) {items {orderId title headline testimonial trips starCount crew date spaceFlag show}}}"}';
-    	$testimonials = getData($testimonialsQuery);
+        $faqQuery = '{"query":"query {faqCollection (order: orderId_ASC,) {items {question answer orderId show date}}}"}';
+    	$faqs = getData($faqQuery);
 		
 		date_default_timezone_set('US/Eastern');
-    	$downloadData = "Testimonials-" . date("Y-m-d_h:i:sa") . ".csv";
+    	$downloadData = "FAQ-" . date("Y-m-d_h:i:sa") . ".csv";
     }
-    
+
 ?>
 <!DOCTYPE HTML>
 <!--
@@ -92,40 +92,30 @@ Function getData($data){
 											<h3>General Information</h3>
 										</header>
 										<p>
-											None. 
+											Question and Answers
 
 										</p>
 									</section>
 									<section>
 				                	<center>
-				                		<h1 style="color:green">Testimonals Table</h1>
+				                		<h1 style="color:green">FAQ Table</h1>
 				                	</center>
         							
 								    <table border="1" cellspacing="0" cellpadding="10">
 							            <tr>
-							                <th>Title</th>
-							                <th>Headline</th>
-							                <th>Testimonial</th>
-							                <th>Trips</th>
-							                <th>Star Count</th>
-							                <th>Crew</th>
+							                <th>Question</th>
+							                <th>Answer</th>
 							                <th>Order ID</th>
 							                <th>Show</th>
 							                <th>Date</th>
-							                <th>Space Flag</th>
 							            </tr>
-							            <?php foreach($testimonials['data']['customerTestimonialsCollection']['items'] as $value) : ?>
+							            <?php foreach($faqs['data']['faqCollection']['items'] as $value) : ?>
 							            <tr>
-							                <th><?php echo $value['title']; ?></th>
-							                <th><?php echo $value['headline']; ?></th>
-							                <th><?php echo nl2br($value['testimonial']); ?></th>
-							                <th><?php echo $value['trips']; ?></th>
-							                <th><?php echo $value['starCount']; ?></th>
-							                <th><?php echo $value['crew']; ?></th>
+							                <th><?php echo $value['question']; ?></th>
+							                <th><?php echo $value['answer']; ?></th>
 							                <th><?php echo $value['orderId']; ?></th>
 							                <th><?php if($value['show'] === TRUE) { echo "Yes";} else {echo "No";} ?></th>
 							                <th><?php echo $value['date']; ?></th>
-							                <th><?php echo $value['spaceFlag']; ?></th>
 							            </tr>
 							            <?php endforeach; ?>
 							        </table>

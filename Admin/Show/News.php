@@ -33,13 +33,14 @@ Function getData($data){
         header( 'Location: /Admin.html') ;
     }
     if ($onPage == $verifyCode){
-        $testimonialsQuery = '{"query":"query {customerTestimonialsCollection (order: orderId_DESC, where: {show: true}) {items {orderId title headline testimonial trips starCount crew date spaceFlag show}}}"}';
-    	$testimonials = getData($testimonialsQuery);
+        $priceQuery = '{"query":"query {priceScheduleCollection(order: orderId_ASC) {items {season orderId show pax2 pax3 pax4 pax5 pax6 pax7 pax8}}}"}';
+    	$priceSchedule = getData($priceQuery);
+	    //$priceScheduleCount = count($priceSchedule['data']['priceScheduleCollection']['items']);
 		
 		date_default_timezone_set('US/Eastern');
-    	$downloadData = "Testimonials-" . date("Y-m-d_h:i:sa") . ".csv";
+    	$downloadData = "News-" . date("Y-m-d_h:i:sa") . ".csv";
     }
-    
+
 ?>
 <!DOCTYPE HTML>
 <!--
@@ -92,40 +93,41 @@ Function getData($data){
 											<h3>General Information</h3>
 										</header>
 										<p>
-											None. 
+											All Pricing Schedule Information is manually collected from 
+											<a href="https://www.cyabrochure.com/eb/205/pyaX/5323/4/9/1/" target="_blank" >CYA Brochure</a>
 
 										</p>
 									</section>
 									<section>
 				                	<center>
-				                		<h1 style="color:green">Testimonals Table</h1>
+				                		<h1 style="color:green">Price Schedule Table</h1>
 				                	</center>
         							
 								    <table border="1" cellspacing="0" cellpadding="10">
 							            <tr>
-							                <th>Title</th>
-							                <th>Headline</th>
-							                <th>Testimonial</th>
-							                <th>Trips</th>
-							                <th>Star Count</th>
-							                <th>Crew</th>
+							                <th>Season</th>
 							                <th>Order ID</th>
 							                <th>Show</th>
-							                <th>Date</th>
-							                <th>Space Flag</th>
+							                <th>pax2</th>
+							                <th>pax3</th>
+							                <th>pax4</th>
+							                <th>pax5</th>
+							                <th>pax6</th>
+							                <th>pax7</th>
+							                <th>pax8</th>
 							            </tr>
-							            <?php foreach($testimonials['data']['customerTestimonialsCollection']['items'] as $value) : ?>
+							            <?php foreach($priceSchedule['data']['priceScheduleCollection']['items'] as $value) : ?>
 							            <tr>
-							                <th><?php echo $value['title']; ?></th>
-							                <th><?php echo $value['headline']; ?></th>
-							                <th><?php echo nl2br($value['testimonial']); ?></th>
-							                <th><?php echo $value['trips']; ?></th>
-							                <th><?php echo $value['starCount']; ?></th>
-							                <th><?php echo $value['crew']; ?></th>
+							                <th><?php echo $value['season']; ?></th>
 							                <th><?php echo $value['orderId']; ?></th>
 							                <th><?php if($value['show'] === TRUE) { echo "Yes";} else {echo "No";} ?></th>
-							                <th><?php echo $value['date']; ?></th>
-							                <th><?php echo $value['spaceFlag']; ?></th>
+							                <th><?php echo $value['pax2']; ?></th>
+							                <th><?php echo $value['pax3']; ?></th>
+							                <th><?php echo $value['pax4']; ?></th>
+							                <th><?php echo $value['pax5']; ?></th>
+							                <th><?php echo $value['pax6']; ?></th>
+							                <th><?php echo $value['pax7']; ?></th>
+							                <th><?php echo $value['pax8']; ?></th>
 							            </tr>
 							            <?php endforeach; ?>
 							        </table>

@@ -60,7 +60,7 @@
 								<section>
 									
 									<header>
-										<h3 style="text-align:center;"><a href="https://drive.google.com/open?id=1guFdmenk0EPc_-d9Da0rgYvmzXTiimy83XimO3hkJI8">Change Request Form</a></h3>
+										<h3 style="text-align:center;"><a href="https://app.contentful.com/spaces/feujzg2f0w3f/home" target="_blank">Manage Content in <i>Contentful</i></a></h3>
 										<hr />
 										<form action="/Admin/Show/CustomerTestimonials.php" method="post" style="text-align: center;">
                                                     <input type="hidden" name="INTERNAL" value="<?php echo $verifyCode;?>">
