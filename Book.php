@@ -196,6 +196,7 @@ Function getData($data){
 								</p>
 								
 							</section>
+							<!-- No Content
 							<section>
 								<header>
 									<h3>Dive Package</h3>
@@ -205,6 +206,7 @@ Function getData($data){
 									<br />***For safety reasons, cannot be combined with Captain Only Charters.***
 								</p>
 							</section>
+							-->
 							<section>
 								<header>
 									<h3>Fees, Commissions, & Tips (Other)</h3>

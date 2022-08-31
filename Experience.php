@@ -767,7 +767,7 @@
 										<article>
 											<a href="<?php echo $value['url']; ?>" target="_blank" class="image featured"><img src="<?php echo $value['photo']['url']; ?>" alt="<?php echo $value['title']; ?>" /></a>
 											<header>
-												<h3><a href="<?php echo $value['url']; ?>" target="_blank"><?php echo $value['title']; ?> - Date: <?php $newsDate=date_create($value['date']); echo date_format($newsDate,"F j, Y"); ?></a></h3>
+												<h3><a href="<?php echo $value['url']; ?>" target="_blank"><?php echo $value['title']; ?> </br> <i>Date: <?php $newsDate=date_create($value['date']); echo date_format($newsDate,"F j, Y"); ?></i></a></h3>
 											</header>
 											</a>
 										</article>
