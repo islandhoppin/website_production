@@ -93,14 +93,16 @@ Function getData($data){
 				        <div class="11u 12u(mobile) important(mobile)" id="content">
 				                <article id="main">
 				                	<section>
-										<header>
-											<h3>General Information</h3>
-										</header>
-										<p>
-											All Pricing Schedule Information is manually collected from 
-											</br><a href="https://www.cyabrochure.com/eb/205/pyaX/5323/4/9/1/">CYA Brochure</a>
-
-										</p>
+				                		<center>
+											<header>
+												<h3>General Information</h3>
+											</header>
+											<p>
+												All Pricing Schedule Information is manually collected from 
+												</br><a href="https://www.cyabrochure.com/eb/205/pyaX/5323/4/9/1/" target="_blank" >CYA Brochure</a>
+	
+											</p>
+										</center>
 									</section>
 									<section>
 				                	<center>
