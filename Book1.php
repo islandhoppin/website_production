@@ -189,6 +189,8 @@ Function getData($data){
 								<p>
 									We know flights can be hard to arrange, so to make sure you don't miss out on anytime on the water, we offer a sleep aboard on the night before your charter. 
 									The current rate is $1200 for the entire group and allows you the ability to board the vessel an entire day early!
+									<br />***Guests arrive to the yacht at 5pm***
+									<br />***Snacks and welcome drink served, this is not an open bar. Dinner is ashore on clients expense. Continental breakfast provided next morning. Vessel departs at noon.***
 									<br />***Based on availability and boat readiness*** 
 								</p>
 								
@@ -218,6 +220,7 @@ Function getData($data){
 								<h2 style="font-family:'Shadows Into Light', 'Source Sans Pro', sans-serif; padding-top:10px; text-align: center; font-size:2.2em;">Reductions</h2>
 							</header>
 							
+							<!--- Captain Only Rate Appears to have been removed 
 							<section>
 								<header>
 									<h3>Captain Only</h3>
@@ -229,6 +232,7 @@ Function getData($data){
 									<br /> ***Diving & Provisioning services can be arranged***
 								</p>
 							</section>
+							-->
 							<section>
 								<header>
 									<h3>Half Board</h3>
@@ -244,8 +248,10 @@ Function getData($data){
 									<h3>Child Discount</h3>
 								</header>
 								<p>
-									Island Hoppin' is family friendly, and that's why we are currently offering a $250 discount per child under 15 years old. (Max Discount - 4 Children)
-									<br />***Based on the Charter Sailing date, not booking the date.***
+									Island Hoppin' is family friendly, and that's why we are currently offering a $250 discount per child under 15 years old.
+									<br />***Does not combine with half board options.***
+									<br />***Age is determined on the Charter Sailing date, not booking the date.***
+									<br />***Max Discount - 4 Children.***
 								</p>
 							</section>
 							<section>
