@@ -33,9 +33,8 @@ Function getData($data){
         header( 'Location: /Admin.html') ;
     }
     if ($onPage == $verifyCode){
-        $priceQuery = '{"query":"query {priceScheduleCollection(order: orderId_ASC) {items {season orderId show pax2 pax3 pax4 pax5 pax6 pax7 pax8}}}"}';
-    	$priceSchedule = getData($priceQuery);
-	    //$priceScheduleCount = count($priceSchedule['data']['priceScheduleCollection']['items']);
+        $newsQuery = '{"query":"query {newsCollection (order: orderId_DESC, limit:15, where: {show: true}) {items {header update date photo {title description contentType fileName size url width height}}}}"}';
+    	$news = getData($newsQuery);
 		
 		date_default_timezone_set('US/Eastern');
     	$downloadData = "News-" . date("Y-m-d_h:i:sa") . ".csv";
@@ -106,34 +105,28 @@ Function getData($data){
 									</section>
 									<section>
 				                	<center>
-				                		<h1 style="color:green">Price Schedule Table</h1>
+				                		<h1 style="color:green">iHOP News Table</h1>
 				                	</center>
         							
 								    <table border="1" cellspacing="0" cellpadding="10">
 							            <tr>
-							                <th>Season</th>
+							                <th>Header</th>
 							                <th>Order ID</th>
+							                <th>Update</th>
 							                <th>Show</th>
-							                <th>pax2</th>
-							                <th>pax3</th>
-							                <th>pax4</th>
-							                <th>pax5</th>
-							                <th>pax6</th>
-							                <th>pax7</th>
-							                <th>pax8</th>
+							                <th>Date</th>
+							                <th>Photo-Title</th>
+							                <th>Photo-Url</th>
 							            </tr>
-							            <?php foreach($priceSchedule['data']['priceScheduleCollection']['items'] as $value) : ?>
+							            <?php foreach($news['data']['newsCollection']['items'] as $value) : ?>
 							            <tr>
-							                <th><?php echo $value['season']; ?></th>
+							                <th><?php echo $value['header']; ?></th>
 							                <th><?php echo $value['orderId']; ?></th>
+							                <th><?php echo $value['update']; ?></th>
 							                <th><?php if($value['show'] === TRUE) { echo "Yes";} else {echo "No";} ?></th>
-							                <th><?php echo $value['pax2']; ?></th>
-							                <th><?php echo $value['pax3']; ?></th>
-							                <th><?php echo $value['pax4']; ?></th>
-							                <th><?php echo $value['pax5']; ?></th>
-							                <th><?php echo $value['pax6']; ?></th>
-							                <th><?php echo $value['pax7']; ?></th>
-							                <th><?php echo $value['pax8']; ?></th>
+							                <th><?php echo $value['date']; ?></th>
+							                <th><?php echo $value['photo']['title']; ?></th>
+							                <th><?php echo $value['photo']['url']; ?></th>
 							            </tr>
 							            <?php endforeach; ?>
 							        </table>
