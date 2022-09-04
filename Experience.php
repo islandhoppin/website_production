@@ -611,7 +611,7 @@
 									<div class="reel">
 									<?php foreach($foodImages['data']['foodImagesCollection']['items'] as $value) : ?>
 										<article>
-											<a href="<?php echo $value['photo']['url']; ?>" class="swipebox1" title="<?php echo $value['title']; ?> - Date: <?php $newsDate=date_create($value['date']); echo date_format($newsDate,"F j, Y"); ?>">
+											<a href="<?php echo $value['photo']['url']; ?>" class="swipebox1" title="<?php echo $value['title']; ?>">
 												<img class="image featured" style="width:290px; height:auto; margin-top:30px" src="<?php echo $value['photo']['url']; ?>" alt="<?php echo $value['title']; ?>">
 											</a>
 										</article>

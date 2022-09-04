@@ -33,7 +33,7 @@ Function getData($data){
         header( 'Location: /Admin.html') ;
     }
     if ($onPage == $verifyCode){
-        $newsQuery = '{"query":"query {newsCollection (order: orderId_DESC, limit:15, where: {show: true}) {items {header update date photo {title description contentType fileName size url width height}}}}"}';
+        $newsQuery = '{"query":"query {newsCollection (order: orderId_DESC, limit:15, where: {show: true}) {items {header orderId update date photo {title description contentType fileName size url width height}}}}"}';
     	$news = getData($newsQuery);
 		
 		date_default_timezone_set('US/Eastern');
