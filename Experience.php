@@ -34,7 +34,7 @@
     $foodImagesQuery = '{"query":"query {foodImagesCollection (order: orderId_DESC, where: {show: true}) {items {title date photo {title description contentType fileName size url width height}}}}"}';
     $foodImages = getData($foodImagesQuery);
     
-    $testimonialsQuery = '{"query":"query {customerTestimonialsCollection (order: orderId_DESC, where: {show: true}) {items {orderId title headline testimonial starCount crew date spaceFlag}}}"}';
+    $testimonialsQuery = '{"query":"query {customerTestimonialsCollection (order: orderId_DESC, where: {show: true}) {items {orderId title headline testimonial trips starCount crew date spaceFlag}}}"}';
     $testimonials = getData($testimonialsQuery);
     
     $customerPhotosQuery = '{"query":"query {customerPhotosCollection (order: orderId_DESC, where: {show: true}) {items {title date photo {title description contentType fileName size url width height}}}}"}';
@@ -663,7 +663,7 @@
 												<!-- <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> -->
 												<br> <subscript style="text-align: center; margin-top:-50px;"><?php $newsDate=date_create($value['date']); echo date_format($newsDate,"F - Y"); ?></subscript> <br>
 												<?php
-													$count = $value['starCount'];
+													$count = $value['trips'];
 													
 													switch ($count) {
 													  case "1":
